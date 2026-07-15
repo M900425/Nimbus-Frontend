@@ -1,14 +1,27 @@
+export interface Condition {
+  text: string;
+  icon: string;
+  code: number;
+}
+
 export interface WeatherCurrent {
-  time: string;
-  interval: number;
   temperature: number;
   windspeed: number;
   winddirection: number;
-  is_day: number;
   weathercode: number;
+  condition: Condition;
+  pressure: number;
+  precipitation: number;
+  humidity: number;
+  cloudcover: number;
+  feelslike: number;
+  visibility: number;
+  uvindex: number;
+  windgust: number;
+  conditions: string;
 }
 
-export interface WeatherHourly {
+export interface HourlyData {
   time: string[];
   temperature_2m: number[];
   relativehumidity_2m: number[];
@@ -18,9 +31,10 @@ export interface WeatherHourly {
   snowfall: number[];
   cloudcover: number[];
   visibility: number[];
+  shortwave_radiation?: number[];
 }
 
-export interface WeatherDaily {
+export interface DailyData {
   time: string[];
   temperature_2m_max: number[];
   temperature_2m_min: number[];
@@ -30,6 +44,48 @@ export interface WeatherDaily {
   windspeed_10m_max: number[];
 }
 
+export interface WaterTemperature {
+  temperature: number | null;
+  source: "real" | "calculated" | "unavailable";
+}
+
+export interface Water {
+  sea: WaterTemperature;
+  lake: WaterTemperature;
+  river: WaterTemperature;
+}
+
+export interface DayHour {
+  temp: number;
+  humidity: number;
+  precip: number;
+  windgust: number;
+  windspeed: number;
+  uvindex: number;
+  conditions: string;
+}
+
+export interface Day {
+  temp: number;
+  humidity: number;
+  precip: number;
+  windgust: number;
+  windspeed: number;
+  uvindex: number;
+  conditions: string;
+  hours: DayHour[];
+}
+
+export interface CurrentConditions {
+  temp: number;
+  humidity: number;
+  precip: number;
+  windgust: number;
+  windspeed: number;
+  uvindex: number;
+  conditions: string;
+}
+
 export interface WeatherResponse {
   city: string;
   coords: {
@@ -37,9 +93,19 @@ export interface WeatherResponse {
     lon: number;
   };
   current: WeatherCurrent;
-  hourly: WeatherHourly;
-  daily: WeatherDaily;
+  hourly: HourlyData;
+  daily: DailyData;
   sources: string[];
+  water: Water;
+  days: Day[];
+  currentConditions: CurrentConditions;
+  queryCost?: number;
+  latitude?: number;
+  longitude?: number;
+  resolvedAddress?: string;
+  address?: string;
+  timezone?: string;
+  tzoffset?: number;
 }
 
 export interface CityCoords {
