@@ -1,0 +1,37 @@
+{
+  "sourceLocale": "en",
+  "targetLocales": [
+    "uk",
+    "pl",
+    "de",
+    "fr",
+    "es",
+    "it",
+    "pt",
+    "nl",
+    "sv",
+    "no",
+    "da",
+    "fi",
+    "et",
+    "lv",
+    "lt",
+    "cs",
+    "sk",
+    "hu",
+    "ro",
+    "bg",
+    "el",
+    "tr",
+    "hr",
+    "sl",
+    "sr"
+  ],
+  "files": [
+    {
+      "pattern": "public/locales/en/translation.json"
+    }
+  ],
+  "orgId": "org_I4elWreQkyWZUMsTJyDe",
+  "engineId": "eng_3jV7taeCPMIhz2nYVTYi"
+}

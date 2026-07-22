@@ -4,40 +4,129 @@
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 24px;
   background: #001529;
+  gap: 20px;
+  height: 64px;
 
-  .logo {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 40px;
-    white-space: nowrap;
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
 
-    background: linear-gradient(
-      135deg,
-      #ff6b6b,
-      #feca57,
-      #48dbfb,
-      #ff9ff3,
-      #54a0ff,
-      #5f27cd
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    .logo {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      white-space: nowrap;
+      text-decoration: none;
+      background: linear-gradient(
+        135deg,
+        #ff6b6b,
+        #feca57,
+        #48dbfb,
+        #ff9ff3,
+        #54a0ff,
+        #5f27cd
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .geocode-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 20px;
+      transition:
+        color 0.3s,
+        transform 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+        transform: scale(1.1);
+      }
+    }
   }
 
-  .header-menu {
+  .search-wrapper {
     flex: 1;
-    background: transparent;
-    border-bottom: none;
-    min-width: 0;
+    max-width: 350px;
+    min-width: 120px;
+
+    .search-input {
+      width: 100%;
+
+      .ant-input {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        text-overflow: ellipsis;
+        transition:
+          background 0.3s,
+          border-color 0.3s;
+        font-size: 14px;
+        padding: 4px 11px;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        &:focus {
+          background: rgba(255, 255, 255, 0.2);
+          border-color: #1890ff;
+        }
+
+        &:focus::placeholder {
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      .ant-input-group-addon {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+
+        .ant-btn {
+          background: transparent;
+          border: none;
+          color: #fff;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.15);
+          }
+        }
+      }
+
+      &:hover .ant-input {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+    }
   }
 
-  .user-avatar {
-    margin-left: 20px;
-    background: #87d068;
+  .language-trigger {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+
+@-moz-document url-prefix() {
+  .app-header .search-wrapper .search-input:hover .ant-input {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header .search-wrapper .search-input .ant-input::placeholder {
+    font-size: 12px;
   }
 }

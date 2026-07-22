@@ -1,0 +1,339 @@
+.weather-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  min-height: calc(100vh - 112px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .section-title {
+    margin: 24px 0 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+  }
+
+  .weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    .city-name {
+      margin: 0;
+      font-size: 28px;
+
+      .anticon {
+        font-size: 24px;
+      }
+    }
+
+    .current-temp {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+
+      .temp-value {
+        font-size: 42px;
+        font-weight: 700;
+        color: #1890ff;
+      }
+
+      .temp-condition {
+        font-size: 16px;
+        color: #888;
+      }
+    }
+  }
+
+  .water-temps {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+
+    .ant-tag {
+      font-size: 14px;
+      padding: 4px 12px;
+      border-radius: 16px;
+    }
+  }
+
+  .hourly-scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 12px 4px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #1890ff;
+      border-radius: 10px;
+    }
+
+    .hour-item {
+      flex: 0 0 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      scroll-snap-align: start;
+      padding: 8px 4px;
+      background: #fafafa;
+      border-radius: 12px;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #f0f0f0;
+      }
+
+      .hour-time {
+        font-size: 12px;
+        color: #888;
+        font-weight: 500;
+      }
+
+      .hour-icon {
+        font-size: 28px;
+      }
+
+      .hour-temp {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+  }
+
+  .day-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .day-label {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .day-details {
+    background: #fafafa;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    transition: background 0.3s;
+
+    .day-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px 24px;
+      flex: 1;
+
+      .stat-item {
+        display: flex;
+        flex-direction: column;
+
+        .ant-typography-secondary {
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #999;
+        }
+
+        .ant-typography-strong {
+          font-size: 18px;
+          color: #333;
+        }
+
+        .temp-high {
+          color: #ff4d4f;
+        }
+
+        .temp-low {
+          color: #1890ff;
+        }
+      }
+    }
+
+    .day-condition {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 100px;
+
+      .condition-icon {
+        font-size: 48px;
+      }
+
+      .condition-text {
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+      }
+    }
+  }
+
+  .day-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 8px 0 16px;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #1890ff;
+      border-radius: 10px;
+    }
+
+    .day-item {
+      flex: 0 0 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px 8px;
+      background: #fafafa;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 2px solid transparent;
+
+      &:hover {
+        background: #f0f0f0;
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        background: #e6f7ff;
+        border-color: #1890ff;
+        box-shadow: 0 2px 8px rgba(24, 144, 255, 0.2);
+      }
+
+      .day-name {
+        font-size: 13px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 4px;
+      }
+
+      .day-date {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+        margin-top: -4px;
+      }
+
+      .day-icon {
+        font-size: 28px;
+        margin-bottom: 4px;
+      }
+
+      .day-temps {
+        display: flex;
+        gap: 8px;
+        font-size: 14px;
+
+        .day-high {
+          color: #ff4d4f;
+        }
+
+        .day-low {
+          color: #1890ff;
+        }
+      }
+    }
+  }
+
+  .weather-card {
+    .simple-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+
+      > div {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .weather-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      .city-name {
+        font-size: 22px;
+      }
+
+      .current-temp .temp-value {
+        font-size: 32px;
+      }
+    }
+
+    .day-details {
+      flex-direction: column;
+      align-items: stretch;
+
+      .day-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .day-condition {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+
+        .condition-icon {
+          font-size: 36px;
+        }
+      }
+    }
+
+    .day-navigation {
+      .day-label {
+        font-size: 16px;
+      }
+    }
+
+    .day-item {
+      flex: 0 0 70px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .day-stats {
+      grid-template-columns: 1fr 1fr !important;
+    }
+  }
+}

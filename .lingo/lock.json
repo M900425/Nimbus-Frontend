@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "files": {
+    "public/locales/bg/translation.json": {
+      "sha256": "3ad46d7eac955205f590499a4840556f51ddc249ea7f26c1e951731466a82ee6"
+    },
+    "public/locales/cs/translation.json": {
+      "sha256": "678192631b4a7f9f403145462a86a2cb077a3f60be9e406d41caae25af91af45"
+    },
+    "public/locales/da/translation.json": {
+      "sha256": "19029202048b83659fb01b4e7751a238b5f786726aae482a7265e37804509ae8"
+    },
+    "public/locales/de/translation.json": {
+      "sha256": "adc7480c74f1fca446dc5590ed3e8d6b55f9267533d89667178bb0b02325a24e"
+    },
+    "public/locales/el/translation.json": {
+      "sha256": "c15e4cf908b18a72d607405ab8967ecee3e672433966be4feb87508e0bc2a590"
+    },
+    "public/locales/en/translation.json": {
+      "sha256": "a27e23ba2171e08e506513fb76a28e444eae5a04885de5d6d699e9a2c54d7d23"
+    },
+    "public/locales/es/translation.json": {
+      "sha256": "4a865501cff742d21f3daa97aab5b7b9fa1ed2297df9e0e4fd98ead712ca6f32"
+    },
+    "public/locales/et/translation.json": {
+      "sha256": "b73db117f4cc6b82a34ac5e26d2af1c437cdfacfe23fc6ee40efe8b7f7907dc5"
+    },
+    "public/locales/fi/translation.json": {
+      "sha256": "b34bcc08cd5f195a276562f662c75e31d891ec1b5318f870b39c2f27ba369be6"
+    },
+    "public/locales/fr/translation.json": {
+      "sha256": "3f966ddc1b8bea5c66e241abc322541b50b3a1e19198017f184c32b1d172f2cb"
+    },
+    "public/locales/hr/translation.json": {
+      "sha256": "32cca6ee5724b001bd630bb048e472a798b6b82f602914710cdb86e5dadd6d7c"
+    },
+    "public/locales/hu/translation.json": {
+      "sha256": "546b90673038373c2ffff3b16a412802cc5c71ed23cf2a4f8e07ec4197bb858f"
+    },
+    "public/locales/it/translation.json": {
+      "sha256": "1e3cc4e30704a13e1b37d20f0f85c3f109e7f8232bb3f4247caea4be9acc643d"
+    },
+    "public/locales/lt/translation.json": {
+      "sha256": "b057283ac7e13f6eff83d950bd82d82e5795cb644d482e7358394e22f53e5339"
+    },
+    "public/locales/lv/translation.json": {
+      "sha256": "20f51a5a9c297c9bf21df96e955263e75e37551354ffde0f3cda7e2e63c5db59"
+    },
+    "public/locales/nl/translation.json": {
+      "sha256": "756a710b8c0ed494cf7eafc05bda0f0957333d1cef1869f3afc38c5e3319c81d"
+    },
+    "public/locales/no/translation.json": {
+      "sha256": "58e5cd82f35d3f3227a1f4276222918f9a00bf53df95e1e6d065dfe1ff94305e"
+    },
+    "public/locales/pl/translation.json": {
+      "sha256": "c650fad9e639428fa5df38d103040c51518017b7ce1e2b04130b2f866ec951d7"
+    },
+    "public/locales/pt/translation.json": {
+      "sha256": "abe8fab24dc869362064a13602645b08d21f0c1f0dba8d42dee63c422a6f974d"
+    },
+    "public/locales/ro/translation.json": {
+      "sha256": "5509033414a68c9be7974d684929d212cec63d1837cbb8245c2a6a23b53aac24"
+    },
+    "public/locales/sk/translation.json": {
+      "sha256": "59bd61b7f762be6092b8d7430fbc4913db935c5a257259eb3cb66a207e725b04"
+    },
+    "public/locales/sl/translation.json": {
+      "sha256": "68cf356959070b0655ee3a9c2f8cc69f111acb0599fe26da1d7b8703410cd7a9"
+    },
+    "public/locales/sr/translation.json": {
+      "sha256": "a4f97d58e52532e7082045ea9ae7e059bfabc631b4bfc298a6322183d8705e3a"
+    },
+    "public/locales/sv/translation.json": {
+      "sha256": "aefb0cbeedff391992588f92aa887203771c5ff781c578a6c15ab08fc6955740"
+    },
+    "public/locales/tr/translation.json": {
+      "sha256": "a0627d7c4f0480dc07c1fbcfcba7e69dd9820476929dbb65bfccb06a10a7b7c2"
+    },
+    "public/locales/uk/translation.json": {
+      "sha256": "4b2fadb8ef90a149b4a61988b2c09479825854a82ee2747bdd72fdf18236e877"
+    }
+  }
+}

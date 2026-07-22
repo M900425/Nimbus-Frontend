@@ -1,0 +1,93 @@
+.geocode-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+
+  .geocode-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+
+      .header-icon {
+        font-size: 48px;
+        color: #1890ff;
+        margin-bottom: 8px;
+      }
+
+      .ant-typography {
+        margin: 0;
+      }
+
+      .ant-typography-secondary {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+    }
+
+    .search-section {
+      padding: 16px 0;
+
+      .ant-input-search {
+        max-width: 100%;
+      }
+
+      .hint {
+        margin-top: 8px;
+        color: #8c8c8c;
+        font-size: 12px;
+      }
+    }
+
+    .coords-input {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .ant-input {
+        width: 150px;
+      }
+
+      .ant-btn {
+        min-width: 120px;
+      }
+    }
+
+    .ant-tabs-tab {
+      font-size: 16px;
+    }
+  }
+
+  .error-alert {
+    margin-top: 16px;
+  }
+
+  .results-card {
+    margin-top: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    .ant-card-head-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .coords-input {
+      flex-direction: column;
+      align-items: stretch;
+
+      .ant-input {
+        width: 100% !important;
+      }
+
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -56,6 +56,7 @@ export interface Water {
 }
 
 export interface DayHour {
+  time: string;
   temp: number;
   humidity: number;
   precip: number;
@@ -67,6 +68,8 @@ export interface DayHour {
 
 export interface Day {
   temp: number;
+  tempMax?: number;
+  tempMin?: number;
   humidity: number;
   precip: number;
   windgust: number;

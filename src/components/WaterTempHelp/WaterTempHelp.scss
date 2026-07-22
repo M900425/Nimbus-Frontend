@@ -1,0 +1,11 @@
+.water-temp-help {
+  font-size: 14px;
+  color: #1890ff;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #40a9ff;
+  }
+}

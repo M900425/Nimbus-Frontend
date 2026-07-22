@@ -10,11 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lingo.dev/react": "^1.10.1",
     "@reduxjs/toolkit": "^2.12.0",
+    "@universal-i18n/react": "^3.0.5",
     "antd": "^6.5.0",
+    "i18next": "^26.3.6",
+    "i18next-http-backend": "^4.0.0",
     "react": "^19.2.7",
+    "react-auto-google-translate": "^1.0.3",
     "react-dom": "^19.2.7",
-    "react-redux": "^9.3.0"
+    "react-flagkit": "^2.0.4",
+    "react-i18next": "^17.0.10",
+    "react-redux": "^9.3.0",
+    "react-router-dom": "^7.18.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
