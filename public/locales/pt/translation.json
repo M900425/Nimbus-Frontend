@@ -76,5 +76,11 @@
   "mist": "Neblina",
   "patchy_rain": "Chuva isolada nas proximidades",
   "light_rain_shower": "Pancada de chuva fraca",
-  "moderate_rain": "Chuva moderada"
+  "moderate_rain": "Chuva moderada",
+  "show_more": "Mostrar mais",
+  "show_less": "Mostrar menos",
+  "visibility": "Visibilidade",
+  "wind_gust": "Rajada de vento",
+  "wind_direction": "Direção do vento",
+  "precipitation_now": "Precipitação agora"
 }

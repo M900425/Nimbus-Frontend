@@ -76,5 +76,11 @@
   "mist": "Dūmaka",
   "patchy_rain": "Vietām lietus tuvumā",
   "light_rain_shower": "Neliels lietusgāze",
-  "moderate_rain": "Mērens lietus"
+  "moderate_rain": "Mērens lietus",
+  "show_more": "Rādīt vairāk",
+  "show_less": "Rādīt mazāk",
+  "visibility": "Redzamība",
+  "wind_gust": "Vēja brāzma",
+  "wind_direction": "Vēja virziens",
+  "precipitation_now": "Nokrišņi tagad"
 }

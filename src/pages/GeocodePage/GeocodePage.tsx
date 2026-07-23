@@ -1,15 +1,12 @@
 import "./GeocodePage.scss";
 import { useState } from "react";
-import { Card, Input, Button, Table, Alert, Tabs, Typography } from "antd";
-import {
-  SearchOutlined,
-  EnvironmentOutlined,
-  GlobalOutlined,
-} from "@ant-design/icons";
+import { Card, Input, Button, Alert, Tabs, Typography } from "antd";
+import { SearchOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import type { GeocodeResult } from "../../types/geocode";
 import { Loader } from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
+import { ResultsList } from "./components/ResultsList/ResultsList";
 
 const { Title, Paragraph } = Typography;
 
@@ -25,7 +22,6 @@ export const GeocodePage = () => {
   const [latQuery, setLatQuery] = useState("");
   const [lonQuery, setLonQuery] = useState("");
   const navigate = useNavigate();
-
   const handleSearch = async () => {
     if (searchType === "city") {
       if (!cityQuery.trim()) return;
@@ -35,8 +31,12 @@ export const GeocodePage = () => {
 
     const url =
       searchType === "city"
-        ? `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(cityQuery)}&format=json&limit=10&addressdetails=1`
-        : `https://nominatim.openstreetmap.org/reverse?lat=${encodeURIComponent(latQuery)}&lon=${encodeURIComponent(lonQuery)}&format=json`;
+        ? `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(
+            cityQuery,
+          )}&format=json&limit=10&addressdetails=1`
+        : `https://nominatim.openstreetmap.org/reverse?lat=${encodeURIComponent(
+            latQuery,
+          )}&lon=${encodeURIComponent(lonQuery)}&format=json`;
 
     setLoading(true);
     setError(null);
@@ -76,52 +76,9 @@ export const GeocodePage = () => {
       setLoading(false);
     }
   };
-
-  const columns = [
-    {
-      title: t("location"),
-      dataIndex: "display_name",
-      key: "display_name",
-      render: (text: string) => (
-        <span>
-          <EnvironmentOutlined style={{ marginRight: 8, color: "#1890ff" }} />
-          {text}
-        </span>
-      ),
-    },
-    {
-      title: t("coordinates"),
-      key: "coords",
-      render: (_: unknown, record: GeocodeResult) => (
-        <span>
-          {parseFloat(record.lat).toFixed(4)},{" "}
-          {parseFloat(record.lon).toFixed(4)}
-        </span>
-      ),
-    },
-    {
-      title: t("type"),
-      dataIndex: "class",
-      key: "class",
-      render: (text: string) => text || "—",
-    },
-    {
-      title: t("action"),
-      key: "action",
-      render: (_: unknown, record: GeocodeResult) => (
-        <Button
-          type="link"
-          size="small"
-          onClick={() =>
-            navigate(`/weather?lat=${record.lat}&lon=${record.lon}`)
-          }
-        >
-          {t("view_weather")}
-        </Button>
-      ),
-    },
-  ];
-
+  const handleViewWeather = (lat: number, lon: number) => {
+    navigate(`/weather?lat=${lat}&lon=${lon}`);
+  };
   const tabItems = [
     {
       key: "city",
@@ -190,7 +147,6 @@ export const GeocodePage = () => {
           <Title level={2}>{t("geocoding_title")}</Title>
           <Paragraph type="secondary">{t("geocoding_desc")}</Paragraph>
         </div>
-
         <Tabs
           activeKey={searchType}
           onChange={(key) => setSearchType(key as SearchType)}
@@ -216,12 +172,10 @@ export const GeocodePage = () => {
           className="results-card"
           bordered={false}
         >
-          <Table
-            dataSource={results}
-            columns={columns}
-            rowKey="place_id"
-            pagination={{ pageSize: 5 }}
-            scroll={{ x: true }}
+          <ResultsList
+            results={results}
+            onViewWeather={handleViewWeather}
+            t={t}
           />
         </Card>
       )}

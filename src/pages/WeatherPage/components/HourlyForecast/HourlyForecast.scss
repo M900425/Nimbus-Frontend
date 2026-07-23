@@ -1,0 +1,73 @@
+.hourly-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 12px 4px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #1890ff;
+    border-radius: 10px;
+  }
+
+  .hour-item {
+    flex: 0 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    scroll-snap-align: start;
+    padding: 8px 4px;
+    background: #fafafa;
+    border-radius: 12px;
+    transition: background 0.2s;
+
+    &.active {
+      background: #1890ff;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+
+      .hour-time,
+      .hour-temp {
+        color: #fff;
+      }
+    }
+
+    &:hover {
+      background: #f0f0f0;
+    }
+
+    .hour-time {
+      font-size: 12px;
+      color: #888;
+      font-weight: 500;
+    }
+
+    .hour-icon {
+      font-size: 28px;
+    }
+
+    .hour-temp {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+}
+
+.hourly-forecast-empty {
+  padding: 16px;
+  text-align: center;
+  color: #999;
+}

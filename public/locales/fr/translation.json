@@ -76,5 +76,11 @@
   "mist": "Brume",
   "patchy_rain": "Pluie éparse à proximité",
   "light_rain_shower": "Légère averse",
-  "moderate_rain": "Pluie modérée"
+  "moderate_rain": "Pluie modérée",
+  "show_more": "Afficher plus",
+  "show_less": "Afficher moins",
+  "visibility": "Visibilité",
+  "wind_gust": "Rafale de vent",
+  "wind_direction": "Direction du vent",
+  "precipitation_now": "Précipitations actuelles"
 }

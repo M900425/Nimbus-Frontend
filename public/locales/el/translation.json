@@ -76,5 +76,11 @@
   "mist": "Καχλυβίδα",
   "patchy_rain": "Τοπικές βροχές κοντά",
   "light_rain_shower": "Ελαφρά ντους βροχής",
-  "moderate_rain": "Μέτρια βροχή"
+  "moderate_rain": "Μέτρια βροχή",
+  "show_more": "Εμφάνιση περισσότερων",
+  "show_less": "Εμφάνιση λιγότερων",
+  "visibility": "Ορατότητα",
+  "wind_gust": "Ριπή ανέμου",
+  "wind_direction": "Κατεύθυνση ανέμου",
+  "precipitation_now": "Κατακρημνίσματα τώρα"
 }

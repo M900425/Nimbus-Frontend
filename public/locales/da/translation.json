@@ -76,5 +76,11 @@
   "mist": "Dis",
   "patchy_rain": "Stedvis regn i nærheden",
   "light_rain_shower": "Let regnbyge",
-  "moderate_rain": "Moderat regn"
+  "moderate_rain": "Moderat regn",
+  "show_more": "Vis mere",
+  "show_less": "Vis mindre",
+  "visibility": "Sigtbarhed",
+  "wind_gust": "Vindstød",
+  "wind_direction": "Vindretning",
+  "precipitation_now": "Nedbør nu"
 }

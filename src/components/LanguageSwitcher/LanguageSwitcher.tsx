@@ -37,12 +37,10 @@ export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const currentLang =
     languages.find((l) => l.code === i18n.language) || languages[0];
-
   const handleChangeLanguage = (code: string) => {
     localStorage.setItem("app-locale", code);
     i18n.changeLanguage(code);
   };
-
   const items: MenuProps["items"] = languages.map((lang) => ({
     key: lang.code,
     label: (

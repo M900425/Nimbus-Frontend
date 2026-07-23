@@ -76,5 +76,11 @@
   "mist": "Foschia",
   "patchy_rain": "Pioggia sparsa nelle vicinanze",
   "light_rain_shower": "Acquazzone leggero",
-  "moderate_rain": "Pioggia moderata"
+  "moderate_rain": "Pioggia moderata",
+  "show_more": "Mostra di più",
+  "show_less": "Mostra meno",
+  "visibility": "Visibilità",
+  "wind_gust": "Raffica di vento",
+  "wind_direction": "Direzione del vento",
+  "precipitation_now": "Precipitazioni in corso"
 }

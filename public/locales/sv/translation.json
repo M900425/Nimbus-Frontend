@@ -76,5 +76,11 @@
   "mist": "Dis",
   "patchy_rain": "Lokalt regn i närheten",
   "light_rain_shower": "Lätt regnskur",
-  "moderate_rain": "Måttligt regn"
+  "moderate_rain": "Måttligt regn",
+  "show_more": "Visa mer",
+  "show_less": "Visa mindre",
+  "visibility": "Sikt",
+  "wind_gust": "Vindby",
+  "wind_direction": "Vindriktning",
+  "precipitation_now": "Nederbörd just nu"
 }

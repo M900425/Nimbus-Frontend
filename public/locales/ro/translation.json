@@ -76,5 +76,11 @@
   "mist": "Brumă",
   "patchy_rain": "Ploi izolate în apropiere",
   "light_rain_shower": "Aversă ușoară de ploaie",
-  "moderate_rain": "Ploaie moderată"
+  "moderate_rain": "Ploaie moderată",
+  "show_more": "Arată mai mult",
+  "show_less": "Arată mai puțin",
+  "visibility": "Vizibilitate",
+  "wind_gust": "Rafală de vânt",
+  "wind_direction": "Direcția vântului",
+  "precipitation_now": "Precipitații acum"
 }

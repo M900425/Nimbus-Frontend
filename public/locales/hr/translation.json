@@ -76,5 +76,11 @@
   "mist": "Izmaglica",
   "patchy_rain": "Mjestimična kiša u blizini",
   "light_rain_shower": "Lagana pljusak",
-  "moderate_rain": "Umjerena kiša"
+  "moderate_rain": "Umjerena kiša",
+  "show_more": "Prikaži više",
+  "show_less": "Prikaži manje",
+  "visibility": "Vidljivost",
+  "wind_gust": "Udari vjetra",
+  "wind_direction": "Smjer vjetra",
+  "precipitation_now": "Trenutne oborine"
 }

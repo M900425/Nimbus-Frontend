@@ -76,5 +76,11 @@
   "mist": "Мъгливо",
   "patchy_rain": "Локален дъжд наблизо",
   "light_rain_shower": "Слаб дъждовен порой",
-  "moderate_rain": "Умерен дъжд"
+  "moderate_rain": "Умерен дъжд",
+  "show_more": "Покажи повече",
+  "show_less": "Покажи по-малко",
+  "visibility": "Видимост",
+  "wind_gust": "Пориви на вятъра",
+  "wind_direction": "Посока на вятъра",
+  "precipitation_now": "Валежи в момента"
 }

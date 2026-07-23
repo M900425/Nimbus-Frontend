@@ -5,7 +5,7 @@ import "./WaterTempHelp.scss";
 
 type WaterType = "sea" | "lake" | "river";
 
-interface WaterTempHelpProps {
+interface IProps {
   type: WaterType;
 }
 
@@ -15,7 +15,7 @@ const tooltipKeyMap: Record<WaterType, string> = {
   river: "river_tooltip",
 };
 
-export const WaterTempHelp = ({ type }: WaterTempHelpProps) => {
+export const WaterTempHelp = ({ type }: IProps) => {
   const { t } = useTranslation();
   const key = tooltipKeyMap[type];
   return (

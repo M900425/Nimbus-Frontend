@@ -76,5 +76,16 @@
   "mist": "Mist",
   "patchy_rain": "Patchy rain nearby",
   "light_rain_shower": "Light rain shower",
-  "moderate_rain": "Moderate rain"
+  "moderate_rain": "Moderate rain",
+  "show_more": "Show more",
+  "show_less": "Show less",
+  "visibility": "Visibility",
+  "wind_gust": "Wind gust",
+  "wind_direction": "Wind direction",
+  "precipitation_now": "Precipitation now",
+  "no_hourly_data": "No hourly data available",
+  "details": "Details",
+  "copied": "Copied to clipboard",
+  "copy_coords": "Copy coordinates",
+  "copy_error": "Failed to copy coordinates"
 }

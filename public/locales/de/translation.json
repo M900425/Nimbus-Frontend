@@ -76,5 +76,11 @@
   "mist": "Dunst",
   "patchy_rain": "Vereinzelte Regenschauer in der Nähe",
   "light_rain_shower": "Leichter Regenschauer",
-  "moderate_rain": "Mäßiger Regen"
+  "moderate_rain": "Mäßiger Regen",
+  "show_more": "Mehr anzeigen",
+  "show_less": "Weniger anzeigen",
+  "visibility": "Sichtweite",
+  "wind_gust": "Windböe",
+  "wind_direction": "Windrichtung",
+  "precipitation_now": "Aktueller Niederschlag"
 }

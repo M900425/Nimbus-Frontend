@@ -76,5 +76,11 @@
   "mist": "Utua",
   "patchy_rain": "Paikoin sadetta lähialueella",
   "light_rain_shower": "Kevyt sadekuuro",
-  "moderate_rain": "Kohtalaista sadetta"
+  "moderate_rain": "Kohtalaista sadetta",
+  "show_more": "Näytä lisää",
+  "show_less": "Näytä vähemmän",
+  "visibility": "Näkyvyys",
+  "wind_gust": "Tuulenpuuska",
+  "wind_direction": "Tuulen suunta",
+  "precipitation_now": "Sademäärä nyt"
 }

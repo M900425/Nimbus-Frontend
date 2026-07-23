@@ -76,5 +76,11 @@
   "mist": "Rahla megla",
   "patchy_rain": "Krajevni dež v bližini",
   "light_rain_shower": "Lahek ploha",
-  "moderate_rain": "Zmeren dež"
+  "moderate_rain": "Zmeren dež",
+  "show_more": "Pokaži več",
+  "show_less": "Pokaži manj",
+  "visibility": "Vidljivost",
+  "wind_gust": "Sunki vetra",
+  "wind_direction": "Smer vetra",
+  "precipitation_now": "Padavine zdaj"
 }

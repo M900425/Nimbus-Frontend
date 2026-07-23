@@ -76,5 +76,11 @@
   "mist": "Pára",
   "patchy_rain": "Helyenként eső a közelben",
   "light_rain_shower": "Gyenge zápor",
-  "moderate_rain": "Mérsékelt eső"
+  "moderate_rain": "Mérsékelt eső",
+  "show_more": "Több megjelenítése",
+  "show_less": "Kevesebb megjelenítése",
+  "visibility": "Láthatóság",
+  "wind_gust": "Széllökés",
+  "wind_direction": "Szélirány",
+  "precipitation_now": "Jelenlegi csapadék"
 }

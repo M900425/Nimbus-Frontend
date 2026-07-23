@@ -62,18 +62,16 @@
     flex: 1;
     max-width: 350px;
     min-width: 120px;
+    position: relative; // для абсолютного позиціонування дропдауна
 
     .search-input {
       width: 100%;
 
+      // Стилізація звичайного Input.Search (взяті з твого робочого варіанта)
       .ant-input {
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.2);
         color: #fff;
-        text-overflow: ellipsis;
-        transition:
-          background 0.3s,
-          border-color 0.3s;
         font-size: 14px;
         padding: 4px 11px;
 
@@ -111,17 +109,41 @@
         border-color: rgba(255, 255, 255, 0.3);
       }
     }
+
+    // Кастомний дропдаун
+    .suggestions-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #1a2233;
+      border-radius: 0 0 8px 8px;
+      margin-top: 4px;
+      padding: 4px 0;
+      list-style: none;
+      z-index: 1050;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      max-height: 200px;
+      overflow-y: auto;
+
+      .suggestion-item {
+        padding: 8px 12px;
+        color: #fff;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
   }
 
   .language-trigger {
     margin-left: auto;
     flex-shrink: 0;
-  }
-}
-
-@-moz-document url-prefix() {
-  .app-header .search-wrapper .search-input:hover .ant-input {
-    width: 300px;
   }
 }
 

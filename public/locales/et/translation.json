@@ -76,5 +76,11 @@
   "mist": "Uduvine",
   "patchy_rain": "Kohati vihmasadu lähedal",
   "light_rain_shower": "Kerge vihmahoog",
-  "moderate_rain": "Mõõdukas vihm"
+  "moderate_rain": "Mõõdukas vihm",
+  "show_more": "Näita rohkem",
+  "show_less": "Näita vähem",
+  "visibility": "Nähtavus",
+  "wind_gust": "Tuuleiil",
+  "wind_direction": "Tuule suund",
+  "precipitation_now": "Sademed praegu"
 }

@@ -67,6 +67,7 @@ export interface DayHour {
 }
 
 export interface Day {
+  time: string;
   temp: number;
   tempMax?: number;
   tempMin?: number;

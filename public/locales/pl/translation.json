@@ -76,5 +76,11 @@
   "mist": "Zamglenie",
   "patchy_rain": "Przelotny deszcz w pobliżu",
   "light_rain_shower": "Lekki przelotny deszcz",
-  "moderate_rain": "Umiarkowany deszcz"
+  "moderate_rain": "Umiarkowany deszcz",
+  "show_more": "Pokaż więcej",
+  "show_less": "Pokaż mniej",
+  "visibility": "Widoczność",
+  "wind_gust": "Podmuch wiatru",
+  "wind_direction": "Kierunek wiatru",
+  "precipitation_now": "Opady teraz"
 }

@@ -76,5 +76,11 @@
   "mist": "Migla",
   "patchy_rain": "Vietomis lietus",
   "light_rain_shower": "Silpnas liūtis",
-  "moderate_rain": "Vidutinis lietus"
+  "moderate_rain": "Vidutinis lietus",
+  "show_more": "Rodyti daugiau",
+  "show_less": "Rodyti mažiau",
+  "visibility": "Matomumas",
+  "wind_gust": "Vėjo gūsis",
+  "wind_direction": "Vėjo kryptis",
+  "precipitation_now": "Krituliai dabar"
 }

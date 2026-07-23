@@ -1,8 +1,12 @@
 .home-page {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px 20px;
   animation: fadeIn 0.6s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 
   .hero-section {
     text-align: center;
@@ -15,21 +19,38 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        text-align: left;
+        font-size: 24px;
+      }
     }
 
     .hero-subtitle {
+      text-align: left;
       font-size: 18px;
       color: #595959;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
     }
   }
 
-  .cards-container {
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
     width: 100%;
+
+    .feature-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: calc(50% - 12px);
+    }
   }
 
   .feature-card {
+    width: 100%;
     background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -71,6 +92,19 @@
       font-size: 14px;
       font-weight: 600;
       color: #d4380d;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+
+      .feature-card:last-child:nth-child(odd) {
+        grid-column: auto;
+        justify-self: auto;
+        max-width: 100%;
+      }
     }
   }
 }

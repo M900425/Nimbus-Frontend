@@ -1,5 +1,5 @@
 import "./HomePage.scss";
-import { Typography, Card, Space } from "antd";
+import { Typography, Card } from "antd";
 import {
   CloudOutlined,
   DatabaseOutlined,
@@ -23,8 +23,7 @@ export const HomePage = () => {
         </Title>
         <Paragraph className="hero-subtitle">{t("enter_city_desc")}</Paragraph>
       </div>
-
-      <Space direction="vertical" size="large" className="cards-container">
+      <div className="cards-grid">
         <Card className="feature-card" bordered={false}>
           <div className="card-header">
             <CloudOutlined className="card-icon" />
@@ -39,7 +38,6 @@ export const HomePage = () => {
             — {t("lake_tooltip")}
           </Paragraph>
         </Card>
-
         <Card className="feature-card" bordered={false}>
           <div className="card-header">
             <DatabaseOutlined className="card-icon" />
@@ -47,7 +45,6 @@ export const HomePage = () => {
           </div>
           <Paragraph>{t("aggregates_info")}</Paragraph>
         </Card>
-
         <Card className="feature-card" bordered={false}>
           <div className="card-header">
             <GlobalOutlined className="card-icon" />
@@ -58,7 +55,6 @@ export const HomePage = () => {
             {t("prefer_exact_suffix")}
           </Paragraph>
         </Card>
-
         <Card className="feature-card" bordered={false}>
           <div className="card-header">
             <EnvironmentOutlined className="card-icon" />
@@ -70,7 +66,6 @@ export const HomePage = () => {
             {t("need_coords_suffix")}
           </Paragraph>
         </Card>
-
         <Card className="feature-card" bordered={false}>
           <div className="card-header">
             <ThunderboltOutlined className="card-icon" />
@@ -82,7 +77,7 @@ export const HomePage = () => {
             {t("water_calculated")}
           </Paragraph>
         </Card>
-      </Space>
+      </div>
     </div>
   );
 };

@@ -76,5 +76,11 @@
   "mist": "Opar",
   "patchy_rain": "Místy déšť",
   "light_rain_shower": "Slabá přeháňka",
-  "moderate_rain": "Mírný déšť"
+  "moderate_rain": "Mírný déšť",
+  "show_more": "Zobrazit více",
+  "show_less": "Zobrazit méně",
+  "visibility": "Viditelnost",
+  "wind_gust": "Nárazy větru",
+  "wind_direction": "Směr větru",
+  "precipitation_now": "Aktuální srážky"
 }

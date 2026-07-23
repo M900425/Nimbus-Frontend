@@ -76,5 +76,11 @@
   "mist": "Nevel",
   "patchy_rain": "Plaatselijk regen in de buurt",
   "light_rain_shower": "Lichte regenbui",
-  "moderate_rain": "Matige regen"
+  "moderate_rain": "Matige regen",
+  "show_more": "Meer weergeven",
+  "show_less": "Minder weergeven",
+  "visibility": "Zichtbaarheid",
+  "wind_gust": "Windstoot",
+  "wind_direction": "Windrichting",
+  "precipitation_now": "Neerslag nu"
 }

@@ -76,5 +76,11 @@
   "mist": "Pus",
   "patchy_rain": "Yakın çevrede yer yer yağmur",
   "light_rain_shower": "Hafif sağanak yağış",
-  "moderate_rain": "Orta şiddetli yağmur"
+  "moderate_rain": "Orta şiddetli yağmur",
+  "show_more": "Daha fazla göster",
+  "show_less": "Daha az göster",
+  "visibility": "Görüş mesafesi",
+  "wind_gust": "Rüzgar hamlesi",
+  "wind_direction": "Rüzgar yönü",
+  "precipitation_now": "Şu anki yağış"
 }

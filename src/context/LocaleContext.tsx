@@ -8,17 +8,16 @@ interface LocaleContextType {
 
 const LocaleContext = createContext<LocaleContextType | null>(null);
 
-interface LocaleProviderProps {
+interface IProps {
   children: ReactNode;
 }
 
-export const LocaleProvider = ({ children }: LocaleProviderProps) => {
+export const LocaleProvider = ({ children }: IProps) => {
   const [locale, setLocale] = useState(() => {
     const saved = localStorage.getItem("app-locale");
     if (saved) return saved;
     return navigator.language || "en-US";
   });
-
   const handleSetLocale = (newLocale: string) => {
     setLocale(newLocale);
     localStorage.setItem("app-locale", newLocale);
