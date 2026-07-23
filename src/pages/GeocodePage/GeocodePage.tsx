@@ -3,22 +3,38 @@ import { useState } from "react";
 import { Card, Input, Button, Alert, Tabs, Typography } from "antd";
 import { SearchOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import type { GeocodeResult } from "../../types/geocode";
 import { Loader } from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
 import { ResultsList } from "./components/ResultsList/ResultsList";
-import {
-  useLazySearchCityQuery,
-  useReverseGeocodeQuery,
-} from "../../store/api/geocodingApi";
-import { skipToken } from "@reduxjs/toolkit/query/react";
-import type { GeocodeResult } from "../../types/geocode";
 
 const { Title, Paragraph } = Typography;
 
 type SearchType = "city" | "coords";
+async function fetchWithRetry(
+  url: string,
+  options: RequestInit,
+  retries = 2,
+): Promise<Response> {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      const response = await fetch(url, options);
+      if (response.status === 429 && i < retries) {
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        continue;
+      }
+      return response;
+    } catch (err) {
+      if (i === retries) throw err;
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    }
+  }
+  throw new Error("Failed to fetch");
+}
 
 export const GeocodePage = () => {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<GeocodeResult[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [searchType, setSearchType] = useState<SearchType>("city");
@@ -26,49 +42,65 @@ export const GeocodePage = () => {
   const [latQuery, setLatQuery] = useState("");
   const [lonQuery, setLonQuery] = useState("");
   const navigate = useNavigate();
-  const [triggerSearch, { isLoading: isCityLoading }] =
-    useLazySearchCityQuery();
-  const {
-    data: reverseData,
-    isLoading: isCoordsLoading,
-    isError: isReverseError,
-    error: reverseError,
-  } = useReverseGeocodeQuery(
-    latQuery && lonQuery
-      ? { lat: parseFloat(latQuery), lon: parseFloat(lonQuery) }
-      : skipToken,
-  );
-  const loading = isCityLoading || isCoordsLoading;
   const handleSearch = async () => {
+    if (searchType === "city") {
+      if (!cityQuery.trim()) return;
+    } else {
+      if (!latQuery.trim() || !lonQuery.trim()) return;
+    }
+    const url =
+      searchType === "city"
+        ? `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(
+            cityQuery,
+          )}&format=json&limit=10&addressdetails=1`
+        : `https://nominatim.openstreetmap.org/reverse?lat=${encodeURIComponent(
+            latQuery,
+          )}&lon=${encodeURIComponent(lonQuery)}&format=json`;
+
+    setLoading(true);
     setError(null);
     setResults([]);
 
-    if (searchType === "city") {
-      if (!cityQuery.trim()) return;
+    try {
+      const response = await fetchWithRetry(url, {
+        headers: {
+          "User-Agent": "NimbusWeatherApp/1.0 (your-email@example.com)",
+        },
+      });
 
-      try {
-        const data = await triggerSearch(cityQuery).unwrap();
+      if (!response.ok) {
+        throw new Error(`HTTP error ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (searchType === "coords") {
+        if (data && data.display_name) {
+          setResults([data]);
+        } else {
+          throw new Error(t("location_not_found"));
+        }
+      } else {
         if (data && data.length > 0) {
           setResults(data);
         } else {
-          setError(t("location_not_found"));
+          throw new Error(t("location_not_found"));
         }
-      } catch {
-        setError(t("something_wrong"));
       }
-    } else {
-      if (!latQuery.trim() || !lonQuery.trim()) return;
-
-      if (reverseData) {
-        setResults([reverseData]);
-      } else if (isReverseError) {
-        const errMsg =
-          reverseError && "data" in reverseError
-            ? (reverseError.data as { error?: string })?.error ||
-              t("location_not_found")
-            : t("location_not_found");
-        setError(errMsg);
+    } catch (err: unknown) {
+      let message = t("something_wrong");
+      if (err instanceof Error) {
+        if (err.message === "Failed to fetch") {
+          message = t("network_error_check_connection");
+        } else if (err.message.includes("HTTP error")) {
+          message = t("server_error");
+        } else if (err.message !== t("location_not_found")) {
+          message = err.message;
+        }
       }
+      setError(message);
+    } finally {
+      setLoading(false);
     }
   };
   const handleViewWeather = (lat: number, lon: number) => {
