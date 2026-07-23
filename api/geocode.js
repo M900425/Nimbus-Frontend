@@ -1,3 +1,4 @@
+// api/geocode.js
 export default async function handler(req, res) {
   const { q, lat, lon } = req.query;
 
@@ -16,13 +17,19 @@ export default async function handler(req, res) {
         "User-Agent": "NimbusWeatherApp/1.0 (your-email@example.com)",
       },
     });
+
     if (!response.ok) {
-      throw new Error(`Nominatim responded with ${response.status}`);
+      // повертаємо реальну помилку від Nominatim
+      const errorText = await response.text();
+      return res
+        .status(response.status)
+        .json({ error: `Nominatim error ${response.status}: ${errorText}` });
     }
+
     const data = await response.json();
     res.status(200).json(data);
   } catch (error) {
-    console.error("Geocode error:", error.message);
-    res.status(500).json({ error: "Failed to fetch data" });
+    // повертаємо реальне повідомлення винятку
+    res.status(500).json({ error: error.message || "Unknown error" });
   }
 }
