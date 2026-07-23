@@ -19,10 +19,13 @@ interface OpenMeteoResult {
   country?: string;
 }
 
-async function searchCityOpenMeteo(query: string): Promise<GeocodeResult[]> {
+async function searchCityOpenMeteo(
+  query: string,
+  language: string,
+): Promise<GeocodeResult[]> {
   const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
     query,
-  )}&count=10&language=en&format=json`;
+  )}&count=10&language=${language}&format=json`;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Open-Meteo error ${response.status}`);
   const data = await response.json();
@@ -44,7 +47,7 @@ async function searchCityOpenMeteo(query: string): Promise<GeocodeResult[]> {
 }
 
 export const GeocodePage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<GeocodeResult[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -58,7 +61,7 @@ export const GeocodePage = () => {
     setResults([]);
 
     try {
-      const data = await searchCityOpenMeteo(cityQuery);
+      const data = await searchCityOpenMeteo(cityQuery, i18n.language);
       if (data.length > 0) {
         setResults(data);
       } else {
@@ -78,7 +81,6 @@ export const GeocodePage = () => {
       setLoading(false);
     }
   };
-
   const handleViewWeather = (lat: number, lon: number) => {
     navigate(`/weather?lat=${lat}&lon=${lon}`);
   };
