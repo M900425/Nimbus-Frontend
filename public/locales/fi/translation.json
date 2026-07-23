@@ -107,5 +107,7 @@
   "type_man_made": "Ihmisen rakentama",
   "type_public_transport": "Julkinen liikenne",
   "type_boundary": "Raja",
-  "type_other": "Muu"
+  "type_other": "Muu",
+  "network_error_check_connection": "Verkkovirhe. Tarkista yhteytesi tai yritä uudelleen.",
+  "server_error": "Palvelinvirhe. Yritä myöhemmin uudelleen."
 }

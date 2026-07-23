@@ -107,5 +107,7 @@
   "type_man_made": "Umetna struktura",
   "type_public_transport": "Javni prevoz",
   "type_boundary": "Meja",
-  "type_other": "Drugo"
+  "type_other": "Drugo",
+  "network_error_check_connection": "Napaka omrežja. Preverite svojo povezavo ali poskusite znova.",
+  "server_error": "Napaka strežnika. Poskusite znova pozneje."
 }

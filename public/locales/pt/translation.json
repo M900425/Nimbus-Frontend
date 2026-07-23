@@ -107,5 +107,7 @@
   "type_man_made": "Construção Humana",
   "type_public_transport": "Transporte Público",
   "type_boundary": "Fronteira",
-  "type_other": "Outro"
+  "type_other": "Outro",
+  "network_error_check_connection": "Erro de rede. Verifique a sua ligação ou tente novamente.",
+  "server_error": "Erro no servidor. Por favor, tente novamente mais tarde."
 }

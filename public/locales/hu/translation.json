@@ -107,5 +107,7 @@
   "type_man_made": "Ember alkotta",
   "type_public_transport": "Tömegközlekedés",
   "type_boundary": "Határvonal",
-  "type_other": "Egyéb"
+  "type_other": "Egyéb",
+  "network_error_check_connection": "Hálózati hiba. Ellenőrizze a kapcsolatát, vagy próbálja újra.",
+  "server_error": "Szerverhiba. Kérjük, próbálja újra később."
 }

@@ -107,5 +107,7 @@
   "type_man_made": "Cilvēka veidots",
   "type_public_transport": "Sabiedriskais transports",
   "type_boundary": "Robeža",
-  "type_other": "Cits"
+  "type_other": "Cits",
+  "network_error_check_connection": "Tīkla kļūda. Pārbaudiet savienojumu vai mēģiniet vēlreiz.",
+  "server_error": "Servera kļūda. Lūdzu, mēģiniet vēlāk."
 }

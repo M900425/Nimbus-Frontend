@@ -107,5 +107,7 @@
   "type_man_made": "Изкуствен обект",
   "type_public_transport": "Обществен транспорт",
   "type_boundary": "Граница",
-  "type_other": "Друго"
+  "type_other": "Друго",
+  "network_error_check_connection": "Мрежова грешка. Проверете връзката си или опитайте отново.",
+  "server_error": "Грешка в сървъра. Моля, опитайте отново по-късно."
 }

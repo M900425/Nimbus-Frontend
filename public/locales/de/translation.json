@@ -107,5 +107,7 @@
   "type_man_made": "Vom Menschen geschaffen",
   "type_public_transport": "Öffentlicher Nahverkehr",
   "type_boundary": "Grenze",
-  "type_other": "Sonstiges"
+  "type_other": "Sonstiges",
+  "network_error_check_connection": "Netzwerkfehler. Überprüfe deine Verbindung oder versuche es erneut.",
+  "server_error": "Serverfehler. Bitte versuche es später erneut."
 }

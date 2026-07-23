@@ -107,5 +107,7 @@
   "type_man_made": "Žmogaus sukurta",
   "type_public_transport": "Viešasis transportas",
   "type_boundary": "Riba",
-  "type_other": "Kita"
+  "type_other": "Kita",
+  "network_error_check_connection": "Tinklo klaida. Patikrinkite ryšį arba bandykite dar kartą.",
+  "server_error": "Serverio klaida. Bandykite dar kartą vėliau."
 }

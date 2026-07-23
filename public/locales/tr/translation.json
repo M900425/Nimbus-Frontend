@@ -107,5 +107,7 @@
   "type_man_made": "İnsan Yapımı",
   "type_public_transport": "Toplu Taşıma",
   "type_boundary": "Sınır",
-  "type_other": "Diğer"
+  "type_other": "Diğer",
+  "network_error_check_connection": "Ağ hatası. Bağlantınızı kontrol edin veya tekrar deneyin.",
+  "server_error": "Sunucu hatası. Lütfen daha sonra tekrar deneyin."
 }

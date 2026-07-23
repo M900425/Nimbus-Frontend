@@ -107,5 +107,7 @@
   "type_man_made": "Artificiel",
   "type_public_transport": "Transport en commun",
   "type_boundary": "Frontière",
-  "type_other": "Autre"
+  "type_other": "Autre",
+  "network_error_check_connection": "Erreur réseau. Vérifiez votre connexion ou réessayez.",
+  "server_error": "Erreur serveur. Veuillez réessayer ultérieurement."
 }

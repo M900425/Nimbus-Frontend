@@ -107,5 +107,7 @@
   "type_man_made": "Ljudska građevina",
   "type_public_transport": "Javni prijevoz",
   "type_boundary": "Granica",
-  "type_other": "Ostalo"
+  "type_other": "Ostalo",
+  "network_error_check_connection": "Mrežna pogreška. Provjerite svoju vezu ili pokušajte ponovno.",
+  "server_error": "Pogreška poslužitelja. Molimo pokušajte ponovo kasnije."
 }

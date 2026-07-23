@@ -107,5 +107,7 @@
   "type_man_made": "Construit de om",
   "type_public_transport": "Transport public",
   "type_boundary": "Limită",
-  "type_other": "Altele"
+  "type_other": "Altele",
+  "network_error_check_connection": "Eroare de rețea. Verificați conexiunea sau încercați din nou.",
+  "server_error": "Eroare de server. Vă rugăm să încercați din nou mai târziu."
 }

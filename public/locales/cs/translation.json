@@ -107,5 +107,7 @@
   "type_man_made": "Umělá stavba",
   "type_public_transport": "Veřejná doprava",
   "type_boundary": "Hranice",
-  "type_other": "Ostatní"
+  "type_other": "Ostatní",
+  "network_error_check_connection": "Chyba sítě. Zkontrolujte připojení nebo to zkuste znovu.",
+  "server_error": "Chyba serveru. Zkuste to prosím později."
 }

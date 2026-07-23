@@ -107,5 +107,7 @@
   "type_man_made": "Kunstmatig",
   "type_public_transport": "Openbaar vervoer",
   "type_boundary": "Grens",
-  "type_other": "Overig"
+  "type_other": "Overig",
+  "network_error_check_connection": "Netwerkfout. Controleer je verbinding of probeer het opnieuw.",
+  "server_error": "Serverfout. Probeer het later opnieuw."
 }

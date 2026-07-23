@@ -107,5 +107,7 @@
   "type_man_made": "Menneskeskabt",
   "type_public_transport": "Offentlig transport",
   "type_boundary": "Grænse",
-  "type_other": "Andet"
+  "type_other": "Andet",
+  "network_error_check_connection": "Netværksfejl. Tjek din forbindelse, eller prøv igen.",
+  "server_error": "Serverfejl. Prøv igen senere."
 }

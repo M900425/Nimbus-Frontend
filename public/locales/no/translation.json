@@ -107,5 +107,7 @@
   "type_man_made": "Menneskeskapt",
   "type_public_transport": "Kollektivtransport",
   "type_boundary": "Grense",
-  "type_other": "Annet"
+  "type_other": "Annet",
+  "network_error_check_connection": "Nettverksfeil. Sjekk tilkoblingen din eller prøv igjen.",
+  "server_error": "Serverfeil. Vennligst prøv igjen senere."
 }

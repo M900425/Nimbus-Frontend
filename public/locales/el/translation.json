@@ -107,5 +107,7 @@
   "type_man_made": "Ανθρωπογενές Στοιχείο",
   "type_public_transport": "Δημόσιες Μεταφορές",
   "type_boundary": "Όριο",
-  "type_other": "Άλλο"
+  "type_other": "Άλλο",
+  "network_error_check_connection": "Σφάλμα δικτύου. Ελέγξτε τη σύνδεσή σας ή δοκιμάστε ξανά.",
+  "server_error": "Σφάλμα διακομιστή. Παρακαλώ δοκιμάστε ξανά αργότερα."
 }

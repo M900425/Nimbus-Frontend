@@ -107,5 +107,7 @@
   "type_man_made": "Veštačko",
   "type_public_transport": "Javni prevoz",
   "type_boundary": "Granica",
-  "type_other": "Ostalo"
+  "type_other": "Ostalo",
+  "network_error_check_connection": "Greška mreže. Proverite vezu ili pokušajte ponovo.",
+  "server_error": "Greška servera. Pokušajte ponovo kasnije."
 }

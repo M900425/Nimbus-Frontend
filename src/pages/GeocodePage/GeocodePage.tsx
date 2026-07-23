@@ -11,6 +11,26 @@ import { ResultsList } from "./components/ResultsList/ResultsList";
 const { Title, Paragraph } = Typography;
 
 type SearchType = "city" | "coords";
+async function fetchWithRetry(
+  url: string,
+  options: RequestInit,
+  retries = 2,
+): Promise<Response> {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      const response = await fetch(url, options);
+      if (response.status === 429 && i < retries) {
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        continue;
+      }
+      return response;
+    } catch (err) {
+      if (i === retries) throw err;
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    }
+  }
+  throw new Error("Failed to fetch");
+}
 
 export const GeocodePage = () => {
   const { t } = useTranslation();
@@ -28,7 +48,6 @@ export const GeocodePage = () => {
     } else {
       if (!latQuery.trim() || !lonQuery.trim()) return;
     }
-
     const url =
       searchType === "city"
         ? `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(
@@ -43,7 +62,7 @@ export const GeocodePage = () => {
     setResults([]);
 
     try {
-      const response = await fetch(url, {
+      const response = await fetchWithRetry(url, {
         headers: {
           "User-Agent": "NimbusWeatherApp/1.0 (your-email@example.com)",
         },
@@ -68,10 +87,18 @@ export const GeocodePage = () => {
           throw new Error(t("location_not_found"));
         }
       }
-    } catch (err) {
-      const errorMessage =
-        err instanceof Error ? err.message : t("something_wrong");
-      setError(errorMessage);
+    } catch (err: unknown) {
+      let message = t("something_wrong");
+      if (err instanceof Error) {
+        if (err.message === "Failed to fetch") {
+          message = t("network_error_check_connection");
+        } else if (err.message.includes("HTTP error")) {
+          message = t("server_error");
+        } else if (err.message !== t("location_not_found")) {
+          message = err.message;
+        }
+      }
+      setError(message);
     } finally {
       setLoading(false);
     }
@@ -153,7 +180,6 @@ export const GeocodePage = () => {
           items={tabItems}
         />
       </Card>
-
       {error && (
         <Alert
           message={t("error")}
@@ -165,7 +191,6 @@ export const GeocodePage = () => {
           className="error-alert"
         />
       )}
-
       {results.length > 0 && (
         <Card
           title={t("results", { count: results.length })}

@@ -107,5 +107,7 @@
   "type_man_made": "Man Made",
   "type_public_transport": "Public Transport",
   "type_boundary": "Boundary",
-  "type_other": "Other"
+  "type_other": "Other",
+  "network_error_check_connection": "Network error. Check your connection or try again.",
+  "server_error": "Server error. Please try again later."
 }

@@ -107,5 +107,7 @@
   "type_man_made": "Manufatto",
   "type_public_transport": "Trasporto pubblico",
   "type_boundary": "Confine",
-  "type_other": "Altro"
+  "type_other": "Altro",
+  "network_error_check_connection": "Errore di rete. Controlla la connessione o riprova.",
+  "server_error": "Errore del server. Riprova più tardi."
 }

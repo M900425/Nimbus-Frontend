@@ -107,5 +107,7 @@
   "type_man_made": "Konstgjord",
   "type_public_transport": "Kollektivtrafik",
   "type_boundary": "Gräns",
-  "type_other": "Övrigt"
+  "type_other": "Övrigt",
+  "network_error_check_connection": "Nätverksfel. Kontrollera din anslutning eller försök igen.",
+  "server_error": "Serverfel. Försök igen senare."
 }

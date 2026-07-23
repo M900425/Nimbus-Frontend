@@ -107,5 +107,7 @@
   "type_man_made": "Штучний об'єкт",
   "type_public_transport": "Громадський транспорт",
   "type_boundary": "Межа",
-  "type_other": "Інше"
+  "type_other": "Інше",
+  "network_error_check_connection": "Помилка мережі. Перевірте підключення або спробуйте ще раз.",
+  "server_error": "Помилка сервера. Будь ласка, спробуйте пізніше."
 }

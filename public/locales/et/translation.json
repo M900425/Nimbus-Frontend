@@ -107,5 +107,7 @@
   "type_man_made": "Inimtekkelised",
   "type_public_transport": "Ühistransport",
   "type_boundary": "Piir",
-  "type_other": "Muu"
+  "type_other": "Muu",
+  "network_error_check_connection": "Võrguviga. Kontrollige ühendust või proovige uuesti.",
+  "server_error": "Serveri viga. Palun proovige hiljem uuesti."
 }

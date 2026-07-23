@@ -107,5 +107,7 @@
   "type_man_made": "Obiekty stworzone przez człowieka",
   "type_public_transport": "Transport publiczny",
   "type_boundary": "Granica",
-  "type_other": "Inne"
+  "type_other": "Inne",
+  "network_error_check_connection": "Błąd sieci. Sprawdź połączenie lub spróbuj ponownie.",
+  "server_error": "Błąd serwera. Spróbuj ponownie później."
 }
