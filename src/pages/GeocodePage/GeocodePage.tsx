@@ -3,14 +3,20 @@ import { useState } from "react";
 import { Card, Input, Button, Alert, Tabs, Typography } from "antd";
 import { SearchOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import type { GeocodeResult } from "../../types/geocode";
 import { Loader } from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
 import { ResultsList } from "./components/ResultsList/ResultsList";
+import type { GeocodeResult } from "../../types/geocode";
 
 const { Title, Paragraph } = Typography;
 
 type SearchType = "city" | "coords";
+
+// Локально – прямо до Nominatim, на продакшені – через наш API
+const BASE_URL = import.meta.env.DEV
+  ? "https://nominatim.openstreetmap.org"
+  : "/api/geocode";
+
 async function fetchWithRetry(
   url: string,
   options: RequestInit,
@@ -42,20 +48,31 @@ export const GeocodePage = () => {
   const [latQuery, setLatQuery] = useState("");
   const [lonQuery, setLonQuery] = useState("");
   const navigate = useNavigate();
+
   const handleSearch = async () => {
     if (searchType === "city") {
       if (!cityQuery.trim()) return;
     } else {
       if (!latQuery.trim() || !lonQuery.trim()) return;
     }
-    const url =
-      searchType === "city"
-        ? `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(
-            cityQuery,
-          )}&format=json&limit=10&addressdetails=1`
-        : `https://nominatim.openstreetmap.org/reverse?lat=${encodeURIComponent(
-            latQuery,
-          )}&lon=${encodeURIComponent(lonQuery)}&format=json`;
+
+    let url: string;
+    if (searchType === "city") {
+      const params = new URLSearchParams({
+        q: cityQuery,
+        format: "json",
+        limit: "10",
+        addressdetails: "1",
+      });
+      url = `${BASE_URL}?${params.toString()}`;
+    } else {
+      const params = new URLSearchParams({
+        lat: latQuery,
+        lon: lonQuery,
+        format: "json",
+      });
+      url = `${BASE_URL}?${params.toString()}`;
+    }
 
     setLoading(true);
     setError(null);
@@ -103,9 +120,11 @@ export const GeocodePage = () => {
       setLoading(false);
     }
   };
+
   const handleViewWeather = (lat: number, lon: number) => {
     navigate(`/weather?lat=${lat}&lon=${lon}`);
   };
+
   const tabItems = [
     {
       key: "city",
@@ -180,6 +199,7 @@ export const GeocodePage = () => {
           items={tabItems}
         />
       </Card>
+
       {error && (
         <Alert
           message={t("error")}
@@ -191,6 +211,7 @@ export const GeocodePage = () => {
           className="error-alert"
         />
       )}
+
       {results.length > 0 && (
         <Card
           title={t("results", { count: results.length })}
