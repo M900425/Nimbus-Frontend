@@ -19,6 +19,16 @@ interface IProps {
   t: TFunction;
 }
 
+const translateClass = (
+  classValue: string | undefined,
+  t: TFunction,
+): string => {
+  if (!classValue) return "—";
+  const key = `type_${classValue}`;
+  const translated = t(key);
+  return translated === key ? classValue : translated;
+};
+
 export const ResultsList = ({ results, onViewWeather, t }: IProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedResult, setSelectedResult] = useState<GeocodeResult | null>(
@@ -99,7 +109,7 @@ export const ResultsList = ({ results, onViewWeather, t }: IProps) => {
       title: t("type"),
       dataIndex: "class",
       key: "class",
-      render: (text: string) => text || "—",
+      render: (text: string) => translateClass(text, t),
     },
     {
       title: t("action"),
@@ -209,7 +219,7 @@ export const ResultsList = ({ results, onViewWeather, t }: IProps) => {
               </div>
               <div className="modal-row">
                 <Text strong>{t("type")}:</Text>
-                <Text>{selectedResult.class || "—"}</Text>
+                <Text>{translateClass(selectedResult.class, t)}</Text>
               </div>
               {selectedResult.address && (
                 <div className="modal-row">

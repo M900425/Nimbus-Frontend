@@ -2,82 +2,82 @@
   "version": 1,
   "files": {
     "public/locales/bg/translation.json": {
-      "sha256": "c31040dd14a97f3e7d610f17e3c31917968604b5d5c8307c7b1fbc42923cce57"
+      "sha256": "f35c34c16bfe8010f50f277500fb13e47f26aded6272858614451c43eb826abe"
     },
     "public/locales/cs/translation.json": {
-      "sha256": "06586817c59e3c94501bd45013260bfbbe1014255b6b2457476b4d856f9bb3a8"
+      "sha256": "77f05d37c87e03b730884f4ba26111dbf6040b5ad4e71631b2e24eca8c6d4dfe"
     },
     "public/locales/da/translation.json": {
-      "sha256": "0a101557ad2a9a9c733da141e4f47aa9e5c0c497fd92f3b81a94430e35b257c6"
+      "sha256": "7e286cf3ffb1492be56a12945c4553d0433aef58c7bd16701a67a962763bc1f0"
     },
     "public/locales/de/translation.json": {
-      "sha256": "d0c0c9b461de3e44958c787783700d1bf0f294a8f054602c0a747e12f6a4cb1a"
+      "sha256": "858335af123a7e09b9712d0332a00ab96abca5ecc36e7e228d144dcb2a674957"
     },
     "public/locales/el/translation.json": {
-      "sha256": "dc263a1e3f2c7e4e88a32c08bdb813cc2092d64f921105fc8e9c84779a1de53c"
+      "sha256": "5ad1f5d348232040df46ec3457d62365876ab68f5eb1ba3e24d5a92f9e32090a"
     },
     "public/locales/en/translation.json": {
-      "sha256": "58509535604ae2690ec23aa9233f3e64958eda41550d84102cc4e3b56945ed0b"
+      "sha256": "878f4076d5e0f0cf718b7ba8206746e7eee376cd214726480478b81579cd747d"
     },
     "public/locales/es/translation.json": {
-      "sha256": "a2da66c1b919fc8822cd849f204f73301f91bd950b650b62e8170a6401534c9b"
+      "sha256": "39afd74c51345a668f11ad762553c5369337751df391848a12094f35aa9a384c"
     },
     "public/locales/et/translation.json": {
-      "sha256": "18d66bb8bfffd6bd77090e89a5a8ebb446b6796934b84737af46b99aa79f8449"
+      "sha256": "971542b2e87990a6331a6908d25b63284bbeb543793aa02c62207cd5cc9ada0b"
     },
     "public/locales/fi/translation.json": {
-      "sha256": "d3a4fbd1609d197ec18c1f7621dc50d946e56a15757fb5d381f53430786a5d0c"
+      "sha256": "6cf0b601ba572c2beec01c6e1c4043fac9ad07cacefbe402301e0e0940b96911"
     },
     "public/locales/fr/translation.json": {
-      "sha256": "78e43bd267c12db0723f9e9736536d4da615ad8a88336b968a98b2bae0061b86"
+      "sha256": "924ba56d8520369fbb3c5a6070a5fffcf47a880bd8ec65b58659ae66982a0cfc"
     },
     "public/locales/hr/translation.json": {
-      "sha256": "ea61d1ac46d8973e1cc37b259c15e7a6c4267a44822a38f77bb6ab73c1f48c8a"
+      "sha256": "82f6875ff86b9fde205b17affd8efe47d9e63a48f370fef95e9c858548b4d3f5"
     },
     "public/locales/hu/translation.json": {
-      "sha256": "8091a09acc19c0f649a76d54a52e0ff7ea9b3773ab22a476d0928d798f9fbb0b"
+      "sha256": "a614f93ad02c7384c3c41c0e4bbb0048285e7458b425a048e0b6d5cbf4b0b613"
     },
     "public/locales/it/translation.json": {
-      "sha256": "4e8982985412b81dea311ef05b68b993ffc6ce926880af88870cb6d7fb62df60"
+      "sha256": "467ac8f1bffb2c2cb769bc121de1d81edf637b54575e38da83ecc0a2f8b263f9"
     },
     "public/locales/lt/translation.json": {
-      "sha256": "dd42edebfc5efa2e35b2a87069ab7124a30c3b74c3e636e68f1ebac777ef8071"
+      "sha256": "3dab53ef970ae71e4021be8169ba5d2bdf02e82b5e760d6d207359b580a10b16"
     },
     "public/locales/lv/translation.json": {
-      "sha256": "89d091c97b4a61dd50a0ee94615b236e6d833774110f80b9074ac446c60af7ba"
+      "sha256": "a22efbc69784c3d5a17dd7e4ae54019c73352ae62020ea622487d7eb212a22fd"
     },
     "public/locales/nl/translation.json": {
-      "sha256": "669d4a1076175fd4ab6902db088de828ce3da3e2a6cd6c4056dcf3f0633d4fd8"
+      "sha256": "e03097603eab29995940d99f1eb296f10e85eb59531a94eb105cfca776fa9884"
     },
     "public/locales/no/translation.json": {
-      "sha256": "68900bd5feebb22d01356e583a4b31b2f8a6e9307175e773736aedc43c536527"
+      "sha256": "592b42cc5413d31a242dbcb655857c066186df90756d2b70f95a475f4ae9c863"
     },
     "public/locales/pl/translation.json": {
-      "sha256": "b75fff0d376776859bfc35238cc430837922e155f5245df4131d0f4a806e7bfe"
+      "sha256": "39737b28d30293dd36910641c97a3155ce287561b518cd1e9ceb40fdb7628eef"
     },
     "public/locales/pt/translation.json": {
-      "sha256": "1f6a9acbeb016866c61b0466e4885228e7ae297485d19f3658b65d25810c4dc9"
+      "sha256": "4df7acfb4797ac3bc5ae9dc9ee8c89ffeb39ef150c07de900b756d496593fa14"
     },
     "public/locales/ro/translation.json": {
-      "sha256": "7d384083d96bf3052e0bacf73aba13637ff43813918ece441279808096f44f71"
+      "sha256": "0379d104c6e3fa44d1fffe5ab7d7ce553f46e9bfd74c834c488d0d3b0dddfd8c"
     },
     "public/locales/sk/translation.json": {
-      "sha256": "e3cc4f1669ea21aea79ca385f3e3484647f55613e34bfd17a256c8c76b7299a0"
+      "sha256": "f449aec963b8ea7b04cd24528ed561440374b59e7a0a71d4fc5154cfdffb85a8"
     },
     "public/locales/sl/translation.json": {
-      "sha256": "ccbb50d913f946d8e1b1a23a1857f219b40c21d9848a87aaf1445156805bd4b4"
+      "sha256": "e1adb0fa0b0bd9b24eac2c20d28d6cb81f77f9d5f21692f8c9568202b498cd41"
     },
     "public/locales/sr/translation.json": {
-      "sha256": "a0a50f426f2110933ab26597551c193ae2e43a94a20ed71023700c729e8745f1"
+      "sha256": "1aa4e777edb5469835aa116c745c1d93ffcfc686a775851c921c19e344fdb2cc"
     },
     "public/locales/sv/translation.json": {
-      "sha256": "5cba4f64949877fee81c94ffd510c9d57fbd6fd893649c991db257c957dc5762"
+      "sha256": "1008eecf361b08ea449d180cee8807799a507f202dc338d7400f88841d68fe00"
     },
     "public/locales/tr/translation.json": {
-      "sha256": "7c345e37175fd64529570451886a3a65018b66f52b346dbd69638a725cfcf9a2"
+      "sha256": "e2165c18c1fec7645847bb6d2dcd822a3b52278c4a2d635400e0e50d68f3237c"
     },
     "public/locales/uk/translation.json": {
-      "sha256": "eb1664e0a0a27883241a39b0e85ad515df0a2faa039b97481e65b75a816ddc33"
+      "sha256": "4e4cd46d9850c06a1dfab03d5e83fb9e89edd0c828550e98a2cf99d71e1beeaa"
     }
   }
 }
