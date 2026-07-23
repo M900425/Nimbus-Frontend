@@ -1,7 +1,7 @@
 import "./GeocodePage.scss";
 import { useState } from "react";
-import { Card, Input, Button, Alert, Tabs, Typography } from "antd";
-import { SearchOutlined, GlobalOutlined } from "@ant-design/icons";
+import { Card, Input, Alert, Typography } from "antd";
+import { GlobalOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { Loader } from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
@@ -10,32 +10,37 @@ import type { GeocodeResult } from "../../types/geocode";
 
 const { Title, Paragraph } = Typography;
 
-type SearchType = "city" | "coords";
+interface OpenMeteoResult {
+  id: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+  admin1?: string;
+  country?: string;
+}
 
-// Локально – прямо до Nominatim, на продакшені – через наш API
-const BASE_URL = import.meta.env.DEV
-  ? "https://nominatim.openstreetmap.org"
-  : "/api/geocode";
+async function searchCityOpenMeteo(query: string): Promise<GeocodeResult[]> {
+  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
+    query,
+  )}&count=10&language=en&format=json`;
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Open-Meteo error ${response.status}`);
+  const data = await response.json();
 
-async function fetchWithRetry(
-  url: string,
-  options: RequestInit,
-  retries = 2,
-): Promise<Response> {
-  for (let i = 0; i <= retries; i++) {
-    try {
-      const response = await fetch(url, options);
-      if (response.status === 429 && i < retries) {
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-        continue;
-      }
-      return response;
-    } catch (err) {
-      if (i === retries) throw err;
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-    }
-  }
-  throw new Error("Failed to fetch");
+  if (!data.results) return [];
+
+  return data.results.map((item: OpenMeteoResult) => ({
+    place_id: item.id,
+    display_name: `${item.name}, ${item.admin1 || ""}, ${item.country || ""}`,
+    lat: item.latitude.toString(),
+    lon: item.longitude.toString(),
+    class: "place",
+    address: {
+      city: item.name,
+      state: item.admin1,
+      country: item.country,
+    },
+  }));
 }
 
 export const GeocodePage = () => {
@@ -43,75 +48,28 @@ export const GeocodePage = () => {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<GeocodeResult[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const [searchType, setSearchType] = useState<SearchType>("city");
   const [cityQuery, setCityQuery] = useState("");
-  const [latQuery, setLatQuery] = useState("");
-  const [lonQuery, setLonQuery] = useState("");
   const navigate = useNavigate();
-
   const handleSearch = async () => {
-    if (searchType === "city") {
-      if (!cityQuery.trim()) return;
-    } else {
-      if (!latQuery.trim() || !lonQuery.trim()) return;
-    }
-
-    let url: string;
-    if (searchType === "city") {
-      const params = new URLSearchParams({
-        q: cityQuery,
-        format: "json",
-        limit: "10",
-        addressdetails: "1",
-      });
-      url = `${BASE_URL}?${params.toString()}`;
-    } else {
-      const params = new URLSearchParams({
-        lat: latQuery,
-        lon: lonQuery,
-        format: "json",
-      });
-      url = `${BASE_URL}?${params.toString()}`;
-    }
+    if (!cityQuery.trim()) return;
 
     setLoading(true);
     setError(null);
     setResults([]);
 
     try {
-      const response = await fetchWithRetry(url, {
-        headers: {
-          "User-Agent": "NimbusWeatherApp/1.0 (your-email@example.com)",
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      if (searchType === "coords") {
-        if (data && data.display_name) {
-          setResults([data]);
-        } else {
-          throw new Error(t("location_not_found"));
-        }
+      const data = await searchCityOpenMeteo(cityQuery);
+      if (data.length > 0) {
+        setResults(data);
       } else {
-        if (data && data.length > 0) {
-          setResults(data);
-        } else {
-          throw new Error(t("location_not_found"));
-        }
+        setError(t("location_not_found"));
       }
     } catch (err: unknown) {
       let message = t("something_wrong");
       if (err instanceof Error) {
         if (err.message === "Failed to fetch") {
           message = t("network_error_check_connection");
-        } else if (err.message.includes("HTTP error")) {
-          message = t("server_error");
-        } else if (err.message !== t("location_not_found")) {
+        } else if (err.message.includes("error")) {
           message = err.message;
         }
       }
@@ -125,11 +83,18 @@ export const GeocodePage = () => {
     navigate(`/weather?lat=${lat}&lon=${lon}`);
   };
 
-  const tabItems = [
-    {
-      key: "city",
-      label: "🌍 " + t("city_name"),
-      children: (
+  if (loading) {
+    return <Loader tip={t("searching")} />;
+  }
+
+  return (
+    <div className="geocode-page">
+      <Card className="geocode-card" bordered={false}>
+        <div className="header">
+          <GlobalOutlined className="header-icon" />
+          <Title level={2}>{t("geocoding_title")}</Title>
+          <Paragraph type="secondary">{t("geocoding_desc")}</Paragraph>
+        </div>
         <div className="search-section">
           <Input.Search
             placeholder={t("enter_city_name")}
@@ -144,62 +109,7 @@ export const GeocodePage = () => {
             <small>{t("examples")}</small>
           </div>
         </div>
-      ),
-    },
-    {
-      key: "coords",
-      label: "📍 " + t("coordinates"),
-      children: (
-        <div className="search-section coords-input">
-          <Input
-            placeholder={t("latitude")}
-            value={latQuery}
-            onChange={(e) => setLatQuery(e.target.value)}
-            style={{ width: 150 }}
-            size="large"
-            onPressEnter={handleSearch}
-          />
-          <Input
-            placeholder={t("longitude")}
-            value={lonQuery}
-            onChange={(e) => setLonQuery(e.target.value)}
-            style={{ width: 150 }}
-            size="large"
-            onPressEnter={handleSearch}
-          />
-          <Button
-            type="primary"
-            size="large"
-            icon={<SearchOutlined />}
-            onClick={handleSearch}
-            loading={loading}
-          >
-            {t("search")}
-          </Button>
-        </div>
-      ),
-    },
-  ];
-
-  if (loading) {
-    return <Loader tip={t("searching")} />;
-  }
-
-  return (
-    <div className="geocode-page">
-      <Card className="geocode-card" bordered={false}>
-        <div className="header">
-          <GlobalOutlined className="header-icon" />
-          <Title level={2}>{t("geocoding_title")}</Title>
-          <Paragraph type="secondary">{t("geocoding_desc")}</Paragraph>
-        </div>
-        <Tabs
-          activeKey={searchType}
-          onChange={(key) => setSearchType(key as SearchType)}
-          items={tabItems}
-        />
       </Card>
-
       {error && (
         <Alert
           message={t("error")}
@@ -211,7 +121,6 @@ export const GeocodePage = () => {
           className="error-alert"
         />
       )}
-
       {results.length > 0 && (
         <Card
           title={t("results", { count: results.length })}
