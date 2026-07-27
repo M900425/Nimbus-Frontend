@@ -109,5 +109,6 @@
   "type_boundary": "Riba",
   "type_other": "Kita",
   "network_error_check_connection": "Tinklo klaida. Patikrinkite ryšį arba bandykite dar kartą.",
-  "server_error": "Serverio klaida. Bandykite dar kartą vėliau."
+  "server_error": "Serverio klaida. Bandykite dar kartą vėliau.",
+  "location_details": "Vietos informacija"
 }

@@ -109,5 +109,6 @@
   "type_boundary": "Frontière",
   "type_other": "Autre",
   "network_error_check_connection": "Erreur réseau. Vérifiez votre connexion ou réessayez.",
-  "server_error": "Erreur serveur. Veuillez réessayer ultérieurement."
+  "server_error": "Erreur serveur. Veuillez réessayer ultérieurement.",
+  "location_details": "Détails du lieu"
 }

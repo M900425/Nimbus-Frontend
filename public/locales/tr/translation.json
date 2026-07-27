@@ -109,5 +109,6 @@
   "type_boundary": "Sınır",
   "type_other": "Diğer",
   "network_error_check_connection": "Ağ hatası. Bağlantınızı kontrol edin veya tekrar deneyin.",
-  "server_error": "Sunucu hatası. Lütfen daha sonra tekrar deneyin."
+  "server_error": "Sunucu hatası. Lütfen daha sonra tekrar deneyin.",
+  "location_details": "Konum ayrıntıları"
 }

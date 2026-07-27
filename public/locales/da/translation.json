@@ -109,5 +109,6 @@
   "type_boundary": "Grænse",
   "type_other": "Andet",
   "network_error_check_connection": "Netværksfejl. Tjek din forbindelse, eller prøv igen.",
-  "server_error": "Serverfejl. Prøv igen senere."
+  "server_error": "Serverfejl. Prøv igen senere.",
+  "location_details": "Placeringsdetaljer"
 }

@@ -16,7 +16,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #1890ff;
+    background: var(--primary);
     border-radius: 10px;
   }
 
@@ -33,14 +33,14 @@
     transition: background 0.2s;
 
     &.active {
-      background: #1890ff;
-      color: #fff;
+      background: var(--primary);
+      color: var(--on-primary);
       transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
       .hour-time,
       .hour-temp {
-        color: #fff;
+        color: var(--on-primary);
       }
     }
 

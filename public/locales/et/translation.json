@@ -109,5 +109,6 @@
   "type_boundary": "Piir",
   "type_other": "Muu",
   "network_error_check_connection": "Võrguviga. Kontrollige ühendust või proovige uuesti.",
-  "server_error": "Serveri viga. Palun proovige hiljem uuesti."
+  "server_error": "Serveri viga. Palun proovige hiljem uuesti.",
+  "location_details": "Asukoha üksikasjad"
 }

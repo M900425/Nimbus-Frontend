@@ -1,6 +1,7 @@
 import { Tag } from "antd";
 import { WaterTempHelp } from "../../../../components/WaterTempHelp/WaterTempHelp";
 import type { Water } from "../../../../types/weather";
+import "./WaterTemps.scss";
 
 interface IProps {
   water: Water;

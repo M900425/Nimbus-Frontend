@@ -109,5 +109,6 @@
   "type_boundary": "Raja",
   "type_other": "Muu",
   "network_error_check_connection": "Verkkovirhe. Tarkista yhteytesi tai yritä uudelleen.",
-  "server_error": "Palvelinvirhe. Yritä myöhemmin uudelleen."
+  "server_error": "Palvelinvirhe. Yritä myöhemmin uudelleen.",
+  "location_details": "Sijaintitiedot"
 }

@@ -104,7 +104,8 @@ export const Header = () => {
   }, []);
   const handleSelectSuggestion = useCallback(
     (suggestion: Suggestion) => {
-      const cityParam = encodeURIComponent(toTitleCase(searchValue.trim()));
+      const cityName = suggestion.cityName || suggestion.displayName;
+      const cityParam = encodeURIComponent(toTitleCase(cityName));
       navigate(
         `/weather?lat=${suggestion.lat}&lon=${suggestion.lon}&city=${cityParam}`,
       );
@@ -112,7 +113,7 @@ export const Header = () => {
       setSuggestions([]);
       setDropdownVisible(false);
     },
-    [navigate, searchValue],
+    [navigate],
   );
   const handleSearch = useCallback(
     (value: string) => {

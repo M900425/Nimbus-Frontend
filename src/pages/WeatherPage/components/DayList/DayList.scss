@@ -15,7 +15,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #1890ff;
+    background: var(--primary);
     border-radius: 10px;
   }
 
@@ -38,8 +38,8 @@
 
     &.active {
       background: #e6f7ff;
-      border-color: #1890ff;
-      box-shadow: 0 2px 8px rgba(24, 144, 255, 0.2);
+      border-color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .day-name {

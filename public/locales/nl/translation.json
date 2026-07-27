@@ -109,5 +109,6 @@
   "type_boundary": "Grens",
   "type_other": "Overig",
   "network_error_check_connection": "Netwerkfout. Controleer je verbinding of probeer het opnieuw.",
-  "server_error": "Serverfout. Probeer het later opnieuw."
+  "server_error": "Serverfout. Probeer het later opnieuw.",
+  "location_details": "Locatiedetails"
 }

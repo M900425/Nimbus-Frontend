@@ -109,5 +109,6 @@
   "type_boundary": "Meja",
   "type_other": "Drugo",
   "network_error_check_connection": "Napaka omrežja. Preverite svojo povezavo ali poskusite znova.",
-  "server_error": "Napaka strežnika. Poskusite znova pozneje."
+  "server_error": "Napaka strežnika. Poskusite znova pozneje.",
+  "location_details": "Podrobnosti lokacije"
 }

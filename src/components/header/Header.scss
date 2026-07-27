@@ -62,12 +62,11 @@
     flex: 1;
     max-width: 350px;
     min-width: 120px;
-    position: relative; // для абсолютного позиціонування дропдауна
+    position: relative;
 
     .search-input {
       width: 100%;
 
-      // Стилізація звичайного Input.Search (взяті з твого робочого варіанта)
       .ant-input {
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.2);
@@ -110,7 +109,6 @@
       }
     }
 
-    // Кастомний дропдаун
     .suggestions-dropdown {
       position: absolute;
       top: 100%;
@@ -148,7 +146,21 @@
 }
 
 @media (max-width: 768px) {
-  .app-header .search-wrapper .search-input .ant-input::placeholder {
-    font-size: 12px;
+  .app-header {
+    .search-wrapper {
+      .suggestions-dropdown {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .search-input .ant-input::placeholder {
+      font-size: 12px;
+    }
   }
 }

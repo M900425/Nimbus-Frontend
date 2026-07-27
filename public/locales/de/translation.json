@@ -109,5 +109,6 @@
   "type_boundary": "Grenze",
   "type_other": "Sonstiges",
   "network_error_check_connection": "Netzwerkfehler. Überprüfe deine Verbindung oder versuche es erneut.",
-  "server_error": "Serverfehler. Bitte versuche es später erneut."
+  "server_error": "Serverfehler. Bitte versuche es später erneut.",
+  "location_details": "Standortdetails"
 }

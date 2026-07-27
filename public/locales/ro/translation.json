@@ -109,5 +109,6 @@
   "type_boundary": "Limită",
   "type_other": "Altele",
   "network_error_check_connection": "Eroare de rețea. Verificați conexiunea sau încercați din nou.",
-  "server_error": "Eroare de server. Vă rugăm să încercați din nou mai târziu."
+  "server_error": "Eroare de server. Vă rugăm să încercați din nou mai târziu.",
+  "location_details": "Detalii despre locație"
 }

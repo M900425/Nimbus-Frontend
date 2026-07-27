@@ -109,5 +109,6 @@
   "type_boundary": "Granica",
   "type_other": "Ostalo",
   "network_error_check_connection": "Greška mreže. Proverite vezu ili pokušajte ponovo.",
-  "server_error": "Greška servera. Pokušajte ponovo kasnije."
+  "server_error": "Greška servera. Pokušajte ponovo kasnije.",
+  "location_details": "Detalji lokacije"
 }

@@ -7,9 +7,9 @@
   .extended-toggle {
     padding: 4px 16px;
     border-radius: 20px;
-    border: 1px solid #1890ff;
-    background: #e6f7ff;
-    color: #1890ff;
+    border: 1px solid var(--primary);
+    background: rgba(24, 144, 255, 0.06);
+    color: var(--primary);
     font-size: 14px;
     display: inline-flex;
     align-items: center;
@@ -17,9 +17,9 @@
     transition: all 0.3s;
 
     &:hover {
-      background: #bae7ff;
-      border-color: #40a9ff;
-      color: #40a9ff;
+      background: rgba(24, 144, 255, 0.15);
+      border-color: var(--primary);
+      color: var(--primary);
     }
 
     .anticon {
@@ -45,8 +45,6 @@
   }
 
   .extended-details {
-    animation: none;
-
     .extended-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

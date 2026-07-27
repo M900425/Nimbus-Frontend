@@ -109,5 +109,6 @@
   "type_boundary": "Hranica",
   "type_other": "Iné",
   "network_error_check_connection": "Chyba siete. Skontrolujte svoje pripojenie alebo to skúste znova.",
-  "server_error": "Chyba servera. Skúste to prosím neskôr."
+  "server_error": "Chyba servera. Skúste to prosím neskôr.",
+  "location_details": "Podrobnosti o polohe"
 }

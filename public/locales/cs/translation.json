@@ -109,5 +109,6 @@
   "type_boundary": "Hranice",
   "type_other": "Ostatní",
   "network_error_check_connection": "Chyba sítě. Zkontrolujte připojení nebo to zkuste znovu.",
-  "server_error": "Chyba serveru. Zkuste to prosím později."
+  "server_error": "Chyba serveru. Zkuste to prosím později.",
+  "location_details": "Podrobnosti o poloze"
 }

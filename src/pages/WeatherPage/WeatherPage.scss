@@ -4,6 +4,55 @@
 @import "./components/DayList/DayList.scss";
 
 .weather-page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+
+  &.theme-clear {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --primary: #ffffff;
+    --on-primary: #1a1a2e;
+  }
+  &.theme-partly-cloudy {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    --primary: #0277bd;
+    --on-primary: #ffffff;
+  }
+  &.theme-cloudy {
+    background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+    --primary: #95a5a6;
+    --on-primary: #fff;
+  }
+  &.theme-rain {
+    background: linear-gradient(135deg, #667db6 0%, #0082c8 50%, #667db6 100%);
+    --primary: #b3e5fc;
+    --on-primary: #1a1a2e;
+  }
+  &.theme-snow {
+    background: linear-gradient(135deg, #e6dada 0%, #274046 100%);
+    --primary: #a6e3e9;
+    --on-primary: #1a1a2e;
+  }
+  &.theme-fog {
+    background: linear-gradient(135deg, #d7d2cc 0%, #304352 100%);
+    --primary: #cfd8dc;
+    --on-primary: #1a1a2e;
+  }
+  &.theme-thunderstorm {
+    background: linear-gradient(135deg, #373b44 0%, #4286f4 100%);
+    --primary: #ce93d8;
+    --on-primary: #ffffff;
+  }
+  &.theme-windy {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    --primary: #ff5252;
+    --on-primary: #fff;
+  }
+}
+
+.weather-content {
+  position: relative;
+  z-index: 1;
   max-width: 900px;
   margin: 0 auto;
   padding: 24px 16px;
@@ -35,6 +84,7 @@
 
       .anticon {
         font-size: 24px;
+        color: var(--primary);
       }
     }
 
@@ -46,7 +96,7 @@
       .temp-value {
         font-size: 42px;
         font-weight: 700;
-        color: #1890ff;
+        color: var(--primary);
       }
 
       .temp-condition {
