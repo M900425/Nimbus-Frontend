@@ -52,7 +52,7 @@
   "data_sources": "Surse de date",
   "aggregates_info": "Agregă informații din Open-Meteo, WeatherAPI, Visual Crossing și Marine API pentru a asigura cea mai fiabilă prognoză.",
   "search_by_coords": "Căutare după coordonate",
-  "prefer_exact": "Preferați o locație exactă? Tastați ceva de genul <code>48.46, 30.73</code> (Odesa) sau orice alte coordonate — aplicația va afișa vremea pentru acel loc precis.",
+  "prefer_exact": "Preferați o locație exactă? Tastați ceva de genul <code>46.4843, 30.7323</code> (Odesa) sau orice alte coordonate — aplicația va afișa vremea pentru acel loc precis.",
   "geocoding_tool": "Instrument de geocodare",
   "need_coords": "Aveți nevoie să găsiți coordonatele unui oraș? Sau numele orașului după coordonate? Folosiți",
   "extra_features": "Funcții suplimentare",

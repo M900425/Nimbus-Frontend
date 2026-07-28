@@ -52,7 +52,7 @@
   "data_sources": "Viri podatkov",
   "aggregates_info": "Združuje informacije iz Open-Meteo, WeatherAPI, Visual Crossing in Marine API za zagotavljanje najzanesljivejše napovedi.",
   "search_by_coords": "Iskanje po koordinatah",
-  "prefer_exact": "Želite točno lokacijo? Vnesite kaj takega kot <code>48.46, 30.73</code> (Odesa) ali katere koli druge koordinate — aplikacija bo pridobila vreme za to točno lokacijo.",
+  "prefer_exact": "Želite točno lokacijo? Vnesite kaj takega kot <code>46.4843, 30.7323</code> (Odesa) ali katere koli druge koordinate — aplikacija bo pridobila vreme za to točno lokacijo.",
   "geocoding_tool": "Orodje za geokodiranje",
   "need_coords": "Iščete koordinate za mesto? Ali ime mesta za koordinate? Uporabite",
   "extra_features": "Dodatne funkcije",

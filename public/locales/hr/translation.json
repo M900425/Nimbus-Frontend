@@ -52,7 +52,7 @@
   "data_sources": "Izvori podataka",
   "aggregates_info": "Prikuplja podatke iz Open-Meteo, WeatherAPI, Visual Crossing i Marine API kako bi osiguralo najpouzdaniju prognozu.",
   "search_by_coords": "Pretraži po koordinatama",
-  "prefer_exact": "Preferirate točnu lokaciju? Jednostavno upišite nešto poput <code>48.46, 30.73</code> (Odesa) ili bilo koje druge koordinate — aplikacija će dohvatiti vremensku prognozu za to točno mjesto.",
+  "prefer_exact": "Preferirate točnu lokaciju? Jednostavno upišite nešto poput <code>46.4843, 30.7323</code> (Odesa) ili bilo koje druge koordinate — aplikacija će dohvatiti vremensku prognozu za to točno mjesto.",
   "geocoding_tool": "Alat za geokodiranje",
   "need_coords": "Trebate pronaći koordinate za grad? Ili naziv grada prema koordinatama? Koristite",
   "extra_features": "Dodatne mogućnosti",

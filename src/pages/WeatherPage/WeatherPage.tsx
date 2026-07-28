@@ -118,18 +118,14 @@ export const WeatherPage = () => {
   const dailyDates = daily?.time || [];
   const days = data.days || [];
   const selectedDay = days[selectedDayIndex] || null;
+  const isToday = selectedDayIndex === 0;
+  const currentHour = new Date().getHours();
   const themeConfig = getWeatherTheme(
     undefined,
     selectedDay?.conditions || "Clear",
     true,
   );
   const theme = themeConfig.theme;
-  console.log(
-    "🎨 Застосована тема:",
-    theme,
-    "| Умови дня:",
-    selectedDay?.conditions,
-  );
   const displayCity = cityFromQuery
     ? toTitleCase(decodeURIComponent(cityFromQuery))
     : data.city
@@ -137,7 +133,23 @@ export const WeatherPage = () => {
       : coords
         ? `${coords.lat}, ${coords.lon}`
         : searchCity;
-  const hourlyData = selectedDay?.hours || [];
+  let hourlyData = selectedDay?.hours || [];
+  if (isToday && data.hourly?.time && data.hourly?.temperature_2m) {
+    const todayStr = new Date().toISOString().slice(0, 10);
+    const todayIndices: number[] = [];
+    data.hourly.time.forEach((time: string, idx: number) => {
+      if (time.startsWith(todayStr)) {
+        todayIndices.push(idx);
+      }
+    });
+    if (todayIndices.length === 24 && selectedDay?.hours) {
+      hourlyData = selectedDay.hours.map((hour, i) => ({
+        ...hour,
+        temp: data.hourly.temperature_2m[todayIndices[i]] ?? hour.temp,
+      }));
+    }
+  }
+
   const effectiveDates = getEffectiveDates(dailyDates, days.length);
   const goToPreviousDay = () => {
     if (selectedDayIndex > 0) {
@@ -173,10 +185,12 @@ export const WeatherPage = () => {
         minMax.min !== null ? Math.round(minMax.min) : Math.round(day.temp),
     };
   });
-  const isToday = selectedDayIndex === 0;
-  const currentHour = new Date().getHours();
   const activeHourIndex =
     isToday && hourlyData.length === 24 ? currentHour : undefined;
+  const currentTemperature =
+    isToday && activeHourIndex !== undefined
+      ? hourlyData[activeHourIndex].temp
+      : current.temperature;
   const getWaterLabel = createWaterLabel(t);
 
   return (
@@ -190,7 +204,7 @@ export const WeatherPage = () => {
           </Title>
           <div className="current-temp">
             <span className="temp-value">
-              {Math.round(current.temperature)}°C
+              {Math.round(currentTemperature)}°C
             </span>
           </div>
         </div>

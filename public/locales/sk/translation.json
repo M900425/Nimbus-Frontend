@@ -52,7 +52,7 @@
   "data_sources": "Zdroje údajov",
   "aggregates_info": "Agreguje informácie z Open-Meteo, WeatherAPI, Visual Crossing a Marine API, aby poskytol čo najspoľahlivejšiu predpoveď.",
   "search_by_coords": "Vyhľadávanie podľa súradníc",
-  "prefer_exact": "Preferujete presnú polohu? Stačí zadať niečo ako <code>48.46, 30.73</code> (Odesa) alebo akékoľvek iné súradnice — aplikácia načíta počasie pre toto presné miesto.",
+  "prefer_exact": "Preferujete presnú polohu? Stačí zadať niečo ako <code>46.4843, 30.7323</code> (Odesa) alebo akékoľvek iné súradnice — aplikácia načíta počasie pre toto presné miesto.",
   "geocoding_tool": "Geokódovací nástroj",
   "need_coords": "Potrebujete nájsť súradnice pre mesto? Alebo názov mesta podľa súradníc? Použite",
   "extra_features": "Ďalšie funkcie",

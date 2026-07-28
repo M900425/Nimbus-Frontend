@@ -51,7 +51,7 @@ export const HomePage = () => {
             <Title level={4}>{t("search_by_coords")}</Title>
           </div>
           <Paragraph>
-            {t("prefer_exact_prefix")} <code>48.46, 30.73</code>{" "}
+            {t("prefer_exact_prefix")} <code>46.4843, 30.7323</code>{" "}
             {t("prefer_exact_suffix")}
           </Paragraph>
         </Card>

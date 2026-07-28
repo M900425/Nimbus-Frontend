@@ -52,7 +52,7 @@
   "data_sources": "Tietolähteet",
   "aggregates_info": "Kokoaa tietoja Open-Meteosta, WeatherAPI:sta, Visual Crossingista ja Marine API:sta varmistaakseen luotettavimman ennusteen.",
   "search_by_coords": "Hae koordinaateilla",
-  "prefer_exact": "Haluatko tarkan sijainnin? Kirjoita esimerkiksi <code>48.46, 30.73</code> (Odesa) tai muut koordinaatit — sovellus hakee sään kyseiselle paikalle.",
+  "prefer_exact": "Haluatko tarkan sijainnin? Kirjoita esimerkiksi <code>46.4843, 30.7323</code> (Odesa) tai muut koordinaatit — sovellus hakee sään kyseiselle paikalle.",
   "geocoding_tool": "Geokoodaustyökalu",
   "need_coords": "Haluatko etsiä koordinaatit kaupungille tai kaupungin nimen koordinaateille? Käytä",
   "extra_features": "Lisäominaisuudet",

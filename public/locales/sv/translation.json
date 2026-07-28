@@ -52,7 +52,7 @@
   "data_sources": "Datakällor",
   "aggregates_info": "Sammanställer information från Open-Meteo, WeatherAPI, Visual Crossing och Marine API för att säkerställa den mest tillförlitliga prognosen.",
   "search_by_coords": "Sök med koordinater",
-  "prefer_exact": "Föredrar du en exakt plats? Skriv bara något som <code>48.46, 30.73</code> (Odesa) eller andra koordinater – appen hämtar väder för exakt den platsen.",
+  "prefer_exact": "Föredrar du en exakt plats? Skriv bara något som <code>46.4843, 30.7323</code> (Odesa) eller andra koordinater – appen hämtar väder för exakt den platsen.",
   "geocoding_tool": "Geokodningsverktyg",
   "need_coords": "Behöver du hitta koordinater för en stad? Eller stadsnamnet för koordinater? Använd",
   "extra_features": "Extra funktioner",

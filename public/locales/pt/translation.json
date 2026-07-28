@@ -52,7 +52,7 @@
   "data_sources": "Fontes de dados",
   "aggregates_info": "Agrega informações do Open-Meteo, WeatherAPI, Visual Crossing e Marine API para garantir a previsão mais fiável.",
   "search_by_coords": "Pesquisar por coordenadas",
-  "prefer_exact": "Prefere uma localização exata? Basta escrever algo como <code>48.46, 30.73</code> (Odesa) ou quaisquer outras coordenadas — a aplicação irá obter a meteorologia para esse local exato.",
+  "prefer_exact": "Prefere uma localização exata? Basta escrever algo como <code>46.4843, 30.7323</code> (Odesa) ou quaisquer outras coordenadas — a aplicação irá obter a meteorologia para esse local exato.",
   "geocoding_tool": "Ferramenta de Geocodificação",
   "need_coords": "Precisa de encontrar as coordenadas de uma cidade? Ou o nome de uma cidade pelas coordenadas? Use",
   "extra_features": "Funcionalidades extra",

@@ -1,6 +1,6 @@
 import "./Header.scss";
 import { Layout, Input } from "antd";
-import { GlobalOutlined } from "@ant-design/icons";
+import { GlobalOutlined, ClockCircleOutlined } from "@ant-design/icons";
 import { useState, useCallback, useRef, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toTitleCase, parseCoordinates } from "../../utils/string";
@@ -25,12 +25,33 @@ function debounce(fn: (...args: string[]) => void, ms: number) {
   };
 }
 
+const MAX_RECENT = 5;
+
+function getRecentSearches(): string[] {
+  const stored = localStorage.getItem("recentSearches");
+  return stored ? JSON.parse(stored) : [];
+}
+
+function saveRecentSearch(query: string): string[] {
+  const trimmed = query.trim();
+  if (!trimmed) return getRecentSearches();
+  let recent = getRecentSearches();
+  recent = recent.filter((item) => item !== trimmed);
+  recent.unshift(trimmed);
+  if (recent.length > MAX_RECENT) recent.pop();
+  localStorage.setItem("recentSearches", JSON.stringify(recent));
+  return recent;
+}
+// ------------------------------------
+
 export const Header = () => {
   const { t } = useTranslation();
   const [searchValue, setSearchValue] = useState("");
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [loading, setLoading] = useState(false);
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [recentSearches, setRecentSearches] =
+    useState<string[]>(getRecentSearches());
+  const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
   const abortRef = useRef<AbortController | null>(null);
   const debouncedFetchRef = useRef<ReturnType<typeof debounce> | undefined>(
@@ -42,13 +63,11 @@ export const Header = () => {
     debouncedFetchRef.current = debounce(async (query: string) => {
       if (query.trim().length < 2) {
         setSuggestions([]);
-        setDropdownVisible(false);
         return;
       }
 
       if (parseCoordinates(query)) {
         setSuggestions([]);
-        setDropdownVisible(false);
         return;
       }
 
@@ -83,7 +102,6 @@ export const Header = () => {
             };
           });
           setSuggestions(list);
-          setDropdownVisible(list.length > 0);
         }
       } catch (err: unknown) {
         if (err instanceof Error && err.name !== "AbortError") {
@@ -109,9 +127,11 @@ export const Header = () => {
       navigate(
         `/weather?lat=${suggestion.lat}&lon=${suggestion.lon}&city=${cityParam}`,
       );
+      const updated = saveRecentSearch(cityName);
+      setRecentSearches(updated);
       setSearchValue("");
       setSuggestions([]);
-      setDropdownVisible(false);
+      setIsFocused(false);
     },
     [navigate],
   );
@@ -125,22 +145,35 @@ export const Header = () => {
       } else {
         navigate(`/weather/${encodeURIComponent(toTitleCase(trimmed))}`);
       }
+      const updated = saveRecentSearch(trimmed);
+      setRecentSearches(updated);
       setSearchValue("");
       setSuggestions([]);
-      setDropdownVisible(false);
+      setIsFocused(false);
     },
     [navigate],
+  );
+  const handleRecentClick = useCallback(
+    (query: string) => {
+      handleSearch(query);
+    },
+    [handleSearch],
   );
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (inputRef.current && !inputRef.current.contains(e.target as Node)) {
-        setDropdownVisible(false);
+        setIsFocused(false);
+        setSuggestions([]);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  const showSuggestions = suggestions.length > 0;
+  const showRecent =
+    isFocused && !searchValue.trim() && recentSearches.length > 0;
 
   return (
     <AntHeader className="app-header">
@@ -163,20 +196,37 @@ export const Header = () => {
           value={searchValue}
           onChange={handleChange}
           onSearch={handleSearch}
+          onFocus={() => setIsFocused(true)}
           enterButton
           loading={loading}
         />
-        {isDropdownVisible && suggestions.length > 0 && (
+        {/* Випадаючий список: або підказки, або історія */}
+        {(showSuggestions || showRecent) && (
           <ul className="suggestions-dropdown">
-            {suggestions.map((s, idx) => (
-              <li
-                key={idx}
-                onClick={() => handleSelectSuggestion(s)}
-                className="suggestion-item"
-              >
-                {s.displayName}
-              </li>
-            ))}
+            {showSuggestions &&
+              suggestions.map((s, idx) => (
+                <li
+                  key={idx}
+                  onClick={() => handleSelectSuggestion(s)}
+                  className="suggestion-item"
+                >
+                  {s.displayName}
+                </li>
+              ))}
+            {!showSuggestions &&
+              showRecent &&
+              recentSearches.map((q, idx) => (
+                <li
+                  key={idx}
+                  onClick={() => handleRecentClick(q)}
+                  className="suggestion-item recent-item"
+                >
+                  <ClockCircleOutlined
+                    style={{ marginRight: 8, opacity: 0.5 }}
+                  />
+                  {q}
+                </li>
+              ))}
           </ul>
         )}
       </div>
