@@ -80,12 +80,13 @@
 
     .search-input {
       width: 100%;
+      --ant-input-search-btn-height: 36px;
 
       .ant-input {
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.2);
         color: #fff;
-        font-size: 14px;
+        font-size: 16px;
         padding: 4px 11px;
 
         &::placeholder {
@@ -180,7 +181,7 @@
     }
 
     .search-input .ant-input::placeholder {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
