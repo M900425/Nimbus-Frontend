@@ -52,7 +52,7 @@
   "data_sources": "Datu avoti",
   "aggregates_info": "Apkopo informāciju no Open-Meteo, WeatherAPI, Visual Crossing un Marine API, lai nodrošinātu visuzticamāko prognozi.",
   "search_by_coords": "Meklēt pēc koordinātām",
-  "prefer_exact": "Vēlaties precīzu atrašanās vietu? Vienkārši ierakstiet kaut ko līdzīgu <code>46.4843, 30.7323</code> (Odesa) vai jebkuras citas koordinātas — lietotne iegūs laikapstākļus tieši šai vietai.",
+  "prefer_exact": "Vēlaties precīzu atrašanās vietu? Vienkārši ierakstiet kaut ko līdzīgu <code>46.4843, 30.7323</code> (Odesa) vai jebkādas citas koordinātas — lietotne ielādēs laika apstākļus tieši šai vietai.",
   "geocoding_tool": "Ģeokodēšanas rīks",
   "need_coords": "Vai jāatrod pilsētas koordinātas? Vai koordinātu pilsētas nosaukums? Izmantojiet",
   "extra_features": "Papildu funkcijas",
@@ -110,5 +110,7 @@
   "type_other": "Cits",
   "network_error_check_connection": "Tīkla kļūda. Pārbaudiet savienojumu vai mēģiniet vēlreiz.",
   "server_error": "Servera kļūda. Lūdzu, mēģiniet vēlāk.",
-  "location_details": "Atrašanās vietas informācija"
+  "location_details": "Atrašanās vietas informācija",
+  "back_to_weather": "Laiks",
+  "geocoding": "Ģeokodēšana"
 }

@@ -110,5 +110,7 @@
   "type_other": "Other",
   "network_error_check_connection": "Network error. Check your connection or try again.",
   "server_error": "Server error. Please try again later.",
-  "location_details": "Location details"
+  "location_details": "Location details",
+  "back_to_weather": "Weather",
+  "geocoding": "Geocoding"
 }

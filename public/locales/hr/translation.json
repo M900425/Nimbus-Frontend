@@ -110,5 +110,7 @@
   "type_other": "Ostalo",
   "network_error_check_connection": "Mrežna pogreška. Provjerite svoju vezu ili pokušajte ponovno.",
   "server_error": "Pogreška poslužitelja. Molimo pokušajte ponovo kasnije.",
-  "location_details": "Pojedinosti o lokaciji"
+  "location_details": "Pojedinosti o lokaciji",
+  "back_to_weather": "Vrijeme",
+  "geocoding": "Geokodiranje"
 }

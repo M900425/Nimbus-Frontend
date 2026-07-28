@@ -52,7 +52,7 @@
   "data_sources": "Andmeallikad",
   "aggregates_info": "Koondab andmeid Open-Meteo, WeatherAPI, Visual Crossingi ja Marine API põhjal, et tagada kõige usaldusväärsem prognoos.",
   "search_by_coords": "Otsi koordinaatide järgi",
-  "prefer_exact": "Eelistate täpset asukohta? Tippige lihtsalt midagi sellist nagu <code>46.4843, 30.7323</code> (Odesa) või mõni muu koordinaat — rakendus toob ilmaandmed täpselt selle koha jaoks.",
+  "prefer_exact": "Eelistad täpset asukohta? Sisesta lihtsalt midagi sellist nagu <code>46.4843, 30.7323</code> (Odessa) või muud koordinaadid — rakendus toob ilmaandmed täpselt selle punkti kohta.",
   "geocoding_tool": "Geokodeerimise tööriist",
   "need_coords": "Kas vajate linna koordinaate? Või koordinaatide järgi linna nime? Kasutage",
   "extra_features": "Lisafunktsioonid",
@@ -110,5 +110,7 @@
   "type_other": "Muu",
   "network_error_check_connection": "Võrguviga. Kontrollige ühendust või proovige uuesti.",
   "server_error": "Serveri viga. Palun proovige hiljem uuesti.",
-  "location_details": "Asukoha üksikasjad"
+  "location_details": "Asukoha üksikasjad",
+  "back_to_weather": "Ilm",
+  "geocoding": "Geokoodeerimine"
 }

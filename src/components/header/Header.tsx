@@ -1,8 +1,12 @@
 import "./Header.scss";
 import { Layout, Input } from "antd";
-import { GlobalOutlined, ClockCircleOutlined } from "@ant-design/icons";
-import { useState, useCallback, useRef, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {
+  GlobalOutlined,
+  ClockCircleOutlined,
+  ThunderboltOutlined,
+} from "@ant-design/icons";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { toTitleCase, parseCoordinates } from "../../utils/string";
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
@@ -15,6 +19,13 @@ interface Suggestion {
   cityName: string;
   lat: number;
   lon: number;
+}
+
+interface LastViewedCity {
+  displayName: string;
+  cityName: string;
+  lat: number | null;
+  lon: number | null;
 }
 
 function debounce(fn: (...args: string[]) => void, ms: number) {
@@ -42,7 +53,15 @@ function saveRecentSearch(query: string): string[] {
   localStorage.setItem("recentSearches", JSON.stringify(recent));
   return recent;
 }
-// ------------------------------------
+
+function saveLastViewedCity(city: LastViewedCity): void {
+  localStorage.setItem("lastViewedCity", JSON.stringify(city));
+}
+
+function getLastViewedCityFromStorage(): LastViewedCity | null {
+  const stored = localStorage.getItem("lastViewedCity");
+  return stored ? JSON.parse(stored) : null;
+}
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -53,11 +72,47 @@ export const Header = () => {
     useState<string[]>(getRecentSearches());
   const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isWeatherActive = location.pathname.startsWith("/weather");
+  const isGeocodeActive = location.pathname.startsWith("/geocode");
   const abortRef = useRef<AbortController | null>(null);
   const debouncedFetchRef = useRef<ReturnType<typeof debounce> | undefined>(
     undefined,
   );
   const inputRef = useRef<HTMLDivElement>(null);
+  const lastCity = useMemo<LastViewedCity | null>(() => {
+    const params = new URLSearchParams(location.search);
+    const lat = params.get("lat");
+    const lon = params.get("lon");
+    const city = params.get("city");
+
+    if (lat && lon) {
+      const cityName = city || `${lat},${lon}`;
+      const cityData: LastViewedCity = {
+        displayName: cityName,
+        cityName,
+        lat: parseFloat(lat),
+        lon: parseFloat(lon),
+      };
+      saveLastViewedCity(cityData);
+      return cityData;
+    } else if (location.pathname.startsWith("/weather/")) {
+      const pathCity = decodeURIComponent(
+        location.pathname.split("/weather/")[1],
+      );
+      if (pathCity) {
+        const cityData: LastViewedCity = {
+          displayName: pathCity,
+          cityName: pathCity,
+          lat: null,
+          lon: null,
+        };
+        saveLastViewedCity(cityData);
+        return cityData;
+      }
+    }
+    return getLastViewedCityFromStorage();
+  }, [location]);
 
   useEffect(() => {
     debouncedFetchRef.current = debounce(async (query: string) => {
@@ -133,7 +188,7 @@ export const Header = () => {
       setSuggestions([]);
       setIsFocused(false);
     },
-    [navigate],
+    [navigate, setRecentSearches],
   );
   const handleSearch = useCallback(
     (value: string) => {
@@ -151,7 +206,7 @@ export const Header = () => {
       setSuggestions([]);
       setIsFocused(false);
     },
-    [navigate],
+    [navigate, setRecentSearches],
   );
   const handleRecentClick = useCallback(
     (query: string) => {
@@ -159,6 +214,19 @@ export const Header = () => {
     },
     [handleSearch],
   );
+  const goToLastCity = useCallback(() => {
+    if (!lastCity) return;
+    if (lastCity.lat !== null && lastCity.lon !== null) {
+      const cityParam = encodeURIComponent(toTitleCase(lastCity.cityName));
+      navigate(
+        `/weather?lat=${lastCity.lat}&lon=${lastCity.lon}&city=${cityParam}`,
+      );
+    } else {
+      navigate(
+        `/weather/${encodeURIComponent(toTitleCase(lastCity.cityName))}`,
+      );
+    }
+  }, [lastCity, navigate]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -183,11 +251,20 @@ export const Header = () => {
         </Link>
         <Link
           to="/geocode"
-          className="geocode-link"
+          className={`geocode-link ${isGeocodeActive ? "active" : ""}`}
           title={t("geocoding_tool")}
         >
           <GlobalOutlined />
         </Link>
+        {lastCity && (
+          <button
+            className={`geocode-link last-city-btn ${isWeatherActive ? "active" : ""}`}
+            onClick={goToLastCity}
+            title={t("back_to_last_city")}
+          >
+            <ThunderboltOutlined />
+          </button>
+        )}
       </div>
       <div className="search-wrapper" ref={inputRef}>
         <Input.Search
@@ -200,7 +277,6 @@ export const Header = () => {
           enterButton
           loading={loading}
         />
-        {/* Випадаючий список: або підказки, або історія */}
         {(showSuggestions || showRecent) && (
           <ul className="suggestions-dropdown">
             {showSuggestions &&

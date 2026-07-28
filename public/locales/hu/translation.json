@@ -52,7 +52,7 @@
   "data_sources": "Adatforrások",
   "aggregates_info": "Az Open-Meteo, a WeatherAPI, a Visual Crossing és a Marine API adatait összesíti a legmegbízhatóbb előrejelzés érdekében.",
   "search_by_coords": "Keresés koordináták alapján",
-  "prefer_exact": "Pontos helyet szeretnél? Írj be valami olyat, mint <code>46.4843, 30.7323</code> (Odesa) vagy bármilyen más koordinátát — az alkalmazás lekéri az adott pont időjárását.",
+  "prefer_exact": "Pontos helyszínt szeretnél? Csak írj be valamit, például <code>46.4843, 30.7323</code> (Odesa) vagy bármilyen más koordinátát — az alkalmazás lekéri az időjárást az adott helyszínre.",
   "geocoding_tool": "Geokódolási eszköz",
   "need_coords": "Koordinátákat keresel egy városhoz? Vagy városnevet koordinátákhoz? Használd a",
   "extra_features": "További funkciók",
@@ -110,5 +110,7 @@
   "type_other": "Egyéb",
   "network_error_check_connection": "Hálózati hiba. Ellenőrizze a kapcsolatát, vagy próbálja újra.",
   "server_error": "Szerverhiba. Kérjük, próbálja újra később.",
-  "location_details": "Helyszín részletei"
+  "location_details": "Helyszín részletei",
+  "back_to_weather": "Időjárás",
+  "geocoding": "Geokódolás"
 }

@@ -55,6 +55,20 @@
         color: #fff;
         transform: scale(1.1);
       }
+
+      &.active {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        padding: 4px;
+      }
+    }
+
+    .last-city-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
     }
   }
 
@@ -147,6 +161,12 @@
 
 @media (max-width: 768px) {
   .app-header {
+    .header-left {
+      .geocode-link,
+      .last-city-btn {
+        display: none;
+      }
+    }
     .search-wrapper {
       .suggestions-dropdown {
         position: fixed;

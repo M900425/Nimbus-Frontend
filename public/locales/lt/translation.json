@@ -52,7 +52,7 @@
   "data_sources": "Duomenų šaltiniai",
   "aggregates_info": "Apjungia informaciją iš Open-Meteo, WeatherAPI, Visual Crossing ir Marine API, siekiant užtikrinti patikimiausią prognozę.",
   "search_by_coords": "Ieškoti pagal koordinates",
-  "prefer_exact": "Norite tikslios vietos? Tiesiog įveskite kažką panašaus į <code>46.4843, 30.7323</code> (Odesa) arba bet kokias kitas koordinates — programa pateiks orą būtent tai vietai.",
+  "prefer_exact": "Norite tikslios vietos? Tiesiog įveskite kažką panašaus į <code>46.4843, 30.7323</code> (Odesa) arba bet kokias kitas koordinates — programa pateiks orų prognozę būtent tai vietai.",
   "geocoding_tool": "Geokodavimo įrankis",
   "need_coords": "Reikia rasti miesto koordinates? Arba miesto pavadinimą pagal koordinates? Naudokite",
   "extra_features": "Papildomos funkcijos",
@@ -110,5 +110,7 @@
   "type_other": "Kita",
   "network_error_check_connection": "Tinklo klaida. Patikrinkite ryšį arba bandykite dar kartą.",
   "server_error": "Serverio klaida. Bandykite dar kartą vėliau.",
-  "location_details": "Vietos informacija"
+  "location_details": "Vietos informacija",
+  "back_to_weather": "Orai",
+  "geocoding": "Geokodavimas"
 }

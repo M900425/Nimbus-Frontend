@@ -52,7 +52,7 @@
   "data_sources": "Zdroje dat",
   "aggregates_info": "Agreguje informace z Open-Meteo, WeatherAPI, Visual Crossing a Marine API pro zajištění co nejspolehlivější předpovědi.",
   "search_by_coords": "Hledat podle souřadnic",
-  "prefer_exact": "Preferujete přesnou polohu? Stačí zadat něco jako <code>46.4843, 30.7323</code> (Odesa) nebo jakékoli jiné souřadnice — aplikace načte počasí pro dané místo.",
+  "prefer_exact": "Chcete přesnou polohu? Jednoduše zadejte něco jako <code>46.4843, 30.7323</code> (Oděsa) nebo jiné souřadnice — aplikace načte počasí pro přesně toto místo.",
   "geocoding_tool": "Nástroj pro geokódování",
   "need_coords": "Potřebujete najít souřadnice pro město? Nebo název města pro souřadnice? Použijte",
   "extra_features": "Další funkce",
@@ -110,5 +110,7 @@
   "type_other": "Ostatní",
   "network_error_check_connection": "Chyba sítě. Zkontrolujte připojení nebo to zkuste znovu.",
   "server_error": "Chyba serveru. Zkuste to prosím později.",
-  "location_details": "Podrobnosti o poloze"
+  "location_details": "Podrobnosti o poloze",
+  "back_to_weather": "Počasí",
+  "geocoding": "Geokódování"
 }

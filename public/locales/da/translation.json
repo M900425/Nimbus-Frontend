@@ -52,7 +52,7 @@
   "data_sources": "Datakilder",
   "aggregates_info": "Samler information fra Open-Meteo, WeatherAPI, Visual Crossing og Marine API for at sikre den mest pålidelige vejrudsigt.",
   "search_by_coords": "Søg efter koordinater",
-  "prefer_exact": "Foretrækker du en præcis placering? Skriv blot noget som <code>46.4843, 30.7323</code> (Odesa) eller andre koordinater – appen henter vejret for netop det sted.",
+  "prefer_exact": "Foretrækker du en præcis placering? Skriv blot noget som <code>46.4843, 30.7323</code> (Odesa) eller andre koordinater — appen henter vejret for det præcise sted.",
   "geocoding_tool": "Geokodningsværktøj",
   "need_coords": "Har du brug for at finde koordinater for en by? Eller bynavnet for koordinater? Brug",
   "extra_features": "Ekstra funktioner",
@@ -110,5 +110,7 @@
   "type_other": "Andet",
   "network_error_check_connection": "Netværksfejl. Tjek din forbindelse, eller prøv igen.",
   "server_error": "Serverfejl. Prøv igen senere.",
-  "location_details": "Placeringsdetaljer"
+  "location_details": "Placeringsdetaljer",
+  "back_to_weather": "Vejr",
+  "geocoding": "Geokodning"
 }

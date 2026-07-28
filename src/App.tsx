@@ -5,6 +5,7 @@ import { Header } from "./components/header/Header";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { WeatherPage } from "./pages/WeatherPage/WeatherPage";
 import { GeocodePage } from "./pages/GeocodePage/GeocodePage";
+import MobileDock from "./components/MobileDock/MobileDock";
 
 const { Content } = Layout;
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/weather" element={<WeatherPage />} />
           <Route path="/geocode" element={<GeocodePage />} />
         </Routes>
+        <MobileDock />
       </Content>
     </Layout>
   );
