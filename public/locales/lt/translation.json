@@ -112,5 +112,7 @@
   "server_error": "Serverio klaida. Bandykite dar kartą vėliau.",
   "location_details": "Vietos informacija",
   "back_to_weather": "Orai",
-  "geocoding": "Geokodavimas"
+  "geocoding": "Geokodavimas",
+  "detailed_forecasts": "Išsamios prognozės",
+  "detailed_forecasts_desc": "Peržiūrėkite išsamią valandinę temperatūros diagramą artimiausioms 24 valandoms ir išplėstinę prognozę artimiausioms dienoms, įskaitant vėją ir UV indeksą."
 }

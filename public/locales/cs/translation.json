@@ -112,5 +112,7 @@
   "server_error": "Chyba serveru. Zkuste to prosím později.",
   "location_details": "Podrobnosti o poloze",
   "back_to_weather": "Počasí",
-  "geocoding": "Geokódování"
+  "geocoding": "Geokódování",
+  "detailed_forecasts": "Podrobné předpovědi",
+  "detailed_forecasts_desc": "Zobrazte si podrobný hodinový graf teploty na dalších 24 hodin a rozšířenou předpověď na nadcházející dny, včetně větru a UV indexu."
 }

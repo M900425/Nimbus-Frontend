@@ -71,6 +71,7 @@ export const Header = () => {
   const [recentSearches, setRecentSearches] =
     useState<string[]>(getRecentSearches());
   const [isFocused, setIsFocused] = useState(false);
+  const [isPlaceholderOverflowing, setIsPlaceholderOverflowing] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const isWeatherActive = location.pathname.startsWith("/weather");
@@ -80,6 +81,8 @@ export const Header = () => {
     undefined,
   );
   const inputRef = useRef<HTMLDivElement>(null);
+  const placeholderContainerRef = useRef<HTMLDivElement>(null);
+  const placeholderTextRef = useRef<HTMLSpanElement>(null);
   const lastCity = useMemo<LastViewedCity | null>(() => {
     const params = new URLSearchParams(location.search);
     const lat = params.get("lat");
@@ -239,6 +242,25 @@ export const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (placeholderContainerRef.current && placeholderTextRef.current) {
+        const containerWidth = placeholderContainerRef.current.clientWidth;
+        const textWidth = placeholderTextRef.current.scrollWidth;
+        if (textWidth > containerWidth) {
+          setIsPlaceholderOverflowing(true);
+          const scrollDistance = textWidth - containerWidth + 20;
+          placeholderTextRef.current.style.setProperty('--scroll-dist', `-${scrollDistance}px`);
+        } else {
+          setIsPlaceholderOverflowing(false);
+        }
+      }
+    };
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [t, searchValue, isFocused]);
+
   const showSuggestions = suggestions.length > 0;
   const showRecent =
     isFocused && !searchValue.trim() && recentSearches.length > 0;
@@ -269,7 +291,6 @@ export const Header = () => {
       <div className="search-wrapper" ref={inputRef}>
         <Input.Search
           className="search-input"
-          placeholder={t("search_placeholder")}
           value={searchValue}
           onChange={handleChange}
           onSearch={handleSearch}
@@ -277,6 +298,13 @@ export const Header = () => {
           enterButton
           loading={loading}
         />
+        {!searchValue && (
+          <div className={`custom-placeholder ${isFocused ? 'focused' : ''}`} ref={placeholderContainerRef}>
+             <span className={`placeholder-text ${isPlaceholderOverflowing ? 'scrolling' : ''}`} ref={placeholderTextRef}>
+               {t("search_placeholder")}
+             </span>
+          </div>
+        )}
         {(showSuggestions || showRecent) && (
           <ul className="suggestions-dropdown">
             {showSuggestions &&

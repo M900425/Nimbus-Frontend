@@ -112,5 +112,7 @@
   "server_error": "Sunucu hatası. Lütfen daha sonra tekrar deneyin.",
   "location_details": "Konum ayrıntıları",
   "back_to_weather": "Hava Durumu",
-  "geocoding": "Coğrafi Kodlama"
+  "geocoding": "Coğrafi Kodlama",
+  "detailed_forecasts": "Detaylı Tahminler",
+  "detailed_forecasts_desc": "Önümüzdeki 24 saat için ayrıntılı saatlik sıcaklık grafiğini ve önümüzdeki günler için rüzgar ve UV indeksi dahil olmak üzere genişletilmiş tahminleri görüntüleyin."
 }

@@ -112,5 +112,7 @@
   "server_error": "Serveri viga. Palun proovige hiljem uuesti.",
   "location_details": "Asukoha üksikasjad",
   "back_to_weather": "Ilm",
-  "geocoding": "Geokoodeerimine"
+  "geocoding": "Geokoodeerimine",
+  "detailed_forecasts": "Üksikasjalikud prognoosid",
+  "detailed_forecasts_desc": "Vaadake üksikasjalikku tunnist temperatuurigraafikut järgmise 24 tunni kohta ja laiendatud prognoosi lähipäevadeks, sealhulgas tuul ja UV-indeks."
 }

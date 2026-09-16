@@ -112,5 +112,7 @@
   "server_error": "Servera kļūda. Lūdzu, mēģiniet vēlāk.",
   "location_details": "Atrašanās vietas informācija",
   "back_to_weather": "Laiks",
-  "geocoding": "Ģeokodēšana"
+  "geocoding": "Ģeokodēšana",
+  "detailed_forecasts": "Detalizētas prognozes",
+  "detailed_forecasts_desc": "Skatiet detalizētu stundas temperatūras grafiku nākamajām 24 stundām un paplašinātu prognozi tuvākajām dienām, tostarp vēju un UV indeksu."
 }

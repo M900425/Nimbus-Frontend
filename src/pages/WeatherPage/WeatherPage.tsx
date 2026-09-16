@@ -4,7 +4,7 @@ import {
   useGetWeatherByCityQuery,
   useGetWeatherByCoordsQuery,
 } from "../../store/api/weatherApi";
-import { Card, Alert, Typography } from "antd";
+import { Card, Alert, Typography, Spin } from "antd";
 import { EnvironmentOutlined } from "@ant-design/icons";
 import { toTitleCase } from "../../utils/string";
 import { skipToken } from "@reduxjs/toolkit/query/react";
@@ -49,10 +49,12 @@ export const WeatherPage = () => {
     !coords && searchCity ? searchCity : skipToken,
   );
   const coordsQuery = useGetWeatherByCoordsQuery(coords ? coords : skipToken);
-  const { data, isLoading, isError } = coords ? coordsQuery : cityQuery;
+  const { data, isLoading, isFetching, isError } = coords ? coordsQuery : cityQuery;
   const [selectedDayIndex, setSelectedDayIndex] = useState(0);
   const hourlyRef = useRef<HTMLDivElement>(null);
   const dayListRef = useRef<HTMLDivElement>(null);
+  const prevCityRef = useRef<string>("");
+
 
   useEffect(() => {
     setTimeout(() => setSelectedDayIndex(0), 0);
@@ -120,19 +122,27 @@ export const WeatherPage = () => {
   const selectedDay = days[selectedDayIndex] || null;
   const isToday = selectedDayIndex === 0;
   const currentHour = new Date().getHours();
+  const themeCondition = isToday ? current.conditions : (selectedDay?.conditions || "Clear");
   const themeConfig = getWeatherTheme(
     undefined,
-    selectedDay?.conditions || "Clear",
+    themeCondition,
     true,
   );
   const theme = themeConfig.theme;
-  const displayCity = cityFromQuery
+
+  let displayCity = cityFromQuery
     ? toTitleCase(decodeURIComponent(cityFromQuery))
     : data.city
       ? toTitleCase(data.city)
       : coords
         ? `${coords.lat}, ${coords.lon}`
         : searchCity;
+
+  if (isFetching && !isLoading && prevCityRef.current) {
+    displayCity = prevCityRef.current;
+  } else {
+    prevCityRef.current = displayCity;
+  }
   let hourlyData = selectedDay?.hours || [];
   if (isToday && data.hourly?.time && data.hourly?.temperature_2m) {
     const todayStr = new Date().toISOString().slice(0, 10);
@@ -174,8 +184,8 @@ export const WeatherPage = () => {
     minTempFromHours !== null
       ? Math.round(minTempFromHours)
       : Math.round(selectedDay?.temp || 0);
-  const daysWithMinMax = days.map((day) => {
-    const dayHours = day.hours || [];
+  const daysWithMinMax = days.map((day, index) => {
+    const dayHours = index === 0 ? hourlyData : (day.hours || []);
     const minMax = getDayMinMax(dayHours);
     return {
       ...day,
@@ -196,7 +206,7 @@ export const WeatherPage = () => {
   return (
     <div className={`weather-page theme-${theme}`}>
       <WeatherEffects theme={theme} />
-      <div className="weather-content">
+      <div className={`weather-content${isFetching && !isLoading ? ' refetching' : ''}`}>
         <div className="weather-header">
           <Title level={2} className="city-name">
             <EnvironmentOutlined style={{ marginRight: 8, color: "#1890ff" }} />
@@ -301,6 +311,11 @@ export const WeatherPage = () => {
           </Card>
         )}
       </div>
+      {isFetching && !isLoading && (
+        <div className="weather-refetch-overlay">
+          <Spin size="large" />
+        </div>
+      )}
     </div>
   );
 };

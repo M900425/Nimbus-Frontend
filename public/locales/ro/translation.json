@@ -112,5 +112,7 @@
   "server_error": "Eroare de server. Vă rugăm să încercați din nou mai târziu.",
   "location_details": "Detalii despre locație",
   "back_to_weather": "Vreme",
-  "geocoding": "Geocodare"
+  "geocoding": "Geocodare",
+  "detailed_forecasts": "Prognoze detaliate",
+  "detailed_forecasts_desc": "Vizualizați un grafic detaliat al temperaturii pe ore pentru următoarele 24 de ore și o prognoză extinsă pentru zilele următoare, inclusiv vântul și indicele UV."
 }

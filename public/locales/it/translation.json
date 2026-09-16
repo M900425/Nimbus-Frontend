@@ -112,5 +112,7 @@
   "server_error": "Errore del server. Riprova più tardi.",
   "location_details": "Dettagli della posizione",
   "back_to_weather": "Meteo",
-  "geocoding": "Geocodifica"
+  "geocoding": "Geocodifica",
+  "detailed_forecasts": "Previsioni dettagliate",
+  "detailed_forecasts_desc": "Visualizza un grafico orario dettagliato delle temperature per le prossime 24 ore e previsioni estese per i prossimi giorni, inclusi vento e indice UV."
 }

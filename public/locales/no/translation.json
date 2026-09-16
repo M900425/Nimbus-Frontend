@@ -112,5 +112,7 @@
   "server_error": "Serverfeil. Vennligst prøv igjen senere.",
   "location_details": "Stedsdetaljer",
   "back_to_weather": "Vær",
-  "geocoding": "Geokoding"
+  "geocoding": "Geokoding",
+  "detailed_forecasts": "Detaljerte varsler",
+  "detailed_forecasts_desc": "Se en detaljert time-for-time temperaturgraf for de neste 24 timene og et utvidet varsel for de kommende dagene, inkludert vind og UV-indeks."
 }

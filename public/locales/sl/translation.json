@@ -112,5 +112,7 @@
   "server_error": "Napaka strežnika. Poskusite znova pozneje.",
   "location_details": "Podrobnosti lokacije",
   "back_to_weather": "Vreme",
-  "geocoding": "Geokodiranje"
+  "geocoding": "Geokodiranje",
+  "detailed_forecasts": "Podrobne napovedi",
+  "detailed_forecasts_desc": "Oglejte si podroben urni graf temperature za naslednjih 24 ur in razširjeno napoved za prihodnje dni, vključno z vetrom in UV indeksom."
 }

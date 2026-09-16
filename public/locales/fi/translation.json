@@ -112,5 +112,7 @@
   "server_error": "Palvelinvirhe. Yritä myöhemmin uudelleen.",
   "location_details": "Sijaintitiedot",
   "back_to_weather": "Sää",
-  "geocoding": "Geokoodaus"
+  "geocoding": "Geokoodaus",
+  "detailed_forecasts": "Yksityiskohtaiset ennusteet",
+  "detailed_forecasts_desc": "Katso yksityiskohtainen tuntikohtainen lämpötilakaavio seuraavalle 24 tunnille ja laajennettu ennuste tuleville päiville, mukaan lukien tuuli ja UV-indeksi."
 }

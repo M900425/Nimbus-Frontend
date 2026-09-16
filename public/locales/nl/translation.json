@@ -112,5 +112,7 @@
   "server_error": "Serverfout. Probeer het later opnieuw.",
   "location_details": "Locatiedetails",
   "back_to_weather": "Weer",
-  "geocoding": "Geocodering"
+  "geocoding": "Geocodering",
+  "detailed_forecasts": "Gedetailleerde voorspellingen",
+  "detailed_forecasts_desc": "Bekijk een gedetailleerde temperatuurgrafiek per uur voor de komende 24 uur en een uitgebreide weersverwachting voor de komende dagen, inclusief wind en UV-index."
 }

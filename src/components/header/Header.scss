@@ -78,6 +78,33 @@
     min-width: 120px;
     position: relative;
 
+    .custom-placeholder {
+      position: absolute;
+      top: 0;
+      left: 12px;
+      right: 46px;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &.focused .placeholder-text {
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .placeholder-text {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &.scrolling {
+          animation: marquee-bounce 6s ease-in-out infinite alternate;
+        }
+      }
+    }
+
     .search-input {
       width: 100%;
       --ant-input-search-btn-height: 36px;
@@ -162,6 +189,8 @@
 
 @media (max-width: 768px) {
   .app-header {
+    padding: 0 16px;
+    
     .header-left {
       .geocode-link,
       .last-city-btn {
@@ -183,5 +212,14 @@
     .search-input .ant-input::placeholder {
       font-size: 14px;
     }
+  }
+}
+
+@keyframes marquee-bounce {
+  0%, 15% {
+    transform: translateX(0);
+  }
+  85%, 100% {
+    transform: translateX(var(--scroll-dist, 0));
   }
 }

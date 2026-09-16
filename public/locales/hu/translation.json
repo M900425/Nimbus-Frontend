@@ -112,5 +112,7 @@
   "server_error": "Szerverhiba. Kérjük, próbálja újra később.",
   "location_details": "Helyszín részletei",
   "back_to_weather": "Időjárás",
-  "geocoding": "Geokódolás"
+  "geocoding": "Geokódolás",
+  "detailed_forecasts": "Részletes előrejelzések",
+  "detailed_forecasts_desc": "Tekintse meg a részletes óránkénti hőmérséklet-grafikont a következő 24 órára és a kiterjesztett előrejelzést az elkövetkező napokra, beleértve a szelet és az UV indexet."
 }

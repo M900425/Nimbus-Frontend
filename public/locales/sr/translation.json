@@ -112,5 +112,7 @@
   "server_error": "Greška servera. Pokušajte ponovo kasnije.",
   "location_details": "Detalji lokacije",
   "back_to_weather": "Временска прогноза",
-  "geocoding": "Геокодирање"
+  "geocoding": "Геокодирање",
+  "detailed_forecasts": "Detaljne prognoze",
+  "detailed_forecasts_desc": "Pogledajte detaljan grafikon temperature po satima za naredna 24 sata i proširenu prognozu za naredne dane, uključujući vetar i UV indeks."
 }

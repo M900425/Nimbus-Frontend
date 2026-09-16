@@ -6,6 +6,7 @@ import {
   GlobalOutlined,
   ThunderboltOutlined,
   EnvironmentOutlined,
+  LineChartOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -64,6 +65,15 @@ export const HomePage = () => {
             {t("need_coords_prefix")}{" "}
             <Link to="/geocode">{t("geocoding_tool")}</Link>{" "}
             {t("need_coords_suffix")}
+          </Paragraph>
+        </Card>
+        <Card className="feature-card" bordered={false}>
+          <div className="card-header">
+            <LineChartOutlined className="card-icon" />
+            <Title level={4}>{t("detailed_forecasts")}</Title>
+          </div>
+          <Paragraph>
+            {t("detailed_forecasts_desc")}
           </Paragraph>
         </Card>
         <Card className="feature-card" bordered={false}>

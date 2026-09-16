@@ -112,5 +112,7 @@
   "server_error": "Błąd serwera. Spróbuj ponownie później.",
   "location_details": "Szczegóły lokalizacji",
   "back_to_weather": "Pogoda",
-  "geocoding": "Geokodowanie"
+  "geocoding": "Geokodowanie",
+  "detailed_forecasts": "Szczegółowe prognozy",
+  "detailed_forecasts_desc": "Zobacz szczegółowy godzinowy wykres temperatury na najbliższe 24 godziny oraz rozszerzoną prognozę na nadchodzące dni, w tym wiatr i indeks UV."
 }
