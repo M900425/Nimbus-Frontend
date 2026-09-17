@@ -161,7 +161,7 @@ export const MapPage: React.FC = () => {
             duration: 1.5,
           });
         },
-        () => {},
+        () => { },
         { timeout: 5000 },
       );
     }
@@ -278,11 +278,13 @@ export const MapPage: React.FC = () => {
           ) : (
             <CompassOutlined className="hint-icon" />
           )}
-          <span>
-            {isLoadingPoint
-              ? t("loading_weather")
-              : t("click_map_hint")}
-          </span>
+          <div className="hint-text-wrapper">
+            <span>
+              {isLoadingPoint
+                ? t("loading_weather")
+                : t("click_map_hint")}
+            </span>
+          </div>
         </div>
         <Button
           className="locate-btn"
