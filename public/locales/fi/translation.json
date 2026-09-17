@@ -113,7 +113,6 @@
   "detailed_forecasts": "Yksityiskohtaiset ennusteet",
   "detailed_forecasts_desc": "Katso yksityiskohtainen tuntikohtainen lämpötilakaavio seuraavalle 24 tunnille ja laajennettu ennuste tuleville päiville, mukaan lukien tuuli ja UV-indeksi.",
   "map_theme_dark": "Tumma",
-  "map_theme_light": "Vaalea",
   "map_theme_classic": "Klassinen",
   "click_map_hint": "Napsauta karttaa tarkistaaksesi sään",
   "my_location": "Oma sijainti",

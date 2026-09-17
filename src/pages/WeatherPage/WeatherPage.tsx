@@ -124,16 +124,12 @@ export const WeatherPage = () => {
   
   let currentHour = new Date().getHours();
   if (data.timezone) {
-    try {
-      const timeString = new Intl.DateTimeFormat("en-GB", {
-        hour: "numeric",
-        hourCycle: "h23",
-        timeZone: data.timezone,
-      }).format(new Date());
-      currentHour = parseInt(timeString, 10);
-    } catch (e) {
-      // fallback
-    }
+    const timeString = new Intl.DateTimeFormat("en-GB", {
+      hour: "numeric",
+      hourCycle: "h23",
+      timeZone: data.timezone,
+    }).format(new Date());
+    currentHour = parseInt(timeString, 10);
   } else if (data.tzoffset !== undefined) {
     const now = new Date();
     const utc = now.getTime() + now.getTimezoneOffset() * 60000;

@@ -55,9 +55,16 @@
       box-shadow: 0 4px 14px rgba(24, 144, 255, 0.4);
       transition: all 0.2s ease;
 
-      &:hover {
+      &:hover:not(:disabled) {
         transform: translateY(-1px);
         box-shadow: 0 6px 20px rgba(24, 144, 255, 0.6);
+      }
+
+      &:disabled {
+        background: #d9d9d9;
+        color: #8c8c8c;
+        box-shadow: none;
+        cursor: not-allowed;
       }
     }
   }
@@ -68,7 +75,6 @@
     z-index: 1;
   }
 
-  /* Map Controls Styling (Leaflet & MapLibre) */
   .leaflet-bottom.leaflet-right,
   .maplibregl-ctrl-bottom-right {
     margin-bottom: 24px;
@@ -111,7 +117,6 @@
     }
   }
 
-  /* Leaflet Layers Switcher */
   .leaflet-bottom.leaflet-left {
     margin-bottom: 24px;
     margin-left: 16px;
@@ -140,8 +145,6 @@
       }
     }
   }
-
-  /* Custom Animated Marker */
   .custom-map-marker-container {
     background: transparent;
     border: none;
@@ -220,7 +223,6 @@
   }
 }
 
-/* Weather Map Modal Styling */
 .weather-map-modal {
   .ant-modal-content {
     background: #ffffff;
@@ -412,7 +414,6 @@
 
 @media (max-width: 768px) {
   .map-page {
-    /* Full height, mobile dock floats on top */
     height: calc(100vh - 64px - env(safe-area-inset-top, 0px));
 
     .map-header-overlay {
@@ -454,11 +455,6 @@
   }
 }
 
-/* Map Theme Filters (Fine-tuning Stadia Maps) */
-.map-theme-light {
-  filter: brightness(0.92) contrast(1.05) saturate(1.1);
-}
-
 .map-theme-dark {
-  filter: brightness(1.5) contrast(0.85) saturate(1.2);
+  filter: invert(100%) hue-rotate(180deg) brightness(135%) contrast(100%) saturate(160%);
 }

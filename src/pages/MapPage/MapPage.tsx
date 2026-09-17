@@ -22,14 +22,12 @@ const { Title, Text } = Typography;
 export const MapPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
-  const layersRef = useRef<{ dark: L.TileLayer; light: L.TileLayer; classic: L.TileLayer } | null>(null);
+  const layersRef = useRef<{ dark: L.TileLayer; classic: L.TileLayer } | null>(null);
   const layersControlRef = useRef<L.Control.Layers | null>(null);
   const markerRef = useRef<L.Marker | null>(null);
   const lastRequestIdRef = useRef<number>(0);
-
   const [clickedCoords, setClickedCoords] = useState<{
     lat: number;
     lon: number;
@@ -38,10 +36,8 @@ export const MapPage: React.FC = () => {
   const [localizedCityName, setLocalizedCityName] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoadingPoint, setIsLoadingPoint] = useState(false);
-
+  const [geolocationGranted, setGeolocationGranted] = useState<boolean>(true);
   const [triggerGetWeather] = useLazyGetWeatherByCoordsQuery();
-
-  // Create custom marker icon with loading state
   const createPinIcon = (isLoading = false) => {
     return L.divIcon({
       className: "custom-map-marker-container",
@@ -62,7 +58,6 @@ export const MapPage: React.FC = () => {
     lon: number,
     map?: L.Map | null,
   ) => {
-    // 1. Move or create marker with loading icon immediately
     if (markerRef.current) {
       markerRef.current.setLatLng([lat, lon]);
       markerRef.current.setIcon(createPinIcon(true));
@@ -77,7 +72,6 @@ export const MapPage: React.FC = () => {
     const currentRequestId = ++lastRequestIdRef.current;
 
     try {
-      // 2. Parallel fetch: weather data from backend + localized city name via Nominatim
       const [weatherRes, locName] = await Promise.all([
         triggerGetWeather({ lat, lon }, false).unwrap(),
         fetch(
@@ -99,7 +93,6 @@ export const MapPage: React.FC = () => {
           .catch(() => null),
       ]);
 
-      // Ensure we only show data for the newest clicked point
       if (lastRequestIdRef.current === currentRequestId) {
         setModalWeather(weatherRes);
         setLocalizedCityName(locName);
@@ -125,56 +118,51 @@ export const MapPage: React.FC = () => {
   });
 
   useEffect(() => {
+    if (navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: 'geolocation' }).then((result) => {
+        setGeolocationGranted(result.state !== 'denied');
+        result.addEventListener('change', () => {
+          setGeolocationGranted(result.state !== 'denied');
+        });
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     if (!mapContainerRef.current || mapInstanceRef.current) return;
 
-    // Default center: Europe/Ukraine
     const defaultCenter: [number, number] = [49.0, 31.0];
     const defaultZoom = 5;
-
     const map = L.map(mapContainerRef.current, {
       center: defaultCenter,
       zoom: defaultZoom,
       zoomControl: false,
       attributionControl: false,
     });
-
-    // High quality, modern basemaps (Stadia Maps)
-    // Works completely free without API keys on localhost. No watermarks!
-    const stadiaSmooth = L.tileLayer(
-      "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png",
+    const osmDark = L.tileLayer(
+      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       {
-        maxZoom: 20,
-        className: 'map-theme-light',
-      },
-    );
-
-    const stadiaDark = L.tileLayer(
-      "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png",
-      {
-        maxZoom: 20,
+        maxZoom: 19,
         className: 'map-theme-dark',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       },
     );
-
-    const stadiaBright = L.tileLayer(
-      "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png",
+    const osmClassic = L.tileLayer(
+      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       {
-        maxZoom: 20,
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       },
     );
+    layersRef.current = { dark: osmDark, classic: osmClassic };
+    osmDark.addTo(map);
 
-    // Set default modern map
-    layersRef.current = { dark: stadiaDark, light: stadiaSmooth, classic: stadiaBright };
-    stadiaDark.addTo(map);
-
-    // Zoom control in bottom-right (so it doesn't overlap with locate button)
     L.control
       .zoom({
         position: "bottomright",
       })
       .addTo(map);
 
-    // Geolocation centering
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -188,7 +176,6 @@ export const MapPage: React.FC = () => {
       );
     }
 
-    // Map click
     map.on("click", (e: L.LeafletMouseEvent) => {
       const lat = parseFloat(e.latlng.lat.toFixed(4));
       const lon = parseFloat(e.latlng.lng.toFixed(4));
@@ -205,7 +192,6 @@ export const MapPage: React.FC = () => {
     };
   }, []);
 
-  // Update map layers control dynamically when language changes
   useEffect(() => {
     if (!mapInstanceRef.current || !layersRef.current) return;
 
@@ -215,7 +201,6 @@ export const MapPage: React.FC = () => {
 
     const baseMaps = {
       [t("map_theme_dark")]: layersRef.current.dark,
-      [t("map_theme_light")]: layersRef.current.light,
       [t("map_theme_classic")]: layersRef.current.classic,
     };
 
@@ -223,8 +208,6 @@ export const MapPage: React.FC = () => {
       .layers(baseMaps, undefined, { position: "bottomleft" })
       .addTo(mapInstanceRef.current);
   }, [t, i18n.language]);
-
-  // Removed the language change refetch useEffect as requested by user
 
   const handleLocateMe = () => {
     if (!navigator.geolocation || !mapInstanceRef.current) return;
@@ -241,19 +224,16 @@ export const MapPage: React.FC = () => {
       { timeout: 8000 },
     );
   };
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setModalWeather(null);
     setLocalizedCityName(null);
   };
-
   const handleGoToFullForecast = () => {
     if (!clickedCoords) return;
     handleCloseModal();
     navigate(`/weather?lat=${clickedCoords.lat}&lon=${clickedCoords.lon}`);
   };
-
   const currentConditionText =
     modalWeather?.current?.conditions ||
     modalWeather?.current?.condition?.text ||
@@ -263,7 +243,6 @@ export const MapPage: React.FC = () => {
     currentConditionText,
     (key) => t(key),
   );
-
   const todayHours = modalWeather?.days?.[0]?.hours || [];
   const todayMinMax = getDayMinMax(todayHours);
   let maxTemp =
@@ -274,7 +253,6 @@ export const MapPage: React.FC = () => {
         : modalWeather?.days?.[0]?.tempMax !== undefined
           ? Math.round(modalWeather.days[0].tempMax)
           : null;
-
   let minTemp =
     todayMinMax.min !== null
       ? Math.round(todayMinMax.min)
@@ -283,13 +261,11 @@ export const MapPage: React.FC = () => {
         : modalWeather?.days?.[0]?.tempMin !== undefined
           ? Math.round(modalWeather.days[0].tempMin)
           : null;
-
   const currentT = modalWeather?.current?.temperature !== undefined ? Math.round(modalWeather.current.temperature) : null;
   if (currentT !== null) {
     if (maxTemp !== null && currentT > maxTemp) maxTemp = currentT;
     if (minTemp !== null && currentT < minTemp) minTemp = currentT;
   }
-
   const displayTitle =
     localizedCityName ||
     modalWeather?.city ||
@@ -299,7 +275,6 @@ export const MapPage: React.FC = () => {
 
   return (
     <div className="map-page">
-      {/* Top Floating Hint Banner */}
       <div className="map-header-overlay">
         <div className="map-hint-pill">
           {isLoadingPoint ? (
@@ -319,15 +294,13 @@ export const MapPage: React.FC = () => {
           icon={<AimOutlined />}
           loading={isLoadingPoint}
           onClick={handleLocateMe}
+          disabled={!geolocationGranted}
+          title={!geolocationGranted ? t("geolocation_denied") : ""}
         >
           {t("my_location")}
         </Button>
       </div>
-
-      {/* Leaflet Map DOM Container */}
       <div className="map-container" ref={mapContainerRef} />
-
-      {/* Weather Preview Modal */}
       <Modal
         open={isModalOpen && !!modalWeather}
         onCancel={handleCloseModal}
@@ -351,7 +324,6 @@ export const MapPage: React.FC = () => {
                 )}
               </div>
             </div>
-
             <div className="weather-preview-content">
               <div className="temp-hero">
                 <span className="big-icon">{weatherIcon}</span>
@@ -386,7 +358,6 @@ export const MapPage: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               <div className="stats-grid">
                 <div className="stat-card">
                   <span className="stat-name">
@@ -431,7 +402,6 @@ export const MapPage: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               <Button
                 type="primary"
                 size="large"

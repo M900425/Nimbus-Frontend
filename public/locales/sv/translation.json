@@ -113,7 +113,6 @@
   "detailed_forecasts": "Detaljerade prognoser",
   "detailed_forecasts_desc": "Se ett detaljerat timme-för-timme temperaturdiagram för de kommande 24 timmarna och en utökad prognos för de kommande dagarna, inklusive vind och UV-index.",
   "map_theme_dark": "Mörk",
-  "map_theme_light": "Ljus",
   "map_theme_classic": "Klassisk",
   "click_map_hint": "Klicka var som helst på kartan för att se vädret",
   "my_location": "Min plats",

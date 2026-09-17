@@ -113,7 +113,6 @@
   "detailed_forecasts": "Pronósticos detallados",
   "detailed_forecasts_desc": "Vea un gráfico detallado de la temperatura por hora para las próximas 24 horas y un pronóstico extendido para los próximos días, incluyendo el viento y el índice UV.",
   "map_theme_dark": "Oscuro",
-  "map_theme_light": "Claro",
   "map_theme_classic": "Clásico",
   "click_map_hint": "Haz clic en cualquier lugar del mapa para ver el clima",
   "my_location": "Mi ubicación",
