@@ -55,9 +55,6 @@
   "prefer_exact": "Föredrar du exakt plats? Skriv bara något som <code>46.4843, 30.7323</code> (Odesa) eller andra koordinater — appen hämtar väder för exakt den platsen.",
   "geocoding_tool": "Geokodningsverktyg",
   "need_coords": "Behöver du hitta koordinater för en stad? Eller stadsnamnet för koordinater? Använd",
-  "extra_features": "Extra funktioner",
-  "handles_both": "Hanterar både stadsnamn och koordinater sömlöst.",
-  "water_calculated": "Vattentemperatur för sjöar och floder beräknas specifikt för din plats med hjälp av en anpassad algoritm.",
   "prefer_exact_prefix": "Föredrar du en exakt plats? Skriv något som",
   "prefer_exact_suffix": "(Odesa) eller andra koordinater — appen hämtar vädret för just den platsen.",
   "need_coords_prefix": "Behöver du hitta koordinater för en stad? Eller stadsnamnet för koordinater? Använd",
@@ -114,5 +111,14 @@
   "back_to_weather": "Väder",
   "geocoding": "Geokodning",
   "detailed_forecasts": "Detaljerade prognoser",
-  "detailed_forecasts_desc": "Se ett detaljerat timme-för-timme temperaturdiagram för de kommande 24 timmarna och en utökad prognos för de kommande dagarna, inklusive vind och UV-index."
+  "detailed_forecasts_desc": "Se ett detaljerat timme-för-timme temperaturdiagram för de kommande 24 timmarna och en utökad prognos för de kommande dagarna, inklusive vind och UV-index.",
+  "map_theme_dark": "Mörk",
+  "map_theme_light": "Ljus",
+  "map_theme_classic": "Klassisk",
+  "click_map_hint": "Klicka var som helst på kartan för att se vädret",
+  "my_location": "Min plats",
+  "map_feature_title": "Interaktiv väderkarta",
+  "map_feature_desc_start": "Vet du inte det exakta namnet eller koordinaterna? ",
+  "map_feature_link": "Öppna den interaktiva kartan",
+  "map_feature_desc_end": " och klicka var som helst för att direkt se vädret. Du kan också hitta vädret på din nuvarande plats med ett klick."
 }

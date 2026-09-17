@@ -55,9 +55,6 @@
   "prefer_exact": "¿Prefieres una ubicación exacta? Escribe algo como <code>46.4843, 30.7323</code> (Odesa) o cualquier otra coordenada — la app obtendrá el tiempo para ese lugar exacto.",
   "geocoding_tool": "Herramienta de geocodificación",
   "need_coords": "¿Necesitas encontrar las coordenadas de una ciudad? ¿O el nombre de una ciudad a partir de sus coordenadas? Usa",
-  "extra_features": "Funciones adicionales",
-  "handles_both": "Gestiona nombres de ciudades y coordenadas sin ningún problema.",
-  "water_calculated": "La temperatura del agua de lagos y ríos se calcula específicamente para tu ubicación mediante un algoritmo personalizado.",
   "prefer_exact_prefix": "¿Prefieres una ubicación exacta? Escribe algo como",
   "prefer_exact_suffix": "(Odesa) o cualquier otra coordenada — la app obtendrá el clima para ese lugar exacto.",
   "need_coords_prefix": "¿Necesitas encontrar las coordenadas de una ciudad? ¿O el nombre de la ciudad a partir de coordenadas? Usa",
@@ -114,5 +111,14 @@
   "back_to_weather": "Tiempo",
   "geocoding": "Geocodificación",
   "detailed_forecasts": "Pronósticos detallados",
-  "detailed_forecasts_desc": "Vea un gráfico detallado de la temperatura por hora para las próximas 24 horas y un pronóstico extendido para los próximos días, incluyendo el viento y el índice UV."
+  "detailed_forecasts_desc": "Vea un gráfico detallado de la temperatura por hora para las próximas 24 horas y un pronóstico extendido para los próximos días, incluyendo el viento y el índice UV.",
+  "map_theme_dark": "Oscuro",
+  "map_theme_light": "Claro",
+  "map_theme_classic": "Clásico",
+  "click_map_hint": "Haz clic en cualquier lugar del mapa para ver el clima",
+  "my_location": "Mi ubicación",
+  "map_feature_title": "Mapa del tiempo interactivo",
+  "map_feature_desc_start": "¿No conoce el nombre exacto o las coordenadas? ",
+  "map_feature_link": "Abra el mapa interactivo",
+  "map_feature_desc_end": " y haga clic en cualquier lugar para obtener al instante el clima. También puede conocer el clima en su ubicación actual con un solo clic."
 }

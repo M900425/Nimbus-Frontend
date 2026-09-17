@@ -55,9 +55,6 @@
   "prefer_exact": "Haluatko tarkan sijainnin? Kirjoita vain jotain kuten <code>46.4843, 30.7323</code> (Odesa) tai muut koordinaatit — sovellus hakee säätiedot juuri kyseiselle paikalle.",
   "geocoding_tool": "Geokoodaustyökalu",
   "need_coords": "Haluatko etsiä koordinaatit kaupungille tai kaupungin nimen koordinaateille? Käytä",
-  "extra_features": "Lisäominaisuudet",
-  "handles_both": "Käsittelee saumattomasti sekä kaupunkien nimet että koordinaatit.",
-  "water_calculated": "Järvien ja jokien veden lämpötila lasketaan erikseen sijaintisi mukaan mukautetulla algoritmilla.",
   "prefer_exact_prefix": "Haluatko tarkan sijainnin? Kirjoita esimerkiksi",
   "prefer_exact_suffix": "(Odesa) tai muut koordinaatit — sovellus hakee sään juuri kyseiselle paikalle.",
   "need_coords_prefix": "Haluatko etsiä kaupungin koordinaatit tai koordinaateille kaupungin nimen? Käytä",
@@ -114,5 +111,14 @@
   "back_to_weather": "Sää",
   "geocoding": "Geokoodaus",
   "detailed_forecasts": "Yksityiskohtaiset ennusteet",
-  "detailed_forecasts_desc": "Katso yksityiskohtainen tuntikohtainen lämpötilakaavio seuraavalle 24 tunnille ja laajennettu ennuste tuleville päiville, mukaan lukien tuuli ja UV-indeksi."
+  "detailed_forecasts_desc": "Katso yksityiskohtainen tuntikohtainen lämpötilakaavio seuraavalle 24 tunnille ja laajennettu ennuste tuleville päiville, mukaan lukien tuuli ja UV-indeksi.",
+  "map_theme_dark": "Tumma",
+  "map_theme_light": "Vaalea",
+  "map_theme_classic": "Klassinen",
+  "click_map_hint": "Napsauta karttaa tarkistaaksesi sään",
+  "my_location": "Oma sijainti",
+  "map_feature_title": "Interaktiivinen sääkartta",
+  "map_feature_desc_start": "Etkö tiedä tarkkaa nimeä tai koordinaatteja? ",
+  "map_feature_link": "Avaa interaktiivinen kartta",
+  "map_feature_desc_end": " ja napsauta mitä tahansa paikkaa saadaksesi heti sään. Voit myös tarkistaa sään nykyisessä sijainnissasi yhdellä napsautuksella."
 }

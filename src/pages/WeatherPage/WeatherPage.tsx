@@ -121,7 +121,26 @@ export const WeatherPage = () => {
   const days = data.days || [];
   const selectedDay = days[selectedDayIndex] || null;
   const isToday = selectedDayIndex === 0;
-  const currentHour = new Date().getHours();
+  
+  let currentHour = new Date().getHours();
+  if (data.timezone) {
+    try {
+      const timeString = new Intl.DateTimeFormat("en-GB", {
+        hour: "numeric",
+        hourCycle: "h23",
+        timeZone: data.timezone,
+      }).format(new Date());
+      currentHour = parseInt(timeString, 10);
+    } catch (e) {
+      // fallback
+    }
+  } else if (data.tzoffset !== undefined) {
+    const now = new Date();
+    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+    const targetTime = new Date(utc + 3600000 * data.tzoffset);
+    currentHour = targetTime.getHours();
+  }
+
   const themeCondition = isToday ? current.conditions : (selectedDay?.conditions || "Clear");
   const themeConfig = getWeatherTheme(
     undefined,
@@ -132,10 +151,10 @@ export const WeatherPage = () => {
 
   let displayCity = cityFromQuery
     ? toTitleCase(decodeURIComponent(cityFromQuery))
-    : data.city
-      ? toTitleCase(data.city)
-      : coords
-        ? `${coords.lat}, ${coords.lon}`
+    : coords
+      ? `${coords.lat.toFixed(4)}, ${coords.lon.toFixed(4)}`
+      : data.city
+        ? toTitleCase(data.city)
         : searchCity;
 
   if (isFetching && !isLoading && prevCityRef.current) {
@@ -176,31 +195,52 @@ export const WeatherPage = () => {
   const selectedMinMax = getDayMinMax(hourlyData);
   const maxTempFromHours = selectedMinMax.max;
   const minTempFromHours = selectedMinMax.min;
-  const tempMaxDisplay =
+  let tempMaxDisplay =
     maxTempFromHours !== null
       ? Math.round(maxTempFromHours)
       : Math.round(selectedDay?.temp || 0);
-  const tempMinDisplay =
+  let tempMinDisplay =
     minTempFromHours !== null
       ? Math.round(minTempFromHours)
       : Math.round(selectedDay?.temp || 0);
   const daysWithMinMax = days.map((day, index) => {
     const dayHours = index === 0 ? hourlyData : (day.hours || []);
     const minMax = getDayMinMax(dayHours);
+    let computedMax =
+      minMax.max !== null ? Math.round(minMax.max) : Math.round(day.temp);
+    let computedMin =
+      minMax.min !== null ? Math.round(minMax.min) : Math.round(day.temp);
+      
+    if (index === 0) {
+      const currentT = Math.round(current.temperature);
+      if (currentT > computedMax) computedMax = currentT;
+      if (currentT < computedMin) computedMin = currentT;
+    }
+
     return {
       ...day,
-      computedMax:
-        minMax.max !== null ? Math.round(minMax.max) : Math.round(day.temp),
-      computedMin:
-        minMax.min !== null ? Math.round(minMax.min) : Math.round(day.temp),
+      computedMax,
+      computedMin,
     };
   });
   const activeHourIndex =
     isToday && hourlyData.length === 24 ? currentHour : undefined;
-  const currentTemperature =
-    isToday && activeHourIndex !== undefined
-      ? hourlyData[activeHourIndex].temp
-      : current.temperature;
+  const currentTemperature = current.temperature;
+  
+  if (isToday) {
+    const currentT = Math.round(currentTemperature);
+    if (currentT > tempMaxDisplay) tempMaxDisplay = currentT;
+    if (currentT < tempMinDisplay) tempMinDisplay = currentT;
+    
+    if (activeHourIndex !== undefined && hourlyData[activeHourIndex]) {
+      hourlyData = [...hourlyData];
+      hourlyData[activeHourIndex] = {
+        ...hourlyData[activeHourIndex],
+        temp: currentTemperature
+      };
+    }
+  }
+
   const getWaterLabel = createWaterLabel(t);
 
   return (

@@ -55,9 +55,6 @@
   "prefer_exact": "Preferujete presnú polohu? Stačí zadať niečo ako <code>46.4843, 30.7323</code> (Odesa) alebo akékoľvek iné súradnice — aplikácia načíta počasie pre toto presné miesto.",
   "geocoding_tool": "Geokódovací nástroj",
   "need_coords": "Potrebujete nájsť súradnice pre mesto? Alebo názov mesta podľa súradníc? Použite",
-  "extra_features": "Ďalšie funkcie",
-  "handles_both": "Bez problémov spracováva názvy miest aj súradnice.",
-  "water_calculated": "Teplota vody pre jazerá a rieky sa vypočítava špeciálne pre vašu polohu pomocou vlastného algoritmu.",
   "prefer_exact_prefix": "Chcete presnú polohu? Stačí zadať niečo ako",
   "prefer_exact_suffix": "(Odesa) alebo iné súradnice — aplikácia načíta počasie pre dané miesto.",
   "need_coords_prefix": "Potrebujete nájsť súradnice mesta? Alebo názov mesta podľa súradníc? Použite",
@@ -114,5 +111,14 @@
   "back_to_weather": "Počasie",
   "geocoding": "Geokódovanie",
   "detailed_forecasts": "Podrobné predpovede",
-  "detailed_forecasts_desc": "Zobrazte si podrobný hodinový graf teploty na ďalších 24 hodín a rozšírenú predpoveď na nadchádzajúce dni vrátane vetra a UV indexu."
+  "detailed_forecasts_desc": "Zobrazte si podrobný hodinový graf teploty na ďalších 24 hodín a rozšírenú predpoveď na nadchádzajúce dni vrátane vetra a UV indexu.",
+  "map_theme_dark": "Tmavá",
+  "map_theme_light": "Svetlá",
+  "map_theme_classic": "Klasická",
+  "click_map_hint": "Kliknite kdekoľvek na mapu pre zobrazenie počasia",
+  "my_location": "Moja poloha",
+  "map_feature_title": "Interaktívna mapa počasia",
+  "map_feature_desc_start": "Neviete presný názov alebo súradnice? ",
+  "map_feature_link": "Otvorte interaktívnu mapu",
+  "map_feature_desc_end": " a kliknite kdekoľvek, aby ste okamžite získali počasie. Jedným kliknutím zistíte aj počasie vo vašej aktuálnej polohe."
 }

@@ -55,9 +55,6 @@
   "prefer_exact": "Exacte locatie gewenst? Typ iets zoals <code>46.4843, 30.7323</code> (Odesa) of andere coördinaten — de app haalt het weer op voor die exacte plek.",
   "geocoding_tool": "Geocoderingstool",
   "need_coords": "Wil je de coördinaten van een stad vinden? Of de stadsnaam bij coördinaten? Gebruik",
-  "extra_features": "Extra functies",
-  "handles_both": "Verwerkt zowel stadsnamen als coördinaten naadloos.",
-  "water_calculated": "De watertemperatuur voor meren en rivieren wordt specifiek voor jouw locatie berekend met een eigen algoritme.",
   "prefer_exact_prefix": "Exacte locatie voorkeur? Typ iets zoals",
   "prefer_exact_suffix": "(Odesa) of andere coördinaten — de app haalt het weer op voor die exacte plek.",
   "need_coords_prefix": "Coördinaten zoeken voor een stad? Of de plaatsnaam voor coördinaten? Gebruik",
@@ -114,5 +111,14 @@
   "back_to_weather": "Weer",
   "geocoding": "Geocodering",
   "detailed_forecasts": "Gedetailleerde voorspellingen",
-  "detailed_forecasts_desc": "Bekijk een gedetailleerde temperatuurgrafiek per uur voor de komende 24 uur en een uitgebreide weersverwachting voor de komende dagen, inclusief wind en UV-index."
+  "detailed_forecasts_desc": "Bekijk een gedetailleerde temperatuurgrafiek per uur voor de komende 24 uur en een uitgebreide weersverwachting voor de komende dagen, inclusief wind en UV-index.",
+  "map_theme_dark": "Donker",
+  "map_theme_light": "Licht",
+  "map_theme_classic": "Klassiek",
+  "click_map_hint": "Klik ergens op de kaart om het weer te bekijken",
+  "my_location": "Mijn locatie",
+  "map_feature_title": "Interactieve Weerkaart",
+  "map_feature_desc_start": "Weet u de exacte naam of coördinaten niet? ",
+  "map_feature_link": "Open de interactieve weerkaart",
+  "map_feature_desc_end": " en klik ergens om direct het weer te zien. U kunt ook met één klik het weer op uw huidige locatie vinden."
 }

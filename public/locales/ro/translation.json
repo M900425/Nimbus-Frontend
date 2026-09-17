@@ -55,9 +55,6 @@
   "prefer_exact": "Preferi locația exactă? Tastează ceva de genul <code>46.4843, 30.7323</code> (Odesa) sau orice alte coordonate — aplicația va prelua vremea pentru acel loc exact.",
   "geocoding_tool": "Instrument de geocodare",
   "need_coords": "Aveți nevoie să găsiți coordonatele unui oraș? Sau numele orașului după coordonate? Folosiți",
-  "extra_features": "Funcții suplimentare",
-  "handles_both": "Gestionează atât numele orașelor, cât și coordonatele fără probleme.",
-  "water_calculated": "Temperatura apei pentru lacuri și râuri este calculată specific pentru locația dvs. folosind un algoritm personalizat.",
   "prefer_exact_prefix": "Preferi o locație exactă? Tastează ceva de genul",
   "prefer_exact_suffix": "(Odesa) sau orice alte coordonate — aplicația va prelua vremea pentru acel loc exact.",
   "need_coords_prefix": "Ai nevoie să găsești coordonatele unui oraș? Sau numele orașului pentru anumite coordonate? Folosește",
@@ -114,5 +111,14 @@
   "back_to_weather": "Vreme",
   "geocoding": "Geocodare",
   "detailed_forecasts": "Prognoze detaliate",
-  "detailed_forecasts_desc": "Vizualizați un grafic detaliat al temperaturii pe ore pentru următoarele 24 de ore și o prognoză extinsă pentru zilele următoare, inclusiv vântul și indicele UV."
+  "detailed_forecasts_desc": "Vizualizați un grafic detaliat al temperaturii pe ore pentru următoarele 24 de ore și o prognoză extinsă pentru zilele următoare, inclusiv vântul și indicele UV.",
+  "map_theme_dark": "Întunecat",
+  "map_theme_light": "Luminos",
+  "map_theme_classic": "Clasic",
+  "click_map_hint": "Faceți clic oriunde pe hartă pentru a verifica starea vremii",
+  "my_location": "Locația mea",
+  "map_feature_title": "Hartă meteo interactivă",
+  "map_feature_desc_start": "Nu știți numele exact sau coordonatele? ",
+  "map_feature_link": "Deschideți harta interactivă",
+  "map_feature_desc_end": " și faceți clic oriunde pentru a obține instantaneu vremea. De asemenea, puteți afla vremea în locația dvs. actuală cu un singur clic."
 }

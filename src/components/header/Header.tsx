@@ -2,6 +2,7 @@ import "./Header.scss";
 import { Layout, Input } from "antd";
 import {
   GlobalOutlined,
+  CompassOutlined,
   ClockCircleOutlined,
   ThunderboltOutlined,
 } from "@ant-design/icons";
@@ -76,6 +77,7 @@ export const Header = () => {
   const location = useLocation();
   const isWeatherActive = location.pathname.startsWith("/weather");
   const isGeocodeActive = location.pathname.startsWith("/geocode");
+  const isMapActive = location.pathname.startsWith("/map");
   const abortRef = useRef<AbortController | null>(null);
   const debouncedFetchRef = useRef<ReturnType<typeof debounce> | undefined>(
     undefined,
@@ -277,6 +279,13 @@ export const Header = () => {
           title={t("geocoding_tool")}
         >
           <GlobalOutlined />
+        </Link>
+        <Link
+          to="/map"
+          className={`geocode-link ${isMapActive ? "active" : ""}`}
+          title={t("weather_map", "Карта погоди")}
+        >
+          <CompassOutlined />
         </Link>
         {lastCity && (
           <button

@@ -55,9 +55,6 @@
   "prefer_exact": "Genauen Standort bevorzugen? Gib einfach etwas wie <code>46.4843, 30.7323</code> (Odesa) oder beliebige andere Koordinaten ein — die App ruft das Wetter für genau diesen Ort ab.",
   "geocoding_tool": "Geokodierungs-Tool",
   "need_coords": "Koordinaten für eine Stadt suchen? Oder den Stadtnamen für Koordinaten? Verwenden Sie",
-  "extra_features": "Zusätzliche Funktionen",
-  "handles_both": "Verarbeitet sowohl Stadtnamen als auch Koordinaten nahtlos.",
-  "water_calculated": "Die Wassertemperatur für Seen und Flüsse wird speziell für Ihren Standort mithilfe eines benutzerdefinierten Algorithmus berechnet.",
   "prefer_exact_prefix": "Genauen Standort bevorzugen? Geben Sie einfach etwas ein wie",
   "prefer_exact_suffix": "(Odesa) oder beliebige andere Koordinaten – die App ruft das Wetter für genau diesen Ort ab.",
   "need_coords_prefix": "Koordinaten für eine Stadt suchen? Oder den Stadtnamen für Koordinaten? Nutzen Sie",
@@ -114,5 +111,14 @@
   "back_to_weather": "Wetter",
   "geocoding": "Geocoding",
   "detailed_forecasts": "Detaillierte Vorhersagen",
-  "detailed_forecasts_desc": "Sehen Sie sich ein detailliertes stündliches Temperaturdiagramm für die nächsten 24 Stunden und eine erweiterte Vorhersage für die kommenden Tage an, einschließlich Wind und UV-Index."
+  "detailed_forecasts_desc": "Sehen Sie sich ein detailliertes stündliches Temperaturdiagramm für die nächsten 24 Stunden und eine erweiterte Vorhersage für die kommenden Tage an, einschließlich Wind und UV-Index.",
+  "map_theme_dark": "Dunkel",
+  "map_theme_light": "Hell",
+  "map_theme_classic": "Klassisch",
+  "click_map_hint": "Klicken Sie auf die Karte, um das Wetter zu überprüfen",
+  "my_location": "Mein Standort",
+  "map_feature_title": "Interaktive Wetterkarte",
+  "map_feature_desc_start": "Kennen Sie den genauen Namen oder die Koordinaten nicht? ",
+  "map_feature_link": "Öffnen Sie die interaktive Karte",
+  "map_feature_desc_end": " und klicken Sie auf eine beliebige Stelle, um sofort das Wetter zu erhalten. Sie können das Wetter an Ihrem aktuellen Standort auch mit einem Klick abrufen."
 }

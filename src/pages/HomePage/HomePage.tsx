@@ -4,9 +4,9 @@ import {
   CloudOutlined,
   DatabaseOutlined,
   GlobalOutlined,
-  ThunderboltOutlined,
   EnvironmentOutlined,
   LineChartOutlined,
+  CompassOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -25,6 +25,19 @@ export const HomePage = () => {
         <Paragraph className="hero-subtitle">{t("enter_city_desc")}</Paragraph>
       </div>
       <div className="cards-grid">
+        <Card className="feature-card" bordered={false}>
+          <div className="card-header">
+            <CompassOutlined className="card-icon" />
+            <Title level={4}>{t("map_feature_title")}</Title>
+          </div>
+          <Paragraph>
+            {t("map_feature_desc_start")}
+            <Link to="/map" style={{ color: "#1890ff" }}>
+              {t("map_feature_link")}
+            </Link>
+            {t("map_feature_desc_end")}
+          </Paragraph>
+        </Card>
         <Card className="feature-card" bordered={false}>
           <div className="card-header">
             <CloudOutlined className="card-icon" />
@@ -74,17 +87,6 @@ export const HomePage = () => {
           </div>
           <Paragraph>
             {t("detailed_forecasts_desc")}
-          </Paragraph>
-        </Card>
-        <Card className="feature-card" bordered={false}>
-          <div className="card-header">
-            <ThunderboltOutlined className="card-icon" />
-            <Title level={4}>{t("extra_features")}</Title>
-          </div>
-          <Paragraph>
-            {t("handles_both")}
-            <br />
-            {t("water_calculated")}
           </Paragraph>
         </Card>
       </div>

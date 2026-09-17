@@ -55,9 +55,6 @@
   "prefer_exact": "Norite tikslios vietos? Tiesiog įveskite kažką panašaus į <code>46.4843, 30.7323</code> (Odesa) arba bet kokias kitas koordinates — programa pateiks orų prognozę būtent tai vietai.",
   "geocoding_tool": "Geokodavimo įrankis",
   "need_coords": "Reikia rasti miesto koordinates? Arba miesto pavadinimą pagal koordinates? Naudokite",
-  "extra_features": "Papildomos funkcijos",
-  "handles_both": "Sklandžiai apdoroja tiek miestų pavadinimus, tiek koordinates.",
-  "water_calculated": "Ežerų ir upių vandens temperatūra apskaičiuojama specialiai jūsų vietai naudojant pritaikytą algoritmą.",
   "prefer_exact_prefix": "Norite tikslios vietos? Tiesiog įveskite kažką panašaus į",
   "prefer_exact_suffix": "(Odesa) arba bet kokias kitas koordinates — programa pateiks orų prognozę būtent tai vietai.",
   "need_coords_prefix": "Reikia rasti miesto koordinates? Arba miesto pavadinimą pagal koordinates? Naudokite",
@@ -114,5 +111,14 @@
   "back_to_weather": "Orai",
   "geocoding": "Geokodavimas",
   "detailed_forecasts": "Išsamios prognozės",
-  "detailed_forecasts_desc": "Peržiūrėkite išsamią valandinę temperatūros diagramą artimiausioms 24 valandoms ir išplėstinę prognozę artimiausioms dienoms, įskaitant vėją ir UV indeksą."
+  "detailed_forecasts_desc": "Peržiūrėkite išsamią valandinę temperatūros diagramą artimiausioms 24 valandoms ir išplėstinę prognozę artimiausioms dienoms, įskaitant vėją ir UV indeksą.",
+  "map_theme_dark": "Tamsi",
+  "map_theme_light": "Šviesi",
+  "map_theme_classic": "Klasikinė",
+  "click_map_hint": "Spustelėkite bet kurioje žemėlapio vietoje, kad pamatytumėte orus",
+  "my_location": "Mano vieta",
+  "map_feature_title": "Interaktyvus orų žemėlapis",
+  "map_feature_desc_start": "Nežinote tikslaus pavadinimo ar koordinačių? ",
+  "map_feature_link": "Atidarykite interaktyvų žemėlapį",
+  "map_feature_desc_end": " ir spustelėkite bet kur, kad akimirksniu sužinotumėte orus. Taip pat vienu spustelėjimu galite rasti orus savo dabartinėje vietoje."
 }

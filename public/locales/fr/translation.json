@@ -55,9 +55,6 @@
   "prefer_exact": "Vous préférez une localisation précise ? Saisissez simplement quelque chose comme <code>46.4843, 30.7323</code> (Odessa) ou n'importe quelles autres coordonnées — l'application récupérera la météo pour cet emplacement exact.",
   "geocoding_tool": "Outil de géocodage",
   "need_coords": "Besoin de trouver les coordonnées d'une ville ? Ou le nom d'une ville à partir de coordonnées ? Utilisez",
-  "extra_features": "Fonctionnalités supplémentaires",
-  "handles_both": "Gère aussi bien les noms de villes que les coordonnées.",
-  "water_calculated": "La température de l'eau pour les lacs et les rivières est calculée spécifiquement pour votre emplacement à l'aide d'un algorithme personnalisé.",
   "prefer_exact_prefix": "Vous préférez un emplacement précis ? Tapez simplement quelque chose comme",
   "prefer_exact_suffix": "(Odesa) ou toutes autres coordonnées — l'application récupérera la météo pour cet endroit exact.",
   "need_coords_prefix": "Besoin de trouver les coordonnées d'une ville ? Ou le nom d'une ville à partir de coordonnées ? Utilisez",
@@ -114,5 +111,14 @@
   "back_to_weather": "Météo",
   "geocoding": "Géocodage",
   "detailed_forecasts": "Prévisions détaillées",
-  "detailed_forecasts_desc": "Consultez un graphique détaillé des températures horaires pour les prochaines 24 heures et des prévisions étendues pour les jours à venir, incluant le vent et l'indice UV."
+  "detailed_forecasts_desc": "Consultez un graphique détaillé des températures horaires pour les prochaines 24 heures et des prévisions étendues pour les jours à venir, incluant le vent et l'indice UV.",
+  "map_theme_dark": "Sombre",
+  "map_theme_light": "Clair",
+  "map_theme_classic": "Classique",
+  "click_map_hint": "Cliquez n'importe où sur la carte pour vérifier la météo",
+  "my_location": "Ma position",
+  "map_feature_title": "Carte météo interactive",
+  "map_feature_desc_start": "Vous ne connaissez pas le nom exact ou les coordonnées ? ",
+  "map_feature_link": "Ouvrez la carte interactive",
+  "map_feature_desc_end": " et cliquez n'importe où pour obtenir instantanément la météo. Vous pouvez également connaître la météo à votre position actuelle en un clic."
 }

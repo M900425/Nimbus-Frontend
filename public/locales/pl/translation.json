@@ -55,9 +55,6 @@
   "prefer_exact": "Wolisz podać dokładną lokalizację? Wpisz coś w stylu <code>46.4843, 30.7323</code> (Odessa) lub inne współrzędne — aplikacja pobierze pogodę dla tego konkretnego miejsca.",
   "geocoding_tool": "Narzędzie geokodowania",
   "need_coords": "Chcesz znaleźć współrzędne dla miasta? Albo nazwę miasta dla współrzędnych? Użyj",
-  "extra_features": "Dodatkowe funkcje",
-  "handles_both": "Obsługuje zarówno nazwy miast, jak i współrzędne.",
-  "water_calculated": "Temperatura wody w jeziorach i rzekach jest obliczana specjalnie dla Twojej lokalizacji przy użyciu własnego algorytmu.",
   "prefer_exact_prefix": "Wolisz dokładną lokalizację? Wpisz coś w stylu",
   "prefer_exact_suffix": "(Odesa) lub dowolne inne współrzędne — aplikacja pobierze pogodę dla tego konkretnego miejsca.",
   "need_coords_prefix": "Chcesz znaleźć współrzędne dla miasta? Albo nazwę miasta dla podanych współrzędnych? Skorzystaj z",
@@ -114,5 +111,14 @@
   "back_to_weather": "Pogoda",
   "geocoding": "Geokodowanie",
   "detailed_forecasts": "Szczegółowe prognozy",
-  "detailed_forecasts_desc": "Zobacz szczegółowy godzinowy wykres temperatury na najbliższe 24 godziny oraz rozszerzoną prognozę na nadchodzące dni, w tym wiatr i indeks UV."
+  "detailed_forecasts_desc": "Zobacz szczegółowy godzinowy wykres temperatury na najbliższe 24 godziny oraz rozszerzoną prognozę na nadchodzące dni, w tym wiatr i indeks UV.",
+  "map_theme_dark": "Ciemny",
+  "map_theme_light": "Jasny",
+  "map_theme_classic": "Klasyczny",
+  "click_map_hint": "Kliknij w dowolnym miejscu na mapie, aby sprawdzić pogodę",
+  "my_location": "Moja lokalizacja",
+  "map_feature_title": "Interaktywna mapa pogody",
+  "map_feature_desc_start": "Nie znasz dokładnej nazwy lub współrzędnych? ",
+  "map_feature_link": "Otwórz interaktywną mapę",
+  "map_feature_desc_end": " i kliknij w dowolnym miejscu, aby natychmiast sprawdzić pogodę. Możesz również jednym kliknięciem sprawdzić pogodę w swoim obecnym położeniu."
 }

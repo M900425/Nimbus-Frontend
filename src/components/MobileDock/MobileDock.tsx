@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { GlobalOutlined, ThunderboltOutlined } from "@ant-design/icons";
+import { GlobalOutlined, ThunderboltOutlined, CompassOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import "./MobileDock.scss";
 
@@ -45,6 +45,7 @@ const MobileDock = () => {
 
   const isWeatherActive = location.pathname.startsWith("/weather");
   const isGeocodeActive = location.pathname.startsWith("/geocode");
+  const isMapActive = location.pathname.startsWith("/map");
 
   return (
     <div className="mobile-dock">
@@ -56,6 +57,16 @@ const MobileDock = () => {
         >
           <GlobalOutlined />
           <span className="dock-label">{t("geocoding")}</span>
+        </button>
+      </div>
+      <div className="dock-group">
+        <button
+          className={`dock-btn ${isMapActive ? "active" : ""}`}
+          onClick={() => navigate("/map")}
+          title={t("weather_map", "Карта")}
+        >
+          <CompassOutlined />
+          <span className="dock-label">{t("map", "Карта")}</span>
         </button>
       </div>
       {lastCity && (

@@ -55,9 +55,6 @@
   "prefer_exact": "Prefere uma localização exata? Basta digitar algo como <code>46.4843, 30.7323</code> (Odesa) ou quaisquer outras coordenadas — a aplicação irá obter o tempo para esse local exato.",
   "geocoding_tool": "Ferramenta de Geocodificação",
   "need_coords": "Precisa de encontrar as coordenadas de uma cidade? Ou o nome de uma cidade pelas coordenadas? Use",
-  "extra_features": "Funcionalidades extra",
-  "handles_both": "Suporta tanto nomes de cidades como coordenadas sem dificuldade.",
-  "water_calculated": "A temperatura da água para lagos e rios é calculada especificamente para a sua localização através de um algoritmo personalizado.",
   "prefer_exact_prefix": "Prefere uma localização exata? Digite algo como",
   "prefer_exact_suffix": "(Odesa) ou quaisquer outras coordenadas — o aplicativo buscará o clima exato para esse local.",
   "need_coords_prefix": "Precisa encontrar as coordenadas de uma cidade? Ou o nome da cidade para determinadas coordenadas? Use",
@@ -114,5 +111,14 @@
   "back_to_weather": "Tempo",
   "geocoding": "Geocodificação",
   "detailed_forecasts": "Previsões detalhadas",
-  "detailed_forecasts_desc": "Veja um gráfico detalhado da temperatura por hora para as próximas 24 horas e uma previsão estendida para os próximos dias, incluindo vento e índice UV."
+  "detailed_forecasts_desc": "Veja um gráfico detalhado da temperatura por hora para as próximas 24 horas e uma previsão estendida para os próximos dias, incluindo vento e índice UV.",
+  "map_theme_dark": "Escuro",
+  "map_theme_light": "Claro",
+  "map_theme_classic": "Clássico",
+  "click_map_hint": "Clique em qualquer lugar do mapa para ver a previsão do tempo",
+  "my_location": "Minha localização",
+  "map_feature_title": "Mapa meteorológico interativo",
+  "map_feature_desc_start": "Não sabe o nome exato ou as coordenadas? ",
+  "map_feature_link": "Abra o mapa interativo",
+  "map_feature_desc_end": " e clique em qualquer lugar para obter instantaneamente o clima. Você também pode saber o clima na sua localização atual com um clique."
 }

@@ -55,9 +55,6 @@
   "prefer_exact": "Preferirate točnu lokaciju? Jednostavno upišite nešto poput <code>46.4843, 30.7323</code> (Odesa) ili bilo koje druge koordinate — aplikacija će dohvatiti vremensku prognozu za to točno mjesto.",
   "geocoding_tool": "Alat za geokodiranje",
   "need_coords": "Trebate pronaći koordinate za grad? Ili naziv grada prema koordinatama? Koristite",
-  "extra_features": "Dodatne mogućnosti",
-  "handles_both": "Besprijekorno rukuje i nazivima gradova i koordinatama.",
-  "water_calculated": "Temperatura vode za jezera i rijeke izračunava se posebno za vašu lokaciju pomoću prilagođenog algoritma.",
   "prefer_exact_prefix": "Preferirate točnu lokaciju? Upišite nešto poput",
   "prefer_exact_suffix": "(Odesa) ili bilo koje druge koordinate — aplikacija će dohvatiti vremensku prognozu za to točno mjesto.",
   "need_coords_prefix": "Trebate pronaći koordinate za grad? Ili naziv grada za koordinate? Koristite",
@@ -114,5 +111,14 @@
   "back_to_weather": "Vrijeme",
   "geocoding": "Geokodiranje",
   "detailed_forecasts": "Detaljne prognoze",
-  "detailed_forecasts_desc": "Pogledajte detaljan grafikon temperature po satima za naredna 24 sata i proširenu prognozu za nadolazeće dane, uključujući vjetar i UV indeks."
+  "detailed_forecasts_desc": "Pogledajte detaljan grafikon temperature po satima za naredna 24 sata i proširenu prognozu za nadolazeće dane, uključujući vjetar i UV indeks.",
+  "map_theme_dark": "Tamna",
+  "map_theme_light": "Svijetla",
+  "map_theme_classic": "Klasična",
+  "click_map_hint": "Kliknite bilo gdje na kartu za provjeru vremena",
+  "my_location": "Moja lokacija",
+  "map_feature_title": "Interaktivna karta vremena",
+  "map_feature_desc_start": "Ne znate točan naziv ili koordinate? ",
+  "map_feature_link": "Otvorite interaktivnu kartu",
+  "map_feature_desc_end": " i kliknite bilo gdje za trenutni prikaz vremena. Vrijeme na vašoj trenutnoj lokaciji također možete saznati jednim klikom."
 }

@@ -55,9 +55,6 @@
   "prefer_exact": "Eelistad täpset asukohta? Sisesta lihtsalt midagi sellist nagu <code>46.4843, 30.7323</code> (Odessa) või muud koordinaadid — rakendus toob ilmaandmed täpselt selle punkti kohta.",
   "geocoding_tool": "Geokodeerimise tööriist",
   "need_coords": "Kas vajate linna koordinaate? Või koordinaatide järgi linna nime? Kasutage",
-  "extra_features": "Lisafunktsioonid",
-  "handles_both": "Toetab sujuvalt nii linnade nimesid kui ka koordinaate.",
-  "water_calculated": "Järvede ja jõgede veetemperatuur arvutatakse kohandatud algoritmi abil spetsiaalselt teie asukoha jaoks.",
   "prefer_exact_prefix": "Eelistad täpset asukohta? Sisesta midagi sellist nagu",
   "prefer_exact_suffix": "(Odesa) või mõni muu koordinaat — rakendus toob ilmateabe täpselt selle koha jaoks.",
   "need_coords_prefix": "Kas vajad linna koordinaate? Või linna nime koordinaatide järgi? Kasuta",
@@ -114,5 +111,14 @@
   "back_to_weather": "Ilm",
   "geocoding": "Geokoodeerimine",
   "detailed_forecasts": "Üksikasjalikud prognoosid",
-  "detailed_forecasts_desc": "Vaadake üksikasjalikku tunnist temperatuurigraafikut järgmise 24 tunni kohta ja laiendatud prognoosi lähipäevadeks, sealhulgas tuul ja UV-indeks."
+  "detailed_forecasts_desc": "Vaadake üksikasjalikku tunnist temperatuurigraafikut järgmise 24 tunni kohta ja laiendatud prognoosi lähipäevadeks, sealhulgas tuul ja UV-indeks.",
+  "map_theme_dark": "Tume",
+  "map_theme_light": "Hele",
+  "map_theme_classic": "Klassikaline",
+  "click_map_hint": "Klõpsake kaardil, et vaadata ilmateadet",
+  "my_location": "Minu asukoht",
+  "map_feature_title": "Interaktiivne ilmakaart",
+  "map_feature_desc_start": "Ei tea täpset nime või koordinaate? ",
+  "map_feature_link": "Avage interaktiivne kaart",
+  "map_feature_desc_end": " ja klõpsake ükskõik millisel kohal, et saada kohe ilmateade. Samuti saate ühe klõpsuga leida ilma oma praeguses asukohas."
 }

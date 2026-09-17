@@ -55,9 +55,6 @@
   "prefer_exact": "Preferisci una posizione esatta? Digita qualcosa come <code>46.4843, 30.7323</code> (Odessa) o qualsiasi altra coordinata — l'app recupererà il meteo per quel punto preciso.",
   "geocoding_tool": "Strumento di geocodifica",
   "need_coords": "Hai bisogno di trovare le coordinate di una città? O il nome della città per delle coordinate? Usa",
-  "extra_features": "Funzionalità aggiuntive",
-  "handles_both": "Gestisce sia nomi di città che coordinate senza problemi.",
-  "water_calculated": "La temperatura dell'acqua per laghi e fiumi è calcolata specificamente per la tua posizione tramite un algoritmo personalizzato.",
   "prefer_exact_prefix": "Preferisci una posizione esatta? Digita qualcosa come",
   "prefer_exact_suffix": "(Odesa) o qualsiasi altra coordinata — l'app mostrerà il meteo per quel punto preciso.",
   "need_coords_prefix": "Hai bisogno di trovare le coordinate di una città? O il nome della città per delle coordinate? Usa",
@@ -114,5 +111,14 @@
   "back_to_weather": "Meteo",
   "geocoding": "Geocodifica",
   "detailed_forecasts": "Previsioni dettagliate",
-  "detailed_forecasts_desc": "Visualizza un grafico orario dettagliato delle temperature per le prossime 24 ore e previsioni estese per i prossimi giorni, inclusi vento e indice UV."
+  "detailed_forecasts_desc": "Visualizza un grafico orario dettagliato delle temperature per le prossime 24 ore e previsioni estese per i prossimi giorni, inclusi vento e indice UV.",
+  "map_theme_dark": "Scuro",
+  "map_theme_light": "Chiaro",
+  "map_theme_classic": "Classico",
+  "click_map_hint": "Clicca ovunque sulla mappa per controllare il meteo",
+  "my_location": "La mia posizione",
+  "map_feature_title": "Mappa meteo interattiva",
+  "map_feature_desc_start": "Non conosci il nome esatto o le coordinate? ",
+  "map_feature_link": "Apri la mappa interattiva",
+  "map_feature_desc_end": " e clicca ovunque per ottenere subito il meteo. Puoi anche scoprire il meteo nella tua posizione attuale con un solo clic."
 }

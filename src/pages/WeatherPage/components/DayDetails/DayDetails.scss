@@ -98,7 +98,7 @@
 }
 
 @media (max-width: 480px) {
-  .day-stats {
-    grid-template-columns: 1fr 1fr !important;
+  .day-details .day-stats {
+    grid-template-columns: 1fr 1fr;
   }
 }
