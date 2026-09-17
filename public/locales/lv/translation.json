@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktīvā laikapstākļu karte",
   "map_feature_desc_start": "Nezināt precīzu nosaukumu vai koordinātas? ",
   "map_feature_link": "Atveriet interaktīvo karti",
-  "map_feature_desc_end": " un noklikšķiniet jebkur, lai uzreiz uzzinātu laikapstākļus. Jūs varat arī uzzināt laikapstākļus savā pašreizējā atrašanās vietā ar vienu klikšķi."
+  "map_feature_desc_end": " un noklikšķiniet jebkur, lai uzreiz uzzinātu laikapstākļus. Jūs varat arī uzzināt laikapstākļus savā pašreizējā atrašanās vietā ar vienu klikšķi.",
+  "geolocation_denied": "Piekļuve atrašanās vietai liegta"
 }

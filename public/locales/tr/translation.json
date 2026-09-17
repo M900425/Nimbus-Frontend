@@ -119,5 +119,6 @@
   "map_feature_title": "Etkileşimli Hava Durumu Haritası",
   "map_feature_desc_start": "Tam adı veya koordinatları bilmiyor musunuz? ",
   "map_feature_link": "Etkileşimli haritayı açın",
-  "map_feature_desc_end": " ve anında hava durumunu öğrenmek için herhangi bir yere tıklayın. Tek bir tıklamayla mevcut konumunuzdaki hava durumunu da bulabilirsiniz."
+  "map_feature_desc_end": " ve anında hava durumunu öğrenmek için herhangi bir yere tıklayın. Tek bir tıklamayla mevcut konumunuzdaki hava durumunu da bulabilirsiniz.",
+  "geolocation_denied": "Konum erişimi reddedildi"
 }

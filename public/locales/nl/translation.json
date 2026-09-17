@@ -119,5 +119,6 @@
   "map_feature_title": "Interactieve Weerkaart",
   "map_feature_desc_start": "Weet u de exacte naam of coördinaten niet? ",
   "map_feature_link": "Open de interactieve weerkaart",
-  "map_feature_desc_end": " en klik ergens om direct het weer te zien. U kunt ook met één klik het weer op uw huidige locatie vinden."
+  "map_feature_desc_end": " en klik ergens om direct het weer te zien. U kunt ook met één klik het weer op uw huidige locatie vinden.",
+  "geolocation_denied": "Toegang tot locatie geweigerd"
 }

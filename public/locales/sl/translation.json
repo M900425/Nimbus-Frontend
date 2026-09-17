@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktivni vremenski zemljevid",
   "map_feature_desc_start": "Ne poznate natančnega imena ali koordinat? ",
   "map_feature_link": "Odprite interaktivni zemljevid",
-  "map_feature_desc_end": " in kliknite kjer koli, da takoj dobite vreme. Vreme na vaši trenutni lokaciji lahko preverite tudi z enim klikom."
+  "map_feature_desc_end": " in kliknite kjer koli, da takoj dobite vreme. Vreme na vaši trenutni lokaciji lahko preverite tudi z enim klikom.",
+  "geolocation_denied": "Dostop do lokacije je zavrnjen"
 }

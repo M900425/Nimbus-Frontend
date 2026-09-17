@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktívna mapa počasia",
   "map_feature_desc_start": "Neviete presný názov alebo súradnice? ",
   "map_feature_link": "Otvorte interaktívnu mapu",
-  "map_feature_desc_end": " a kliknite kdekoľvek, aby ste okamžite získali počasie. Jedným kliknutím zistíte aj počasie vo vašej aktuálnej polohe."
+  "map_feature_desc_end": " a kliknite kdekoľvek, aby ste okamžite získali počasie. Jedným kliknutím zistíte aj počasie vo vašej aktuálnej polohe.",
+  "geolocation_denied": "Prístup k polohe bol odmietnutý"
 }

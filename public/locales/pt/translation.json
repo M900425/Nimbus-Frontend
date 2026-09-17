@@ -119,5 +119,6 @@
   "map_feature_title": "Mapa meteorológico interativo",
   "map_feature_desc_start": "Não sabe o nome exato ou as coordenadas? ",
   "map_feature_link": "Abra o mapa interativo",
-  "map_feature_desc_end": " e clique em qualquer lugar para obter instantaneamente o clima. Você também pode saber o clima na sua localização atual com um clique."
+  "map_feature_desc_end": " e clique em qualquer lugar para obter instantaneamente o clima. Você também pode saber o clima na sua localização atual com um clique.",
+  "geolocation_denied": "Acesso à localização negado"
 }

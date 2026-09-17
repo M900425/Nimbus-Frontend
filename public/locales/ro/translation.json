@@ -119,5 +119,6 @@
   "map_feature_title": "Hartă meteo interactivă",
   "map_feature_desc_start": "Nu știți numele exact sau coordonatele? ",
   "map_feature_link": "Deschideți harta interactivă",
-  "map_feature_desc_end": " și faceți clic oriunde pentru a obține instantaneu vremea. De asemenea, puteți afla vremea în locația dvs. actuală cu un singur clic."
+  "map_feature_desc_end": " și faceți clic oriunde pentru a obține instantaneu vremea. De asemenea, puteți afla vremea în locația dvs. actuală cu un singur clic.",
+  "geolocation_denied": "Accesul la locație a fost refuzat"
 }

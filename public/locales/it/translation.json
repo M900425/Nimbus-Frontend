@@ -119,5 +119,6 @@
   "map_feature_title": "Mappa meteo interattiva",
   "map_feature_desc_start": "Non conosci il nome esatto o le coordinate? ",
   "map_feature_link": "Apri la mappa interattiva",
-  "map_feature_desc_end": " e clicca ovunque per ottenere subito il meteo. Puoi anche scoprire il meteo nella tua posizione attuale con un solo clic."
+  "map_feature_desc_end": " e clicca ovunque per ottenere subito il meteo. Puoi anche scoprire il meteo nella tua posizione attuale con un solo clic.",
+  "geolocation_denied": "Accesso alla posizione negato"
 }

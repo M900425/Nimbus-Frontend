@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktiivne ilmakaart",
   "map_feature_desc_start": "Ei tea täpset nime või koordinaate? ",
   "map_feature_link": "Avage interaktiivne kaart",
-  "map_feature_desc_end": " ja klõpsake ükskõik millisel kohal, et saada kohe ilmateade. Samuti saate ühe klõpsuga leida ilma oma praeguses asukohas."
+  "map_feature_desc_end": " ja klõpsake ükskõik millisel kohal, et saada kohe ilmateade. Samuti saate ühe klõpsuga leida ilma oma praeguses asukohas.",
+  "geolocation_denied": "Asukoha juurdepääs keelatud"
 }

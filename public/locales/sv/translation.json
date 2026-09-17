@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktiv väderkarta",
   "map_feature_desc_start": "Vet du inte det exakta namnet eller koordinaterna? ",
   "map_feature_link": "Öppna den interaktiva kartan",
-  "map_feature_desc_end": " och klicka var som helst för att direkt se vädret. Du kan också hitta vädret på din nuvarande plats med ett klick."
+  "map_feature_desc_end": " och klicka var som helst för att direkt se vädret. Du kan också hitta vädret på din nuvarande plats med ett klick.",
+  "geolocation_denied": "Platsåtkomst nekad"
 }

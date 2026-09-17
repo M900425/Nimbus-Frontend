@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktyvus orų žemėlapis",
   "map_feature_desc_start": "Nežinote tikslaus pavadinimo ar koordinačių? ",
   "map_feature_link": "Atidarykite interaktyvų žemėlapį",
-  "map_feature_desc_end": " ir spustelėkite bet kur, kad akimirksniu sužinotumėte orus. Taip pat vienu spustelėjimu galite rasti orus savo dabartinėje vietoje."
+  "map_feature_desc_end": " ir spustelėkite bet kur, kad akimirksniu sužinotumėte orus. Taip pat vienu spustelėjimu galite rasti orus savo dabartinėje vietoje.",
+  "geolocation_denied": "Prieiga prie vietovės uždrausta"
 }

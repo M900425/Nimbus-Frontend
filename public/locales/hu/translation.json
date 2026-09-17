@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktív időjárási térkép",
   "map_feature_desc_start": "Nem ismeri a pontos nevet vagy a koordinátákat? ",
   "map_feature_link": "Nyissa meg az interaktív térképet",
-  "map_feature_desc_end": " és kattintson bárhová, hogy azonnal megkapja az időjárást. Egyetlen kattintással a jelenlegi tartózkodási helyének időjárását is megtekintheti."
+  "map_feature_desc_end": " és kattintson bárhová, hogy azonnal megkapja az időjárást. Egyetlen kattintással a jelenlegi tartózkodási helyének időjárását is megtekintheti.",
+  "geolocation_denied": "Helyhozzáférés megtagadva"
 }

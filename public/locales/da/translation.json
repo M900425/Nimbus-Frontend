@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktivt vejrkort",
   "map_feature_desc_start": "Kender du ikke det nøjagtige navn eller koordinaterne? ",
   "map_feature_link": "Åbn det interaktive kort",
-  "map_feature_desc_end": " og klik et sted for øjeblikkeligt at få vejret. Du kan også finde vejret på din nuværende placering med et enkelt klik."
+  "map_feature_desc_end": " og klik et sted for øjeblikkeligt at få vejret. Du kan også finde vejret på din nuværende placering med et enkelt klik.",
+  "geolocation_denied": "Adgang til placering nægtet"
 }

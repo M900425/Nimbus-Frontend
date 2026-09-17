@@ -122,5 +122,6 @@
   "map_feature_title": "Interactive Weather Map",
   "map_feature_desc_start": "Don't know the exact name or coordinates? ",
   "map_feature_link": "Open the interactive map",
-  "map_feature_desc_end": " and click anywhere to instantly get the weather. You can also find the weather at your current location with one click."
+  "map_feature_desc_end": " and click anywhere to instantly get the weather. You can also find the weather at your current location with one click.",
+  "geolocation_denied": "Location access denied"
 }

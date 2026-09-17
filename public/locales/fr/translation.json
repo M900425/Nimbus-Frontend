@@ -119,5 +119,6 @@
   "map_feature_title": "Carte météo interactive",
   "map_feature_desc_start": "Vous ne connaissez pas le nom exact ou les coordonnées ? ",
   "map_feature_link": "Ouvrez la carte interactive",
-  "map_feature_desc_end": " et cliquez n'importe où pour obtenir instantanément la météo. Vous pouvez également connaître la météo à votre position actuelle en un clic."
+  "map_feature_desc_end": " et cliquez n'importe où pour obtenir instantanément la météo. Vous pouvez également connaître la météo à votre position actuelle en un clic.",
+  "geolocation_denied": "Accès à la position refusé"
 }

@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktive Wetterkarte",
   "map_feature_desc_start": "Kennen Sie den genauen Namen oder die Koordinaten nicht? ",
   "map_feature_link": "Öffnen Sie die interaktive Karte",
-  "map_feature_desc_end": " und klicken Sie auf eine beliebige Stelle, um sofort das Wetter zu erhalten. Sie können das Wetter an Ihrem aktuellen Standort auch mit einem Klick abrufen."
+  "map_feature_desc_end": " und klicken Sie auf eine beliebige Stelle, um sofort das Wetter zu erhalten. Sie können das Wetter an Ihrem aktuellen Standort auch mit einem Klick abrufen.",
+  "geolocation_denied": "Standortzugriff verweigert"
 }

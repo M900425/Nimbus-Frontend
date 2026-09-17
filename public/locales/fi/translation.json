@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktiivinen sääkartta",
   "map_feature_desc_start": "Etkö tiedä tarkkaa nimeä tai koordinaatteja? ",
   "map_feature_link": "Avaa interaktiivinen kartta",
-  "map_feature_desc_end": " ja napsauta mitä tahansa paikkaa saadaksesi heti sään. Voit myös tarkistaa sään nykyisessä sijainnissasi yhdellä napsautuksella."
+  "map_feature_desc_end": " ja napsauta mitä tahansa paikkaa saadaksesi heti sään. Voit myös tarkistaa sään nykyisessä sijainnissasi yhdellä napsautuksella.",
+  "geolocation_denied": "Sijainnin käyttö estetty"
 }

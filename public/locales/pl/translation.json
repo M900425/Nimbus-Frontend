@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktywna mapa pogody",
   "map_feature_desc_start": "Nie znasz dokładnej nazwy lub współrzędnych? ",
   "map_feature_link": "Otwórz interaktywną mapę",
-  "map_feature_desc_end": " i kliknij w dowolnym miejscu, aby natychmiast sprawdzić pogodę. Możesz również jednym kliknięciem sprawdzić pogodę w swoim obecnym położeniu."
+  "map_feature_desc_end": " i kliknij w dowolnym miejscu, aby natychmiast sprawdzić pogodę. Możesz również jednym kliknięciem sprawdzić pogodę w swoim obecnym położeniu.",
+  "geolocation_denied": "Odmowa dostępu do lokalizacji"
 }

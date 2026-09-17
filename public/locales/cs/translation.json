@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktivní mapa počasí",
   "map_feature_desc_start": "Neznáte přesný název nebo souřadnice? ",
   "map_feature_link": "Otevřete interaktivní mapu",
-  "map_feature_desc_end": " a kliknutím kamkoli okamžitě získáte počasí. Jedním kliknutím také zjistíte počasí ve vaší aktuální poloze."
+  "map_feature_desc_end": " a kliknutím kamkoli okamžitě získáte počasí. Jedním kliknutím také zjistíte počasí ve vaší aktuální poloze.",
+  "geolocation_denied": "Přístup k poloze byl odepřen"
 }

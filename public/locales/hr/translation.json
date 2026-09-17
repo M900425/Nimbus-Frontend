@@ -119,5 +119,6 @@
   "map_feature_title": "Interaktivna karta vremena",
   "map_feature_desc_start": "Ne znate točan naziv ili koordinate? ",
   "map_feature_link": "Otvorite interaktivnu kartu",
-  "map_feature_desc_end": " i kliknite bilo gdje za trenutni prikaz vremena. Vrijeme na vašoj trenutnoj lokaciji također možete saznati jednim klikom."
+  "map_feature_desc_end": " i kliknite bilo gdje za trenutni prikaz vremena. Vrijeme na vašoj trenutnoj lokaciji također možete saznati jednim klikom.",
+  "geolocation_denied": "Pristup lokaciji odbijen"
 }
