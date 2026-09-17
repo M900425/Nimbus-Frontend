@@ -443,12 +443,12 @@
     }
 
     .leaflet-bottom.leaflet-right {
-      margin-bottom: calc(115px + env(safe-area-inset-bottom, 20px));
+      margin-bottom: calc(130px + env(safe-area-inset-bottom, 20px));
       margin-right: 12px;
     }
 
     .leaflet-bottom.leaflet-left {
-      margin-bottom: calc(115px + env(safe-area-inset-bottom, 20px));
+      margin-bottom: calc(130px + env(safe-area-inset-bottom, 20px));
       margin-left: 12px;
     }
   }
