@@ -36,7 +36,6 @@ export const MapPage: React.FC = () => {
   const [localizedCityName, setLocalizedCityName] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoadingPoint, setIsLoadingPoint] = useState(false);
-  const [geolocationGranted, setGeolocationGranted] = useState<boolean>(true);
   const [triggerGetWeather] = useLazyGetWeatherByCoordsQuery();
   const createPinIcon = (isLoading = false) => {
     return L.divIcon({
@@ -117,16 +116,7 @@ export const MapPage: React.FC = () => {
     fetchWeatherForPointRef.current = fetchWeatherForPoint;
   });
 
-  useEffect(() => {
-    if (navigator.permissions && navigator.permissions.query) {
-      navigator.permissions.query({ name: 'geolocation' }).then((result) => {
-        setGeolocationGranted(result.state !== 'denied');
-        result.addEventListener('change', () => {
-          setGeolocationGranted(result.state !== 'denied');
-        });
-      });
-    }
-  }, []);
+
 
   useEffect(() => {
     if (!mapContainerRef.current || mapInstanceRef.current) return;
@@ -220,8 +210,14 @@ export const MapPage: React.FC = () => {
         mapInstanceRef.current?.flyTo([lat, lon], 10, { duration: 1.5 });
         fetchWeatherForPoint(lat, lon, mapInstanceRef.current);
       },
-      () => {},
-      { timeout: 8000 },
+      (error) => {
+        if (error.code === error.PERMISSION_DENIED) {
+          message.error(t("geolocation_denied"));
+        } else {
+          message.error(t("location_not_found") || "Location not found");
+        }
+      },
+      { timeout: 10000, enableHighAccuracy: true },
     );
   };
   const handleCloseModal = () => {
@@ -294,8 +290,6 @@ export const MapPage: React.FC = () => {
           icon={<AimOutlined />}
           loading={isLoadingPoint}
           onClick={handleLocateMe}
-          disabled={!geolocationGranted}
-          title={!geolocationGranted ? t("geolocation_denied") : ""}
         >
           {t("my_location")}
         </Button>
